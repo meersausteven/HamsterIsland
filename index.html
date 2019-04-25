@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hamster Island</title>
+		<link rel="shortcut icon" href="pics/favicon.ico">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="display_wrapper">
+			<div id="display">
+				<div id="display_left"></div>
+				<div id="counter_container">
+					<div id="counter">0 Hamsters</div>
+					<div id="hps_display_container">
+						<div id="hps_display">0 H/s</div>
+					</div>
+					<div id="maximum_display_container">
+						<div id="maximum_display">Max: 10.000 Hamsters</div>
+					</div>
+				</div>
+				<div id="display_right"></div>
+			</div>
+		</div>
+		<div id="hamster_sea" class="background-preset">
+			<div id="hamster_island" class="background-preset">
+				<div id="caged_hamster" class="background-preset">
+					<div id="hamster_cage" class="background-preset"></div>
+				</div>
+				<div id="hamster_food" class="food-drink-not-bought background-preset"></div>
+				<div id="hamster_drink" class="food-drink-not-bought background-preset"></div>
+			</div>
+		</div>
+		<div id="shop_container">
+			<div id="toggle_shop_button" onclick="toggleShop()">
+				<span id="toggle_shop_button_label">OPEN SHOP</span>
+			</div>
+			<div id="shop" class="shop-buying-impossible">
+			</div>
+		</div>
+		<div id="open_statistics" onclick="toggleStats()">Statistics</div>
+		<div id="statistics_screen">
+			<p>Current hamsters: <span id="stats_hamsters"></span></p>
+			<p>Current max. amount of hamster: <span id="stats_max"></span></p>
+			<p>Current hamsters per click: <span id="stats_perclick"></span></p>
+			<p>Current hamsters per second: <span id="stats_hps"></span></p>
+			<p>Total amount of produced hamsters: <span id="stats_total"></span></p>
+			<p>Amount of times the main hamster was clicked: <span id="stats_clicks"></span></p>
+			<p>Rare hamster clicks: <span id="stats_rareclicks"></span></p>
+			<p>Total play time: <span id="stats_playtime"></span></p>
+			<p>Current food level: <span id="stats_food"></span></p>
+			<p>Current drink level: <span id="stats_drink"></span></p>
+			<p>Current cage level: <span id="stats_cage"></span></p>
+			<p>Current island level: <span id="stats_island"></span></p>
+			<div id="close_statistics" onclick="toggleStats()">CLOSE</div>
+		</div>
+	<div id="version_number">ver. alpha 1.0</div>
+	<script src="js/script.js"></script>
+	</body>
+</html>
