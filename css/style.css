@@ -72,13 +72,9 @@ body {
 }
 #hamster_food {
 	left: 41vw;
-
-	border: 2px solid red;
 }
 #hamster_drink {
 	left: 53vw;
-
-	border: 2px solid blue;
 }
 
 /* Display */
@@ -297,21 +293,24 @@ body {
 	height: auto;
 	position: absolute;
 	left: calc(50vw - 60px);
-	bottom: 200px;
+	bottom: 120px;
 	padding: 10px 20px;
 	color: #ffffff;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 	background-color: rgba(0,0,0,0.4);
 	border-radius: 4px;
 	text-align: center;
-	animation-name: fade_in;
-	animation-duration: 0.2s;
 }
-@keyframes fade_in {
-	0%		{opacity: 0; transform: translateX(0px);}
-	100%	{opacity: 1; transform: translateX(-30px);}
+.animation-fade-out {
+	animation-name: 'fade_up';
+	-webkit-animation-name: 'fade_up';
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
 }
-
+@keyframes fade_up {
+	0%		{transform: translateY(30px); opacity: 0;}
+	100%	{transform: translateY(0px); opacity: 1;}
+}
 /* States of the open/closed shop menu */
 
 .shop-open {
@@ -332,13 +331,11 @@ body {
   pointer-events: none;
   transition: 1s;
   filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.2));
-
-  border-radius: 20%;
-  border: 3px solid #aaaaaa;
-  background-color: #cccccc;
+	background-image: url(../pics/hamsters/hamster_particle.png);
 }
-.particle-animation {
+.animation-fade-out {
 	animation-name: 'fade_out';
+	-webkit-animation-name: 'fade_out';
 	animation-duration: 1s;
 	animation-timing-function: ease-out;
 }
@@ -357,8 +354,9 @@ body {
 	height: auto;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.clicked-hamsters-animation {
+.animation-fade-upwards {
 	animation-name: 'fade_upwards';
+	-webkit-animation-name: 'fade_upwards';
 	animation-duration: 1s;
 	animation-timing-function: ease-out;
 }
@@ -371,18 +369,14 @@ body {
 
 .rare-hamster {
 	position: absolute;
-	width: 50px;
-	height: 50px;
-	border-style: solid;
-	border-width: 5px;
+	width: 70px;
+	height: 70px;
 	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
 	cursor: pointer;
 	animation-name: rare_hamster_animation;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	z-index: 100;
-	
-	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 @keyframes rare_hamster_animation {
 	0%		{transform: scale(1.07) rotate(-6deg);}
@@ -408,34 +402,19 @@ body {
 	100%	{transform: scale(1.07) rotate(-6deg);}
 }
 .rare-hamster.rare-hamster-bronze {
-	
-	
-	background-color: #b36800;
-	border-color: #995900;
+	background-image: url(../pics/hamsters/rare_hamster_bronze.png);
 }
 .rare-hamster.rare-hamster-silver {
-	
-	
-	background-color: #cccccc;
-	border-color: #b3b3b3;
+	background-image: url(../pics/hamsters/rare_hamster_silver.png);
 }
 .rare-hamster.rare-hamster-gold {
-	
-	
-	background-color: #eed12b;
-	border-color: #d4b711;
+	background-image: url(../pics/hamsters/rare_hamster_gold.png);
 }
 .rare-hamster.rare-hamster-diamond {
-	
-	
-	background-color: #b6fbfb;
-	border-color: #86f9f9;
+	background-image: url(../pics/hamsters/rare_hamster_diamond.png);
 }
 .rare-hamster.rare-hamster-alexandrite {
-	
-	
-	background: linear-gradient(to top right, #471f47 20%, #196666 100%);
-	border-color: #351735;
+	background-image: url(../pics/hamsters/rare_hamster_alexandrite.png);
 }
 
 /* Rare Hamster Effect Info Box */
