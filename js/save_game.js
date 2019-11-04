@@ -35,18 +35,18 @@ function getProgress() {
 		
 		console.log(save);
 		
-		totalhamstercount = save[0];
-		hamstercount = save[1];
-		cagedhamsterclicks = save[2];
-		rarehamsterclicks = save[3];
-		islandlevel = save[4];
-		cagelevel = save[5];
-		foodlevel = save[6];
-		drinklevel = save[7];
-		basehamsterspersecond = save[8];
-		hamstermaximum = save[9];
-		hamstersperclick = save[10];
-		starttime = save[11];
-		playtime = save[12];
+		totalhamstercount = parseInt(save[0]);
+		hamstercount = parseInt(save[1]);
+		cagedhamsterclicks = parseInt(save[2]);
+		rarehamsterclicks = parseInt(save[3]);
+		islandlevel = parseInt(save[4]);
+		cagelevel = parseInt(save[5]);
+		foodlevel = parseInt(save[6]);
+		drinklevel = parseInt(save[7]);
+		basehamsterspersecond = parseInt(save[8]);
+		hamstermaximum = parseInt(save[9]);
+		hamstersperclick = parseInt(save[10]);
+		starttime = parseInt(save[11]);
+		playtime = parseInt(save[12]);
 	}
 }
