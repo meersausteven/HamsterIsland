@@ -30,7 +30,7 @@ function saveProgress() {
 // check for already saved progress
 
 function getProgress() {
-	if (localStorage.getItem("savegame") != "") {
+	if (localStorage.getItem("savegame") != null) {
 		var save = window.atob(localStorage.getItem("savegame")).split("-");
 		
 		console.log(save);
