@@ -8,18 +8,18 @@ function saveProgress() {
 	var date = Date.now() + (365 * 24 * 60 * 60 * 1000);
 	var expires = "expires = " + (new Date(date).toUTCString());
 	var cookie = window.btoa(totalhamstercount +
-							"-" + hamstercount +
-							"-" + cagedhamsterclicks +
-							"-" + rarehamsterclicks +
-							"-" + islandlevel +
-							"-" + cagelevel +
-							"-" + foodlevel +
-							"-" + drinklevel +
-							"-" + basehamsterspersecond +
-							"-" + hamstermaximum +
-							"-" + hamstersperclick +
-							"-" + starttime +
-							"-" + playtime
+		"-" + hamstercount +
+		"-" + cagedhamsterclicks +
+		"-" + rarehamsterclicks +
+		"-" + islandlevel +
+		"-" + cagelevel +
+		"-" + foodlevel +
+		"-" + drinklevel +
+		"-" + basehamsterspersecond +
+		"-" + hamstermaximum +
+		"-" + hamstersperclick +
+		"-" + starttime +
+		"-" + playtime
 	);
 	document.cookies = "save = " + cookie + ";" + expires;
 	// display a small notice after saving
@@ -32,7 +32,10 @@ function saveProgress() {
 
 function checkForProgress() {
 	if (getProgress("save") != "") {
-		let save = window.atob(getProgress("save")).split("-");
+		var save = window.atob(getProgress("save")).split("-");
+		
+		console.log(save);
+		
 		totalhamstercount = save[0];
 		hamstercount = save[1];
 		cagedhamsterclicks = save[2];
