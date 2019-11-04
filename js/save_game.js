@@ -19,8 +19,6 @@ function saveProgress() {
 		"-" + starttime +
 		"-" + playtime
 	);
-	
-	console.log(save);
 	localStorage.setItem("savegame", save);
 	
 	var notice = new SaveNotice();
@@ -32,8 +30,6 @@ function saveProgress() {
 function getProgress() {
 	if (localStorage.getItem("savegame") != null) {
 		var save = window.atob(localStorage.getItem("savegame")).split("-");
-		
-		console.log(save);
 		
 		totalhamstercount = parseInt(save[0]);
 		hamstercount = parseInt(save[1]);
