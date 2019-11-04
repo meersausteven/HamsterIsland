@@ -31,7 +31,7 @@ function saveProgress() {
 
 function checkForProgress() {
 	if (localStorage.getItem("savegame") != "") {
-		var save = window.atob(getProgress("save")).split("-");
+		var save = window.atob(localStorage.getItem("savegame")).split("-");
 		
 		console.log(save);
 		
