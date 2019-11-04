@@ -1,5 +1,5 @@
 window.onload = function() {
-	checkForProgress();
+	getProgress();
 	updateStats();
 	startTime();
 	updateCageLevel();
