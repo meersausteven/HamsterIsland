@@ -5,7 +5,7 @@ var saveprogress_interval = setInterval(saveProgress, 120000);
 
 function saveProgress() {
 	playtime = Date.now() - starttime;
-	var save = totalhamstercount +
+	var save = window.btoa(totalhamstercount +
 		"-" + hamstercount +
 		"-" + cagedhamsterclicks +
 		"-" + rarehamsterclicks +
@@ -18,7 +18,7 @@ function saveProgress() {
 		"-" + hamstersperclick +
 		"-" + starttime +
 		"-" + playtime
-	;
+	);
 	
 	console.log(save);
 	localStorage.setItem("savegame", save);
