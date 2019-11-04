@@ -1,7 +1,7 @@
 
 // save progress every 2 minutes
 
-var savecookies_interval = setInterval(saveProgress, 120000);
+var saveprogress_interval = setInterval(saveProgress, 120000);
 
 function saveProgress() {
 	playtime = Date.now() - starttime;
@@ -29,7 +29,7 @@ function saveProgress() {
 
 // check for already saved progress
 
-function checkForProgress() {
+function getProgress() {
 	if (localStorage.getItem("savegame") != "") {
 		var save = window.atob(localStorage.getItem("savegame")).split("-");
 		
