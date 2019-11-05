@@ -27,13 +27,11 @@ body {
 	background-position: 50%
 }
 #hamster_cage {
-  max-width: 180px;
-  width: 10vw;
-  max-height: 280px;
-  height: 25vh;
+  width: 180px;
+  height: auto;
   position: absolute;
-  top: calc(50% - 12.5vh);
-  left: calc(50% - 5vw);
+  top: calc(50% - 125px);
+  left: calc(50% - 90px);
   cursor: pointer;
   transition: 0.15s;
 }
@@ -44,14 +42,12 @@ body {
   transform: scale(0.95);
 }
 #caged_hamster {
-	background-image: url(../pics/assets/caged_hamster.png);
-	max-width: 180px;
-  width: 10vw;
-  max-height: 250px;
-  height: 25vh;
+  background-image: url(../pics/assets/caged_hamster.png);
+  width: 180px;
+  height: auto;
   position: absolute;
-  top: calc(45% - 12.5vh);
-  left: calc(50% - 5vw);
+  top: calc(45% - 125px);
+  left: calc(50% - 90px);
   transition: 0.15s;
 }
 #caged_hamster:hover {
@@ -61,20 +57,18 @@ body {
 	transform: scale(0.95);
 }
 #hamster_food, #hamster_drink {
-	max-height: 100px;
-	height: 12vh;
-	max-width: 100px;
-	width: 6vw;
+	width: 100px;
+	height: auto;
 	position: absolute;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	top: calc(53vh - 50px);
 }
 #hamster_food {
-	left: 41vw;
+	left: calc(50% - 120px);
 }
 #hamster_drink {
-	left: 53vw;
+	left: calc(50% + 120px);
 }
 
 /* Display */
@@ -314,11 +308,11 @@ body {
 /* States of the open/closed shop menu */
 
 .shop-open {
-  height: 20vh !important;
+  height: 210px !important;
   overflow-x: auto !important;
 }
 .shop-open-button {
-  bottom: calc(20vh - 23px) !important;
+  bottom: 185px !important;
 }
 
 /* Particles that are created when clicking the cage */
