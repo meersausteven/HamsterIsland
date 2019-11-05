@@ -28,7 +28,7 @@ body {
 }
 #hamster_cage {
   width: 180px;
-  height: auto;
+  height: 240px;
   position: absolute;
   top: calc(50% - 125px);
   left: calc(50% - 90px);
@@ -44,7 +44,7 @@ body {
 #caged_hamster {
   background-image: url(../pics/assets/caged_hamster.png);
   width: 180px;
-  height: auto;
+  height: 240px;
   position: absolute;
   top: calc(45% - 125px);
   left: calc(50% - 90px);
@@ -58,7 +58,7 @@ body {
 }
 #hamster_food, #hamster_drink {
 	width: 100px;
-	height: auto;
+	height: 100px;
 	position: absolute;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
