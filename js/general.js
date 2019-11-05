@@ -36,31 +36,16 @@ function increaseHamsters(amount) {
 		if (amount > 0) {
 			totalhamstercount += amount;
 		}
-		if (amount <= 3) {
-			hamstercount += amount;
-			document.getElementById("counter").innerHTML = Math.round(hamstercount).toLocaleString() + " Hamsters";
-		} else {
-			let divider = Math.ceil((amount / 2) - 1);
-			for (divider; divider > 0; divider--) {
-				if ((amount % divider == 0)) {
-					var norestdivider = amount / divider;
-					break;
-				}
-			}
-			var i = 1;
+		for (i = 0; i < 10; i++) {
+			setTimeout(increaseCounter(), 100);
+			
 			function increaseCounter() {
-				hamstercount += amount / norestdivider;
-				if (hamstercount > hamstermaximum) {
-					let difference = hamstercount - hamstermaximum;
-					hamstercount -= difference;
-					totalhamstercount -= difference;
-				}
-				document.getElementById("counter").innerHTML = Math.round(hamstercount).toLocaleString() + " Hamsters";
-				if (i++ < norestdivider) {
-					setTimeout(increaseCounter, 20);
+				if (i != 10) {
+					hamstercount += Math.floor(amount / 10);
+				} else {
+					hamstercount += amount % 10;
 				}
 			}
-			increaseCounter();
 		}
 	}
 	addNewUpgradesToShop();
