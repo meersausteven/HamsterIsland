@@ -70,7 +70,7 @@ function cageClick(e) {
 		var hamsterWidth = parseFloat(hamsterStyle.width.replace("px", ""));
 		var hamsterTop = parseFloat(hamsterStyle.top.replace("px", ""));
 		var hamsterLeft = parseFloat(hamsterStyle.left.replace("px", ""));
-		particle.element.style.cssText = "top: " + (hamsterTop + hamsterHeight / 2 + particle.posY) + "px; left: " + (hamsterLeft + hamsterWidth / 2 + particle.posX) + "px; transform: rotate(" + Math.floor(Math.random() * 361) + "deg;";
+		particle.element.style.cssText = "top: " + (hamsterTop + hamsterHeight / 2 + particle.posY) + "px; left: " + (hamsterLeft + hamsterWidth / 2 + particle.posX) + "px; transform: rotate(" + Math.floor(Math.random() * 361) + "deg);";
 		particle.element.className += " animation-fade-out";
 
 		// create a node that displays the clicked hamsters
