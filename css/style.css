@@ -334,7 +334,7 @@ body {
 	animation-timing-function: ease-out;
 }
 @keyframes fade_out {
-	0%		{opacity: 1;}
+	0%	{opacity: 1;}
 	100%	{opacity: 0;}
 }
 
@@ -355,7 +355,7 @@ body {
 	animation-timing-function: ease-out;
 }
 @keyframes fade_upwards {
-	0%		{transform: translateY(0px); opacity: 1;}
+	0%	{transform: translateY(0px); opacity: 1;}
 	100%	{transform: translateY(-100px); opacity: 0;}
 }
 
