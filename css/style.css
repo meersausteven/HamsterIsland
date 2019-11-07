@@ -295,9 +295,9 @@ body {
 	border-radius: 4px;
 	text-align: center;
 }
-.animation-fade-out {
-	animation-name: 'fade_up';
-	-webkit-animation-name: 'fade_up';
+.animation-fade-up {
+	animation-name: fade_up;
+	-webkit-animation-name: fade_up;
 	animation-duration: 0.5s;
 	animation-iteration-count: 1;
 }
@@ -328,8 +328,8 @@ body {
 	background-image: url(../pics/hamsters/hamster_particle.png);
 }
 .animation-fade-out {
-	animation-name: 'fade_out';
-	-webkit-animation-name: 'fade_out';
+	animation-name: fade_out;
+	-webkit-animation-name: fade_out;
 	animation-duration: 1s;
 	animation-timing-function: ease-out;
 }
@@ -349,8 +349,8 @@ body {
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .animation-fade-upwards {
-	animation-name: 'fade_upwards';
-	-webkit-animation-name: 'fade_upwards';
+	animation-name: fade_upwards;
+	-webkit-animation-name: fade_upwards;
 	animation-duration: 1s;
 	animation-timing-function: ease-out;
 }
@@ -368,6 +368,7 @@ body {
 	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
 	cursor: pointer;
 	animation-name: rare_hamster_animation;
+	-webkit-animation-name: rare_hamster_animation;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	z-index: 100;
