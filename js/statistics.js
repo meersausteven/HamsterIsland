@@ -22,6 +22,8 @@ function updateStats() {
 	document.getElementById("stats_drink").innerHTML = drinklevel;
 	document.getElementById("stats_cage").innerHTML = cagelevel;
 	document.getElementById("stats_island").innerHTML = islandlevel;
+	document.getElementById("stats_hamsterlevel").innerHTML = hamsterlevel;
+	document.getElementById("stats_world").innerHTML = worldlevel;
 }
 
 // open / close the statistics
