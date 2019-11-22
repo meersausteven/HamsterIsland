@@ -7,12 +7,13 @@ class Particle {
 	constructor() {
 		this.element = document.createElement("div");
 		this.element.className = "background-preset particle";
+		this.hamstertype = Math.floor(Math.random() * hamsterlevel + 1);
 		this.randeg = Math.floor(Math.random() * 361);
 		this.posX = 100 * Math.cos(Math.floor(Math.random() * 361));
 		this.posY = 100 * Math.sin(Math.floor(Math.random() * 361));
 		this.element.style.cssText = "transform: rotate(" + this.randeg + "deg);";
 		document.body.appendChild(this.element);
-		//setTimeout(function() {this.delete()}.bind(this), 1000);
+		setTimeout(function() {this.delete()}.bind(this), 1000);
 	}
 	delete() {
 		document.body.removeChild(this.element);
