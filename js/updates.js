@@ -42,3 +42,11 @@ function updateDrinkLevel() {
 function updateIslandLevel() {
 	document.getElementById("hamster_island").style.cssText = "background-image: url('pics/island/level_" + islandlevel + ".png');";
 }
+
+function updateHamsterLevel() {
+	document.getElementById("caged_hamster").style.cssText = "background-image: url('pics/hamster/level_" + hamsterlevel + ".png');";
+}
+
+function updateWorldLevel() {
+	document.getElementById("hamster_sea").style.cssText = "background-image: url('pics/world/level_" + worldlevel + ".png');";
+}
