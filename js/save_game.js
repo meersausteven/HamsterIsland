@@ -10,6 +10,8 @@ function saveProgress() {
 		"-" + cagedhamsterclicks +
 		"-" + rarehamsterclicks +
 		"-" + islandlevel +
+		"-" + worldlevel +
+		"-" + hamsterlevel +
 		"-" + cagelevel +
 		"-" + foodlevel +
 		"-" + drinklevel +
@@ -36,13 +38,15 @@ function getProgress() {
 		cagedhamsterclicks = parseInt(save[2]);
 		rarehamsterclicks = parseInt(save[3]);
 		islandlevel = parseInt(save[4]);
-		cagelevel = parseInt(save[5]);
-		foodlevel = parseInt(save[6]);
-		drinklevel = parseInt(save[7]);
-		basehamsterspersecond = parseInt(save[8]);
-		hamstermaximum = parseInt(save[9]);
-		hamstersperclick = parseInt(save[10]);
-		starttime = parseInt(save[11]);
-		playtime = parseInt(save[12]);
+		worldlevel = parseInt(save[5]);
+		hamsterlevel = parseInt(save[6]);
+		cagelevel = parseInt(save[7]);
+		foodlevel = parseInt(save[8]);
+		drinklevel = parseInt(save[9]);
+		basehamsterspersecond = parseInt(save[10]);
+		hamstermaximum = parseInt(save[11]);
+		hamstersperclick = parseInt(save[12]);
+		starttime = parseInt(save[13]);
+		playtime = parseInt(save[14]);
 	}
 }
