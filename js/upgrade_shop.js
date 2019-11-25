@@ -102,7 +102,7 @@ function addNewUpgradesToShop() {
   var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades);
   allupgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (upgrade.bought === false) && (upgrade.displayed === false)) {
-		if (upgrade.level != 0) {
+		if ( (upgrade.level != 0) && (upgrade.tag != "world") && (upgrade.world == worldlevel) ) {
 			if ((upgrade.tag == "cage") && (cagelevel != upgrade.level - 1)) {
 				return;
 			} else if ((upgrade.tag == "food") && (foodlevel != upgrade.level - 1)) {
@@ -111,8 +111,13 @@ function addNewUpgradesToShop() {
 				return;
 			} else if ((upgrade.tag == "island") && (islandlevel != upgrade.level - 1)) {
 				return;
+			} else if ((upgrade.tag == "hamster") && (hamsterlevel != upgrade.level - 1)) {
+				return;
 			}
+		} else if ( (upgrade.level != 0) && (upgrade.tag == "world") && (upgrade.level != worldlevel + 1) ) {
+			return;
 		}
+		
 		upgrade.displayed = true;
 		var upgradeelement = document.createElement("div");
 			upgradeelement.className = "shop-upgrade shop-item shop-item-unbuyable shop-" + upgrade.tag + "-upgrade";
