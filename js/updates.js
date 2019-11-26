@@ -16,7 +16,7 @@ function updateHamsterMaximum() {
 }
 
 function updateCageLevel() {
-	document.getElementById("hamster_cage").style.cssText = "background-image: url('pics/cage/level_" + cagelevel + ".png');";
+	document.getElementById("hamster_cage").style.cssText = "background-image: url('pics/cage/world_" + worldlevel + "/level_" + cagelevel + ".png');";
 }
 
 function updateFoodLevel() {
@@ -25,7 +25,7 @@ function updateFoodLevel() {
 		if (foodlevel == 1) {
 			hamsterfood.classList.remove("food-drink-not-bought");
 		}
-		hamsterfood.style.cssText = "background-image: url('pics/food/level_" + foodlevel + ".png');";
+		hamsterfood.style.cssText = "background-image: url('pics/food/world_" + worldlevel + "/level_" + foodlevel + ".png');";
 	}
 }
 
@@ -35,16 +35,16 @@ function updateDrinkLevel() {
 		if (drinklevel == 1) {
 			hamsterdrink.classList.remove("food-drink-not-bought");
 		}
-		hamsterdrink.style.cssText = "background-image: url('pics/drink/level_" + drinklevel + ".png');";
+		hamsterdrink.style.cssText = "background-image: url('pics/drink/world_" + worldlevel + "/level_" + drinklevel + ".png');";
 	}
 }
 
 function updateIslandLevel() {
-	document.getElementById("hamster_island").style.cssText = "background-image: url('pics/island/level_" + islandlevel + ".png');";
+	document.getElementById("hamster_island").style.cssText = "background-image: url('pics/island/world_" + worldlevel + "/level_" + islandlevel + ".png');";
 }
 
 function updateHamsterLevel() {
-	document.getElementById("caged_hamster").style.cssText = "background-image: url('pics/hamster/level_" + hamsterlevel + ".png');";
+	document.getElementById("caged_hamster").style.cssText = "background-image: url('pics/hamster/world_" + worldlevel + "/level_" + hamsterlevel + ".png');";
 }
 
 function updateWorldLevel() {
