@@ -31,37 +31,37 @@ function toggleShop() {
 // Cage upgrades increase hamsters per click 
 var cageupgrades = [
 	// world 0 upgrades - Pet Shop
-	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"", tag:"cage", description:"An old cardboard box you found in the trash. At least hamsters aren't picky.", bought:false, displayed:false},
-	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"", tag:"cage", description:"You bought it because they gave you a discount, even though you don't have a baby.", bought:false, displayed:false},
-	{id:"c003", price:960, level:3, world: 0, action:"add", value:3, name:"", tag:"cage", description:"Now that this fishtank is broken, it won't hold any liquids anymore, but the sharp glass shards will hold your hamsters in place.", bought:false, displayed:false},
-	{id:"c004", price:2460, level:4, world: 0, action:"add", value:4, name:"", tag:"cage", description:"You tried your best making this...cage... At least you made sure that the rusty nails keep the hamsters from getting out.", bought:false, displayed:false},
-	{id:"c005", price:9990, level:5, world: 0, action:"add", value:5, name:"", tag:"cage", description:"Stolen from an old military base, this will definitly keep your hamsters in place.", bought:false, displayed:false},
+	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c003", price:960, level:3, world: 0, action:"add", value:3, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c004", price:2460, level:4, world: 0, action:"add", value:4, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c005", price:9990, level:5, world: 0, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
 	//world 1 upgrades - 
 ];
 // Food upgrades increase hamsters generated per second
 var foodupgrades = [
 	// world 0 upgrades - Pet Shop
-	{id:"f001", price:75, level:1, world: 0, action:"add", value:1, name:"Basic Hamster Food", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f002", price:375, level:2, world: 0, action:"add", value:1, name:"Dry Oats", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f003", price:1750, level:3, world: 0, action:"add", value:1, name:"Dried Barley", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f004", price:7360, level:4, world: 0, action:"add", value:2, name:"Bag of Hazelnuts", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f005", price:13337, level:5, world: 0, action:"add", value:2, name:"Fresh Cucumber", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f006", price:34200, level:6, world: 0, action:"add", value:2, name:"Gammarus", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f007", price:62500, level:7, world: 0, action:"add", value:3, name:"Fruit Basket", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f008", price:138000, level:8, world: 0, action:"add", value:5, name:"Onion Slices", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f001", price:75, level:1, world: 0, action:"add", value:1, name:"Basic Hamster Food", tag:"food", description:"Just normal hamster food. Nothing more. Nothing less.", bought:false, displayed:false},
+	{id:"f002", price:375, level:2, world: 0, action:"add", value:1, name:"Dry Oats", tag:"food", description:"Oats are packed with carbohydrates and supply your hamsters with energy.", bought:false, displayed:false},
+	{id:"f003", price:1750, level:3, world: 0, action:"add", value:1, name:"Dried Barley", tag:"food", description:"Barley contains a lot of vitamins, keeping your hamsters healthy!", bought:false, displayed:false},
+	{id:"f004", price:7360, level:4, world: 0, action:"add", value:2, name:"Bag of Hazelnuts", tag:"food", description:"Nuts are essential for hamsters, supplying them with oils and fat.", bought:false, displayed:false},
+	{id:"f005", price:13337, level:5, world: 0, action:"add", value:2, name:"Fresh Cucumber", tag:"food", description:"Fresh vegetables supply water and vitamins. Perfect for keeping your heamsters healthy.", bought:false, displayed:false},
+	{id:"f006", price:34200, level:6, world: 0, action:"add", value:2, name:"Gammarus", tag:"food", description:"You had to google <b>Gammarus</b>, didn't you? It's like a water insect. Yes, hamsters eat that.", bought:false, displayed:false},
+	{id:"f007", price:62500, level:7, world: 0, action:"add", value:3, name:"Fruit Salad", tag:"food", description:"Most people that breed hamsters would say that fruits are unhealthy because of their high amounts of sugar, but look at them go!", bought:false, displayed:false},
+	{id:"f008", price:138000, level:8, world: 0, action:"add", value:5, name:"Onion Slices", tag:"food", description:"Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion...", bought:false, displayed:false},
 	//world 1 upgrades -
 ];
 // Drink upgrades increase hamsters generated per second
 var drinkupgrades = [
 	// world 0 upgrades - Pet Shop
-	{id:"d001", price:125, level:1, world: 0, action:"add", value:1, name:"Water", tag:"drink", description:"", bought:false, displayed:false},
-	{id:"d002", price:650, level:2, world: 0, action:"add", value:1, name:"Mineral Water", tag:"drink", description:"", bought:false, displayed:false},
-	{id:"d003", price:2200, level:3, world: 0, action:"add", value:1, name:"Camomile Tea", tag:"drink", description:"", bought:false, displayed:false},
-	{id:"d004", price:10600, level:4, world: 0, action:"add", value:2, name:"Rose Hip Tea", tag:"drink", description:"", bought:false, displayed:false},
-	{id:"d005", price:25750, level:5, world: 0, action:"add", value:2, name:"Peppermint Tea", tag:"drink", description:"", bought:false, displayed:false},
-	{id:"d006", price:55800, level:6, world: 0, action:"add", value:2, name:"Fresh Milk", tag:"drink", description:"", bought:false, displayed:false},
-	{id:"d007", price:126000, level:7, world: 0, action:"add", value:3, name:"Apple Juice", tag:"drink", description:"", bought:false, displayed:false},
-	{id:"d008", price:267000, level:8, world: 0, action:"add", value:5, name:"Plepsi Soda", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d001", price:125, level:1, world: 0, action:"add", value:1, name:"Water", tag:"drink", description:"Just basic tap water. You gotta start somewhere.", bought:false, displayed:false},
+	{id:"d002", price:650, level:2, world: 0, action:"add", value:1, name:"Mineral Water", tag:"drink", description:"Mineral water drawn from a fountain on top of a volcano. Healthy and refreshing!", bought:false, displayed:false},
+	{id:"d003", price:2200, level:3, world: 0, action:"add", value:1, name:"Camomile Tea", tag:"drink", description:"Cooled down camomile tea keeps your hamsters healthy and hydrated.", bought:false, displayed:false},
+	{id:"d004", price:10600, level:4, world: 0, action:"add", value:2, name:"Rose Hip Tea", tag:"drink", description:"Everybode prefers Rose hip over camomile, right? Your hamsters probably do so as well.", bought:false, displayed:false},
+	{id:"d005", price:25750, level:5, world: 0, action:"add", value:2, name:"Peppermint Tea", tag:"drink", description:"Peppermint tea is perfect when you are having a cold; so when you are already healthy it should be even better!", bought:false, displayed:false},
+	{id:"d006", price:55800, level:6, world: 0, action:"add", value:2, name:"Almond Milk", tag:"drink", description:"Tastes just like regular milk, but without the stress hormones and antibiotics.", bought:false, displayed:false},
+	{id:"d007", price:126000, level:7, world: 0, action:"add", value:3, name:"Apple Juice", tag:"drink", description:"Sweet sweet apple juice. The kids love it and the hamsters run faster because of the sugar!", bought:false, displayed:false},
+	{id:"d008", price:267000, level:8, world: 0, action:"add", value:5, name:"Plepsi Soda", tag:"drink", description:"Soda with 90% sugar makes your hamsters run at the speed of sound. Any faster and they'll turn blue and start collecting rings.", bought:false, displayed:false},
 	//world 1 upgrades
 ];
 // Island upgrades increase maximum amount of hamsters currently allowed
@@ -74,7 +74,7 @@ var islandupgrades = [
 	{id:"i005", price:150000, level:5, world: 0, action:"multiply", value:2, name:"Ultra Supreme Cage", tag:"island", description:"The best of the best. The enitre earth population of hamsters could fit in there!", bought:false, displayed:false},
 	// world 1 upgrades -
 ];
-// World upgrades unlock new upgrades (new world starts with small island but same amount of max. hamsters)
+// World upgrades unlock new upgrades (new world starts with small island but same amount of max. hamsters. New design/theme for upgrades)
 var worldupgrades = [
 	{id: "w01", price: 300000, level: 1, name:"City Park Lake", tag:"world", description:"Taking your hamsters out for some fresh air is a brilliant idea!", bought: false, displayed: false},
 	{id: "w02", price: 999999, level: 2,  name:"Underground Sanctuary", tag:"world", description:"Deep down under your hamsters will be safe from any predators, I think.", bought: false, displayed: false},
@@ -82,18 +82,18 @@ var worldupgrades = [
 	{id: "w04", price: 99999999, level: 4,  name:"Candy Land", tag:"world", description:"In this literal paradise your hamsters can live in harmony and diabetes.", bought: false, displayed: false},
 
 ];
-// Cage upgrades increase hamsters per click 
+// Hamster upgrades increase hamsters per click 
 var hamsterupgrades = [
 	// world 0 upgrades - Pet Shop
-	{id:"h001", price:6969, level:1, world: 0, action:"add", value:5, name:"Syrian Hamster", tag:"hamster", description:"Bigger island mean more space. More space means more hamsters. More hamsters means more upgrades.", bought:false, displayed:false},
-	{id:"h002", price:256000, level:2, world: 0, action:"add", value:10, name:"Chinese Hamster", tag:"hamster", description:"Bigger island mean more space. More space means more hamsters. More hamsters means more upgrades.", bought:false, displayed:false},
-	{id:"h003", price:9999999, level:3, world: 0, action:"add", value:25, name:"Golden Hamster", tag:"hamster", description:"Bigger island mean more space. More space means more hamsters. More hamsters means more upgrades.", bought:false, displayed:false},
+	{id:"h001", price:6969, level:1, world: 0, action:"add", value:5, name:"Syrian Hamster", tag:"hamster", description:"The syrian hamster is very popular because of their soft fur.", bought:false, displayed:false},
+	{id:"h002", price:256000, level:2, world: 0, action:"add", value:10, name:"Chinese Hamster", tag:"hamster", description:"The stripes of the chinese hamsters are the same with race cars. They make them go faster.", bought:false, displayed:false},
+	{id:"h003", price:9999999, level:3, world: 0, action:"add", value:25, name:"Golden Hamster", tag:"hamster", description:"As a kid I always thought golden hamsters are made of gold. Oh well, maybe in the future...", bought:false, displayed:false},
 	// world 1 upgrades -
 	
 ];
 
 function addNewUpgradesToShop() {
-  var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades);
+  var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, hamsterupgrades, worldupgrades);
   allupgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (upgrade.bought === false) && (upgrade.displayed === false)) {
 		if ( (upgrade.level != 0) && (upgrade.tag != "world") && (upgrade.world == worldlevel) ) {
