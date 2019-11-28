@@ -33,10 +33,16 @@ var cageupgrades = [
 	// world 0 upgrades - Pet Shop
 	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"", tag:"cage", description:"", bought:false, displayed:false},
 	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c003", price:960, level:3, world: 0, action:"add", value:3, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c004", price:2460, level:4, world: 0, action:"add", value:4, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c005", price:9990, level:5, world: 0, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	//world 1 upgrades - 
+	{id:"c003", price:2360, level:3, world: 0, action:"add", value:3, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c004", price:6460, level:4, world: 0, action:"add", value:4, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c005", price:14990, level:5, world: 0, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	//world 1 upgrades - City Park Lake
+	{id:"c001", price:50, level:1, world: 1, action:"add", value:2, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c002", price:150, level:2, world: 1, action:"add", value:2, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c003", price:960, level:3, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c004", price:2460, level:4, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c005", price:9990, level:5, world: 1, action:"add", value:7, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	// world 2 upgrades - 
 ];
 // Food upgrades increase hamsters generated per second
 var foodupgrades = [
@@ -49,7 +55,16 @@ var foodupgrades = [
 	{id:"f006", price:34200, level:6, world: 0, action:"add", value:2, name:"Gammarus", tag:"food", description:"You had to google <b>Gammarus</b>, didn't you? It's like a water insect. Yes, hamsters eat that.", bought:false, displayed:false},
 	{id:"f007", price:62500, level:7, world: 0, action:"add", value:3, name:"Fruit Salad", tag:"food", description:"Most people that breed hamsters would say that fruits are unhealthy because of their high amounts of sugar, but look at them go!", bought:false, displayed:false},
 	{id:"f008", price:138000, level:8, world: 0, action:"add", value:5, name:"Onion Slices", tag:"food", description:"Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion...", bought:false, displayed:false},
-	//world 1 upgrades -
+	//world 1 upgrades - City Park Lake
+	{id:"f009", price:386000, level:1, world: 1, action:"add", value:1, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f010", price:523900, level:2, world: 1, action:"add", value:1, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f011", price:612700, level:3, world: 1, action:"add", value:2, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f012", price:768000, level:4, world: 1, action:"add", value:2, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f013", price:1085160, level:5, world: 1, action:"add", value:3, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f014", price:2220000, level:6, world: 1, action:"add", value:3, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f015", price:5291000, level:7, world: 1, action:"add", value:5, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f016", price:8230000, level:8, world: 1, action:"add", value:7, name:"", tag:"food", description:"", bought:false, displayed:false},
+	// world 2 upgrades - 
 ];
 // Drink upgrades increase hamsters generated per second
 var drinkupgrades = [
@@ -62,7 +77,16 @@ var drinkupgrades = [
 	{id:"d006", price:55800, level:6, world: 0, action:"add", value:2, name:"Almond Milk", tag:"drink", description:"Tastes just like regular milk, but without the stress hormones and antibiotics.", bought:false, displayed:false},
 	{id:"d007", price:126000, level:7, world: 0, action:"add", value:3, name:"Apple Juice", tag:"drink", description:"Sweet sweet apple juice. The kids love it and the hamsters run faster because of the sugar!", bought:false, displayed:false},
 	{id:"d008", price:267000, level:8, world: 0, action:"add", value:5, name:"Plepsi Soda", tag:"drink", description:"Soda with 90% sugar makes your hamsters run at the speed of sound. Any faster and they'll turn blue and start collecting rings.", bought:false, displayed:false},
-	//world 1 upgrades
+	//world 1 upgrades - City Park Lake
+	{id:"d009", price:406900, level:1, world: 1, action:"add", value:1, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d010", price:637000, level:2, world: 1, action:"add", value:1, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d011", price:721960, level:3, world: 1, action:"add", value:2, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d012", price:987000, level:4, world: 1, action:"add", value:2, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d013", price:1645000, level:5, world: 1, action:"add", value:3, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d014", price:3030303, level:6, world: 1, action:"add", value:3, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d015", price:7777777, level:7, world: 1, action:"add", value:5, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	{id:"d016", price:9130000, level:8, world: 1, action:"add", value:7, name:"", tag:"drink", description:"", bought:false, displayed:false},
+	// world 2 upgrades - 
 ];
 // Island upgrades increase maximum amount of hamsters currently allowed
 var islandupgrades = [
@@ -72,28 +96,38 @@ var islandupgrades = [
 	{id:"i003", price:34000, level:3, world: 0, action:"add", value:36000, name:"Large Cage", tag:"island", description:"A large cage. Large enough to house huge quantities of hamsters.", bought:false, displayed:false},
 	{id:"i004", price:70000, level:4, world: 0, action:"add", value:80000, name:"Deluxe Cage", tag:"island", description:"The deluxe model. An entire town of hamsters could live in there!", bought:false, displayed:false},
 	{id:"i005", price:150000, level:5, world: 0, action:"multiply", value:2, name:"Ultra Supreme Cage", tag:"island", description:"The best of the best. The enitre earth population of hamsters could fit in there!", bought:false, displayed:false},
-	// world 1 upgrades -
-];
-// World upgrades unlock new upgrades (new world starts with small island but same amount of max. hamsters. New design/theme for upgrades)
-var worldupgrades = [
-	{id: "w01", price: 300000, level: 1, name:"City Park Lake", tag:"world", description:"Taking your hamsters out for some fresh air is a brilliant idea!", bought: false, displayed: false},
-	{id: "w02", price: 999999, level: 2,  name:"Underground Sanctuary", tag:"world", description:"Deep down under your hamsters will be safe from any predators, I think.", bought: false, displayed: false},
-	{id: "w03", price: 9999999, level: 3,  name:"Forsaken Island", tag:"world", description:"Lonely islands always imply peace... and incest.", bought: false, displayed: false},
-	{id: "w04", price: 99999999, level: 4,  name:"Candy Land", tag:"world", description:"In this literal paradise your hamsters can live in harmony and diabetes.", bought: false, displayed: false},
-
+	// world 1 upgrades - City Park Lake
+	{id:"i006", price:300000, level:1, world: 1, action:"add", value:200000, name:"", tag:"island", description:"", bought:false, displayed:false},
+	{id:"i007", price:500000, level:2, world: 1, action:"add", value:350000, name:"", tag:"island", description:"", bought:false, displayed:false},
+	{id:"i008", price:850000, level:3, world: 1, action:"add", value:425000, name:"", tag:"island", description:"", bought:false, displayed:false},
+	{id:"i009", price:1275000, level:4, world: 1, action:"add", value:725000, name:"", tag:"island", description:"", bought:false, displayed:false},
+	{id:"i010", price:2000000, level:5, world: 1, action:"multiply", value:5, name:"", tag:"island", description:"", bought:false, displayed:false},
+	// world 2 upgrades - 
 ];
 // Hamster upgrades increase hamsters per click 
 var hamsterupgrades = [
 	// world 0 upgrades - Pet Shop
-	{id:"h001", price:6969, level:1, world: 0, action:"add", value:5, name:"Syrian Hamster", tag:"hamster", description:"The syrian hamster is very popular because of their soft fur.", bought:false, displayed:false},
-	{id:"h002", price:256000, level:2, world: 0, action:"add", value:10, name:"Chinese Hamster", tag:"hamster", description:"The stripes of the chinese hamsters are the same with race cars. They make them go faster.", bought:false, displayed:false},
-	{id:"h003", price:9999999, level:3, world: 0, action:"add", value:25, name:"Golden Hamster", tag:"hamster", description:"As a kid I always thought golden hamsters are made of gold. Oh well, maybe in the future...", bought:false, displayed:false},
-	// world 1 upgrades -
+	{id:"h001", price:13000, level:1, world: 0, action:"add", value:5, name:"Syrian Hamster", tag:"hamster", description:"The syrian hamster is very popular because of their soft fur.", bought:false, displayed:false},
+	{id:"h002", price:78500, level:2, world: 0, action:"add", value:10, name:"Chinese Hamster", tag:"hamster", description:"The stripes of the chinese hamsters are the same with race cars. They make them go faster.", bought:false, displayed:false},
+	{id:"h003", price:215000, level:3, world: 0, action:"add", value:25, name:"Golden Hamster", tag:"hamster", description:"As a kid I always thought golden hamsters are made of gold. Oh well, maybe in the future...", bought:false, displayed:false},
+	// world 1 upgrades - City Park Lake
+	{id:"h004", price:645000, level:1, world: 1, action:"add", value:15, name:"", tag:"hamster", description:"", bought:false, displayed:false},
+	{id:"h005", price:1850000, level:2, world: 1, action:"add", value:20, name:"", tag:"hamster", description:"", bought:false, displayed:false},
+	{id:"h006", price:7550000, level:3, world: 1, action:"add", value:35, name:"", tag:"hamster", description:"", bought:false, displayed:false},
+	// world 2 upgrades - 
 	
+];
+// World upgrades unlock new upgrades (new world starts with small island but same amount of max. hamsters. New design/theme for upgrades)
+var worldupgrades = [
+	{id: "w01", price: 300000, level: 1, name:"City Park Lake", tag:"world", description:"Taking your hamsters out for some fresh air is a brilliant idea!", bought: false, displayed: false},
+	{id: "w02", price: 10000000, level: 2, name:"Underground Sanctuary", tag:"world", description:"Deep down under your hamsters will be safe from any predators, I think.", bought: false, displayed: false},
+	{id: "w03", price: 99999999999, level: 3, name:"Bermuda Triangle", tag:"world", description:"Ohhh, so the hamsters were responsible for all the ships and airplanes vanishing near the Bermuda Triangle...", bought: false, displayed: false},
+	{id: "w04", price: 9999999999999, level: 4, name:"Candy Land", tag:"world", description:"In this literal paradise your hamsters can live in harmony and diabetes.", bought: false, displayed: false},
+
 ];
 
 function addNewUpgradesToShop() {
-  var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, hamsterupgrades, worldupgrades);
+  var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
   allupgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (upgrade.bought === false) && (upgrade.displayed === false)) {
 		if ( (upgrade.level != 0) && (upgrade.tag != "world") && (upgrade.world == worldlevel) ) {
@@ -119,7 +153,7 @@ function addNewUpgradesToShop() {
 			upgradeelement.innerHTML = "<h1>" + upgrade.name + "</h1><h2>Costs: " + upgrade.price.toLocaleString() + " Hamsters</h2><p class='shop-item-icon' style='background-image: url(./pics/upgrades/" + upgrade.id + ".png)';'></p>";
 			upgradeelement.onclick = function() {
 				var index = this.id.replace('upgrade_','');
-				var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades);
+				var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
 				for (var i = 0; i < allupgrades.length; i++) {
 					if (allupgrades[i].id == index) {
 						var upgrade = allupgrades[i];
@@ -167,6 +201,13 @@ function addNewUpgradesToShop() {
 					case "world":
 						worldlevel++;
 						updateWorldLevel();
+						hamsterlevel = 0;
+						foodlevel = 0;
+						drinklevel = 0;
+						islandlevel = 0;
+						updateIslandLevel();
+						cagelevel = 0;
+						updateCageLevel();
 						break;
 					}
 					increaseHamsters(-(upgrade.price));
@@ -181,7 +222,7 @@ function addNewUpgradesToShop() {
 			}
 			upgradeelement.onmouseenter = function() {
 				var index = this.id.replace("upgrade_","");
-				var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades);
+				var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
 				for (var i = 0; i < allupgrades.length; i++) {
 					if (allupgrades[i].id == index) {
 						var upgrade = allupgrades[i];
@@ -194,19 +235,19 @@ function addNewUpgradesToShop() {
 					} else if (upgrade.action == "add") {
 						action = "Increases your hamsters generated per second by " + upgrade.value + ".";
 					}
-				}
-				if (upgrade.tag == "cage" ||upgrade.tag == "hamster") {
+				} else if (upgrade.tag == "cage" ||upgrade.tag == "hamster") {
 					if (upgrade.action == "multiply") {
 						action = "Increases your hamsters generated per click by " + upgrade.value + " times.";
 					} else if (upgrade.action == "add") {
 						action = "Increases your hamsters generated per click by " + upgrade.value + ".";
 					}
-				}
-				if (upgrade.tag == "island") {
+				} else if (upgrade.tag == "island") {
 					action = "Increases your max. amount of hamsters to " + upgrade.value.toLocaleString() + ".";
-				}
-				if (upgrade.tag == "world") {
-						
+				} else if (upgrade.tag == "world") {
+					action = "Sends your hamsters to a new world with new upgrades. You will keep all your already bought upgrades.";
+				} else {
+					// something went wrong, upgrade.tag not known
+					action = "Error: Unknown upgrade-tag. If you see this, please tell the developer.";
 				}
 				var upgradebox = document.getElementById("upgrade_" + upgrade.id);
 				var upgradeposition = upgradebox.getBoundingClientRect();
@@ -226,7 +267,7 @@ function addNewUpgradesToShop() {
 }
 
 function checkForBuyableUpgrades() {
-	var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades);
+	var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
 	allupgrades.forEach(function(upgrade) {
 		if ((upgrade.bought === false) && (upgrade.displayed === true) && (hamstercount >= upgrade.price)) {
 			document.getElementById("upgrade_" + upgrade.id).classList.remove("shop-item-unbuyable");
