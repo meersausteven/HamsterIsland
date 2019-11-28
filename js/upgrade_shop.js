@@ -56,11 +56,11 @@ var foodupgrades = [
 	{id:"f007", price:62500, level:7, world: 0, action:"add", value:3, name:"Fruit Salad", tag:"food", description:"Most people that breed hamsters would say that fruits are unhealthy because of their high amounts of sugar, but look at them go!", bought:false, displayed:false},
 	{id:"f008", price:138000, level:8, world: 0, action:"add", value:5, name:"Onion Slices", tag:"food", description:"Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion Onion...", bought:false, displayed:false},
 	//world 1 upgrades - City Park Lake
-	{id:"f009", price:386000, level:1, world: 1, action:"add", value:1, name:"", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f010", price:523900, level:2, world: 1, action:"add", value:1, name:"", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f011", price:612700, level:3, world: 1, action:"add", value:2, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f009", price:386000, level:1, world: 1, action:"add", value:1, name:"Bread Crumbs", tag:"food", description:"The elderly always think your hamsters are ducks, so they just keep throwing their bread.", bought:false, displayed:false},
+	{id:"f010", price:523900, level:2, world: 1, action:"add", value:1, name:"Dry Buns", tag:"food", description:"Those seniors just keep throwing their baking goods at your hamsters. I already told them a hundred times to stop.", bought:false, displayed:false},
+	{id:"f011", price:612700, level:3, world: 1, action:"add", value:2, name:"Whole Breads", tag:"food", description:"Okay wow, this is just unreasonable now. What's wrong with old people, throwing baking goods in public lakes?!", bought:false, displayed:false},
 	{id:"f012", price:768000, level:4, world: 1, action:"add", value:2, name:"", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f013", price:1085160, level:5, world: 1, action:"add", value:3, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f013", price:1185125, level:5, world: 1, action:"add", value:3, name:"", tag:"food", description:"", bought:false, displayed:false},
 	{id:"f014", price:2220000, level:6, world: 1, action:"add", value:3, name:"", tag:"food", description:"", bought:false, displayed:false},
 	{id:"f015", price:5291000, level:7, world: 1, action:"add", value:5, name:"", tag:"food", description:"", bought:false, displayed:false},
 	{id:"f016", price:8230000, level:8, world: 1, action:"add", value:7, name:"", tag:"food", description:"", bought:false, displayed:false},
@@ -97,11 +97,11 @@ var islandupgrades = [
 	{id:"i004", price:70000, level:4, world: 0, action:"add", value:80000, name:"Deluxe Cage", tag:"island", description:"The deluxe model. An entire town of hamsters could live in there!", bought:false, displayed:false},
 	{id:"i005", price:150000, level:5, world: 0, action:"multiply", value:2, name:"Ultra Supreme Cage", tag:"island", description:"The best of the best. The enitre earth population of hamsters could fit in there!", bought:false, displayed:false},
 	// world 1 upgrades - City Park Lake
-	{id:"i006", price:300000, level:1, world: 1, action:"add", value:200000, name:"", tag:"island", description:"", bought:false, displayed:false},
-	{id:"i007", price:500000, level:2, world: 1, action:"add", value:350000, name:"", tag:"island", description:"", bought:false, displayed:false},
-	{id:"i008", price:850000, level:3, world: 1, action:"add", value:425000, name:"", tag:"island", description:"", bought:false, displayed:false},
-	{id:"i009", price:1275000, level:4, world: 1, action:"add", value:725000, name:"", tag:"island", description:"", bought:false, displayed:false},
-	{id:"i010", price:2000000, level:5, world: 1, action:"multiply", value:5, name:"", tag:"island", description:"", bought:false, displayed:false},
+	{id:"i006", price:300000, level:1, world: 1, action:"add", value:200000, name:"Small Lily Pads", tag:"island", description:"These lily pads will keep your hamsters afloat on the lake surface.", bought:false, displayed:false},
+	{id:"i007", price:500000, level:2, world: 1, action:"add", value:350000, name:"Big Lily Pads", tag:"island", description:"Big lily pads that help your hamsters stay dry.", bought:false, displayed:false},
+	{id:"i008", price:850000, level:3, world: 1, action:"add", value:425000, name:"Single Lotus Blad", tag:"island", description:"Bigger than any lily pads in the lake.", bought:false, displayed:false},
+	{id:"i009", price:1275000, level:4, world: 1, action:"add", value:725000, name:"Mutliple Lotus Blads", tag:"island", description:"Even bigger lotus blads for all your hamsters.", bought:false, displayed:false},
+	{id:"i010", price:2000000, level:5, world: 1, action:"multiply", value:5, name:"Victoria Lotus Leaves", tag:"island", description:"The world's biggest lotus leaves, keeping your hamsters from drowning.", bought:false, displayed:false},
 	// world 2 upgrades - 
 ];
 // Hamster upgrades increase hamsters per click 
