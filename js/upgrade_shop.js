@@ -126,8 +126,9 @@ var worldupgrades = [
 
 ];
 
+var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
+
 function addNewUpgradesToShop() {
-  var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
   allupgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (upgrade.bought === false) && (upgrade.displayed === false)) {
 		if ( (upgrade.level != 0) && (upgrade.tag != "world") && (upgrade.world == worldlevel) ) {
@@ -153,7 +154,6 @@ function addNewUpgradesToShop() {
 			upgradeelement.innerHTML = "<h1>" + upgrade.name + "</h1><h2>Costs: " + upgrade.price.toLocaleString() + " Hamsters</h2><p class='shop-item-icon' style='background-image: url(./pics/upgrades/" + upgrade.id + ".png)';'></p>";
 			upgradeelement.onclick = function() {
 				var index = this.id.replace('upgrade_','');
-				var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
 				for (var i = 0; i < allupgrades.length; i++) {
 					if (allupgrades[i].id == index) {
 						var upgrade = allupgrades[i];
@@ -222,7 +222,6 @@ function addNewUpgradesToShop() {
 			}
 			upgradeelement.onmouseenter = function() {
 				var index = this.id.replace("upgrade_","");
-				var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
 				for (var i = 0; i < allupgrades.length; i++) {
 					if (allupgrades[i].id == index) {
 						var upgrade = allupgrades[i];
@@ -267,7 +266,6 @@ function addNewUpgradesToShop() {
 }
 
 function checkForBuyableUpgrades() {
-	var allupgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
 	allupgrades.forEach(function(upgrade) {
 		if ((upgrade.bought === false) && (upgrade.displayed === true) && (hamstercount >= upgrade.price)) {
 			document.getElementById("upgrade_" + upgrade.id).classList.remove("shop-item-unbuyable");
