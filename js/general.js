@@ -47,7 +47,7 @@ function increaseHamsters(amount) {
 				} else {
 					hamstercount += amount % 10;
 				}
-				document.getElementById("counter").innerHTML = hamstercount;
+				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " hamsters";
 			}
 		}
 	}
