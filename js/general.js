@@ -38,18 +38,17 @@ function increaseHamsters(amount) {
 		if (amount > 0) {
 			totalhamstercount += amount;
 		}
-		for (i = 1; i <= 10; i++) {
+		for (i = 0; i <= 10; i++) {
 			setTimeout(increaseCounter(), 100);
 			// only run every 0.1 sec
 			function increaseCounter() {
 				if (i < 10) {
 					hamstercount += Math.floor(amount / 10);
-					console.log(i + ": " + Math.floor(amount / 10));
+					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				} else {
 					hamstercount += amount % 10;
-					console.log(i + ": " + amount % 10);
+					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				}
-				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 			}
 		}
 	}
