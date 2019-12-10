@@ -38,7 +38,7 @@ function increaseHamsters(amount) {
 		if (amount > 0) {
 			totalhamstercount += amount;
 		}
-		for (i = 0; i < 10; i++) {
+		for (i = 0; i <= 10; i++) {
 			setTimeout(increaseCounter(), 100);
 			// only run every 0.1 sec
 			function increaseCounter() {
