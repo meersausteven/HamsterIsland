@@ -31,14 +31,14 @@ function toggleShop() {
 // Cage upgrades increase hamsters per click 
 var cageupgrades = [
 	// world 0 upgrades - Pet Shop
-	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c003", price:2360, level:3, world: 0, action:"add", value:3, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c004", price:6460, level:4, world: 0, action:"add", value:4, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c005", price:14990, level:5, world: 0, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"Cardboard Box", tag:"cage", description:"Alternatively you could use an empty toilet paper roll.", bought:false, displayed:false},
+	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"Small Hamster Stall", tag:"cage", description:"Keeps your hamsters dry from the rain. Even though you keep them inside.", bought:false, displayed:false},
+	{id:"c003", price:2360, level:3, world: 0, action:"add", value:3, name:"Wooden House", tag:"cage", description:"A little wooden hamster house. Makes your hamsters feel at home.", bought:false, displayed:false},
+	{id:"c004", price:6460, level:4, world: 0, action:"add", value:4, name:"Fancy Castle", tag:"cage", description:"With this hamster castle your little kritters will feel protected and secure.", bought:false, displayed:false},
+	{id:"c005", price:14990, level:5, world: 0, action:"add", value:5, name:"Luxurious Palace", tag:"cage", description:"In this luxury class housing your hamsters will be pampered like real kings.", bought:false, displayed:false},
 	//world 1 upgrades - City Park Lake
-	{id:"c001", price:50, level:1, world: 1, action:"add", value:2, name:"", tag:"cage", description:"", bought:false, displayed:false},
-	{id:"c002", price:150, level:2, world: 1, action:"add", value:2, name:"", tag:"cage", description:"", bought:false, displayed:false},
+	{id:"c001", price:50, level:1, world: 1, action:"add", value:2, name:"Lily Pad Hat", tag:"cage", description:"This cute little lily pad hat protects your small friends from the rain. The hamsters kinda look like kappas that way.", bought:false, displayed:false},
+	{id:"c002", price:150, level:2, world: 1, action:"add", value:2, name:"Leaf Tent", tag:"cage", description:"A small little tent made from fallen leafs you found in the Park.", bought:false, displayed:false},
 	{id:"c003", price:960, level:3, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
 	{id:"c004", price:2460, level:4, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", bought:false, displayed:false},
 	{id:"c005", price:9990, level:5, world: 1, action:"add", value:7, name:"", tag:"cage", description:"", bought:false, displayed:false},
@@ -58,12 +58,12 @@ var foodupgrades = [
 	//world 1 upgrades - City Park Lake
 	{id:"f009", price:386000, level:1, world: 1, action:"add", value:1, name:"Bread Crumbs", tag:"food", description:"The elderly always think your hamsters are ducks, so they just keep throwing their bread.", bought:false, displayed:false},
 	{id:"f010", price:523900, level:2, world: 1, action:"add", value:1, name:"Dry Buns", tag:"food", description:"Those seniors just keep throwing their baking goods at your hamsters. I already told them a hundred times to stop.", bought:false, displayed:false},
-	{id:"f011", price:612700, level:3, world: 1, action:"add", value:2, name:"Whole Breads", tag:"food", description:"Okay wow, this is just unreasonable now. What's wrong with old people, throwing baking goods in public lakes?!", bought:false, displayed:false},
-	{id:"f012", price:768000, level:4, world: 1, action:"add", value:2, name:"", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f013", price:1185125, level:5, world: 1, action:"add", value:3, name:"", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f014", price:2220000, level:6, world: 1, action:"add", value:3, name:"", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f015", price:5291000, level:7, world: 1, action:"add", value:5, name:"", tag:"food", description:"", bought:false, displayed:false},
-	{id:"f016", price:8230000, level:8, world: 1, action:"add", value:7, name:"", tag:"food", description:"", bought:false, displayed:false},
+	{id:"f011", price:612700, level:3, world: 1, action:"add", value:2, name:"Fresh Crossaints", tag:"food", description:"Okay wow, this is just unreasonable now. What's wrong with old people, throwing baking goods in public lakes?!", bought:false, displayed:false},
+	{id:"f012", price:768000, level:4, world: 1, action:"add", value:2, name:"Whole Breads", tag:"food", description:"COULD SOMEONE PLEASE TELL THOSE PENSIONEERS TO STOP THROWING STUFF IN THE LAKE?!?", bought:false, displayed:false},
+	{id:"f013", price:1185125, level:5, world: 1, action:"add", value:3, name:"Cupcakes", tag:"food", description:"Alright. Just keep going. I'm not gonna even bother anymore.", bought:false, displayed:false},
+	{id:"f014", price:2220000, level:6, world: 1, action:"add", value:3, name:"Unfinished Birthday Cakes", tag:"food", description:"...", bought:false, displayed:false},
+	{id:"f015", price:5291000, level:7, world: 1, action:"add", value:5, name:"Mac 'n' Cheese Made With Love", tag:"food", description:"...", bought:false, displayed:false},
+	{id:"f016", price:8230000, level:8, world: 1, action:"add", value:7, name:"Old Ladies", tag:"food", description:"Ok. Someone just shoved the old people in the lake. Well at least they stopped throwing food in the lake.", bought:false, displayed:false},
 	// world 2 upgrades - 
 ];
 // Drink upgrades increase hamsters generated per second
@@ -111,9 +111,9 @@ var hamsterupgrades = [
 	{id:"h002", price:78500, level:2, world: 0, action:"add", value:10, name:"Chinese Hamster", tag:"hamster", description:"The stripes of the chinese hamsters are the same with race cars. They make them go faster.", bought:false, displayed:false},
 	{id:"h003", price:215000, level:3, world: 0, action:"add", value:25, name:"Golden Hamster", tag:"hamster", description:"As a kid I always thought golden hamsters are made of gold. Oh well, maybe in the future...", bought:false, displayed:false},
 	// world 1 upgrades - City Park Lake
-	{id:"h004", price:645000, level:1, world: 1, action:"add", value:15, name:"", tag:"hamster", description:"", bought:false, displayed:false},
-	{id:"h005", price:1850000, level:2, world: 1, action:"add", value:20, name:"", tag:"hamster", description:"", bought:false, displayed:false},
-	{id:"h006", price:7550000, level:3, world: 1, action:"add", value:35, name:"", tag:"hamster", description:"", bought:false, displayed:false},
+	{id:"h004", price:645000, level:1, world: 1, action:"add", value:15, name:"Water Hamster", tag:"hamster", description:"Your hamsters DNA mutated from living on the water the whole time. They even grew floating skins.", bought:false, displayed:false},
+	{id:"h005", price:1850000, level:2, world: 1, action:"add", value:20, name:"Duck Hamster", tag:"hamster", description:"Somehow, I don't know how that hell that happened, your hamsters crossbred with ducks. You got hamster-duck hybrids now.", bought:false, displayed:false},
+	{id:"h006", price:7550000, level:3, world: 1, action:"add", value:35, name:"Pensioneer Hamster", tag:"hamster", description:"They observed the grannies that fed your hamsters very carefully and now turned to grannies themselves.", bought:false, displayed:false},
 	// world 2 upgrades - 
 	
 ];
