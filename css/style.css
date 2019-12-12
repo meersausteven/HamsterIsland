@@ -289,20 +289,15 @@ body {
 	background-color: #1c1c1c;
 	border: 5px dashed #bf220a;
 }
-#clear_save {
+#clear_save, #abort {
 	cursor: pointer;
 	background-color: #090909;
 	color: #ffffff;
-	margin: 10px 20px;
+	width: auto;
+	padding: 5px 10px;
 }
 #clear_save:hover {
 	background-color: #0abd63;
-}
-#abort {
-	cursor: pointer;
-	background-color: #090909;
-	color: #ffffff;
-	margin: 10px 20px;
 }
 #abort:hover {
 	background-color: #bf220a;
