@@ -46,9 +46,21 @@ function toggleStats() {
   }
 }
 
-document.getElementById("delete_progress").addEventListener("click", deleteProgress);
+document.getElementById("delete_progress").addEventListener("click", toggleDialogueBox);
+document.getElementById("abort").addEventListener("click", toggleDialogueBox);
 
-function deleteProgress() {
+function toggleDialogueBox() {
+	var box = document.getElementById("clear_save_dialogue_box");
+	if (box.classList.contains("visible")) {
+		box.classList.remove("visible");
+	} else {
+		box.classList.add("visible");
+	}
+}
+
+document.getElementById("clear_save").addEventListener("click", clearSave);
+
+function clearSave() {
 	localStorage.clear();
 	location.reload();
 }
