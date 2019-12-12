@@ -50,4 +50,5 @@ document.getElementById("delete_progress").addEventListener("click", deleteProgr
 
 function deleteProgress() {
 	localStorage.clear();
+	location.reload();
 }
