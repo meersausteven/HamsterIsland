@@ -217,7 +217,7 @@ body {
 	color: #ffffff;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
-#open_statistics, #close_statistics {
+#open_statistics, #close_statistics, #delete_progress {
 	position: absolute;
 	cursor: pointer;
 	height: auto;
