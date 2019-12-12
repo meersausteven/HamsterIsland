@@ -39,7 +39,7 @@ function increaseHamsters(amount) {
 			totalhamstercount += amount;
 		}
 		for (i = 0; i <= 10; i++) {
-			window.setTimeout(
+			window.setTimeout(function() {
 			if (i < 10) {
 				console.log(i + ": " + amount/10);
 				hamstercount += Math.floor(amount / 10);
@@ -50,6 +50,7 @@ function increaseHamsters(amount) {
 				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 			}
 			, 100);
+			}
 		}
 	}
 	addNewUpgradesToShop();
