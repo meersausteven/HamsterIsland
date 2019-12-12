@@ -151,7 +151,9 @@ function addNewUpgradesToShop() {
 		var upgradeelement = document.createElement("div");
 			upgradeelement.className = "shop-upgrade shop-item shop-item-unbuyable shop-" + upgrade.tag + "-upgrade";
 			upgradeelement.setAttribute("id", "upgrade_" + upgrade.id);
-			upgradeelement.innerHTML = "<h1>" + upgrade.name + "</h1><h2>Costs: " + upgrade.price.toLocaleString() + " Hamsters</h2><p class='shop-item-icon' style='background-image: url(./pics/upgrades/" + upgrade.id + ".png)';'></p>";
+			upgradeelement.innerHTML = "<h1>" + upgrade.name + "</h1>" +
+				"<h2>Costs: " + upgrade.price.toLocaleString() + " Hamsters</h2>" + 
+				"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
 			upgradeelement.onclick = function() {
 				var index = this.id.replace('upgrade_','');
 				for (var i = 0; i < allupgrades.length; i++) {
