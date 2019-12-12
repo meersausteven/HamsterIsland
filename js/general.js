@@ -43,6 +43,7 @@ function increaseHamsters(amount) {
 			var repeat = setInterval(function() {
 				if (i < amount) {
 					hamstercount++;
+					i++;
 					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				} else {
 					clearInterval(repeat);
