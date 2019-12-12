@@ -285,7 +285,7 @@ body {
 	z-index: 9999;
 	width: auto;
 	height: auto;
-	padding: 30px 15px;
+	padding: 20px 30px;
 	background-color: #1c1c1c;
 	border: 5px dashed #bf220a;
 }
@@ -302,7 +302,7 @@ body {
 	cursor: pointer;
 	background-color: #090909;
 	color: #ffffff;
-	margin: 0px auto;
+	margin: 10px 20px;
 }
 #clear_save_dialogue_box #abort:hover {
 	background-color: #bf220a;
