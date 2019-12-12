@@ -162,7 +162,27 @@ function addNewUpgradesToShop() {
 					}
 				}
 				if (hamstercount >= upgrade.price) {
-					if (upgrade.tag == "island") {
+					switch (upgrade.tag) {
+					case "cage":
+						if (upgrade.action == "multiply") {
+							hamstersperclick *= upgrade.value;
+						} else if (upgrade.action == "add") {
+							hamstersperclick += upgrade.value;
+						}
+						cagelevel++;
+						updateCageLevel();
+						break;
+					case "drink":
+						increaseHPS(upgrade.value, upgrade.action);
+						drinklevel++;
+						updateDrinkLevel();
+						break;
+					case "food":
+						increaseHPS(upgrade.value, upgrade.action);
+						foodlevel++;
+						updateFoodLevel();
+						break;
+					case "island":
 						if (upgrade.action == "add") {
 							hamstermaximum += upgrade.value;
 							updateHamsterMaximum();
@@ -170,33 +190,15 @@ function addNewUpgradesToShop() {
 							hamstermaximum *= upgrade.value;
 							updateHamsterMaximum();
 						}
-					} else if (upgrade.tag == "cage" || upgrade.tag == "hamster") {
+						islandlevel++;
+						updateIslandLevel();
+						break;
+					case "hamster":
 						if (upgrade.action == "multiply") {
 							hamstersperclick *= upgrade.value;
 						} else if (upgrade.action == "add") {
 							hamstersperclick += upgrade.value;
 						}
-					} else if (upgrade.tag == "drink" || upgrade.tag == "food") {
-						increaseHPS(upgrade.value, upgrade.action);
-					}
-					switch (upgrade.tag) {
-					case "cage":
-						cagelevel++;
-						updateCageLevel();
-						break;
-					case "drink":
-						drinklevel++;
-						updateDrinkLevel();
-						break;
-					case "food":
-						foodlevel++;
-						updateFoodLevel();
-						break;
-					case "island":
-						islandlevel++;
-						updateIslandLevel();
-						break;
-					case "hamster":
 						hamsterlevel++;
 						updateHamsterLevel();
 						break;
