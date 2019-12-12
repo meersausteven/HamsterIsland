@@ -45,3 +45,9 @@ function toggleStats() {
     statsopen = true;
   }
 }
+
+document.getElementById("delete_progress").addEventListener("click", deleteProgress);
+
+function deleteProgress() {
+	localStorage.clear();
+}
