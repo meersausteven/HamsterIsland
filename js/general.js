@@ -38,18 +38,30 @@ function increaseHamsters(amount) {
 		if (amount > 0) {
 			totalhamstercount += amount;
 		}
-		var i = 0;
-		var repeat = setInterval(function() {
-			if (i < 10) {
-				i++;
-				hamstercount += Math.floor(amount / 10);
-				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
-			} else {
-				hamstercount += amount % 10;
-				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
-				clearInterval(repeat);
-			}
-		}, 100);
+		if (amount < 10) {
+			var i = 0;
+			var repeat = setInterval(function() {
+				if (i < amount) {
+					hamstercount++;
+					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+				} else {
+					clearInterval(repeat);
+				}
+			}, 100);
+		} else {
+			var i = 0;
+			var repeat = setInterval(function() {
+				if (i < 10) {
+					i++;
+					hamstercount += Math.floor(amount / 10);
+					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+				} else {
+					hamstercount += amount % 10;
+					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+					clearInterval(repeat);
+				}
+			}, 100);
+		}
 	}
 	addNewUpgradesToShop();
 	checkForBuyableUpgrades();
