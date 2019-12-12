@@ -215,6 +215,7 @@ function addNewUpgradesToShop() {
 						break;
 					}
 					increaseHamsters(-(upgrade.price));
+					console.log(upgrade.id + ": " + upgrade.price);
 					upgrade.bought = true;
 					if (typeof document.getElementById("upgrade_info_box") !== "undefined") {
 						var infobox = document.getElementById("upgrade_info_box");
