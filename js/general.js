@@ -38,7 +38,7 @@ function increaseHamsters(amount) {
 		if (amount > 0) {
 			totalhamstercount += amount;
 		}
-		var i = 1;
+		var i = 0;
 		var repeat = setInterval(function() {
 			if (i < 10) {
 				i++;
