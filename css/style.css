@@ -278,6 +278,11 @@ body {
 }
 #clear_save_dialogue_box_container {
 	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
 	width: 100%;
 	height: 100%;
 	z-index: 9998;
