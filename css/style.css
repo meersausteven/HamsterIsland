@@ -262,6 +262,20 @@ body {
 #close_statistics:hover {
 	background-color: #a32929;
 }
+#delete_progress {
+	font-size: 20px;
+	top: 0;
+	right: 0;
+	width: auto;
+	padding: 10px 20px;
+	background-color: #2c2c2c;
+	z-index: 10;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	border-radius: 0px 0px 30px 0px;
+}
+#delete_progress:hover {
+	background-color: #bf220a9;
+}
 /*============================================
   					Classes
 ==============================================*/
