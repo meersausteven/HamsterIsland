@@ -42,11 +42,12 @@ function increaseHamsters(amount) {
 			window.setTimeout(increaseCounter, 100);
 			// only run every 0.1 sec
 			function increaseCounter() {
-				console.log(i);
 				if (i < 10) {
+					console.log(i + ": " + amount/10);
 					hamstercount += Math.floor(amount / 10);
 					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				} else {
+					console.log(i + ": " + amount % 10);
 					hamstercount += amount % 10;
 					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				}
