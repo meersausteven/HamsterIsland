@@ -39,7 +39,7 @@ function increaseHamsters(amount) {
 			totalhamstercount += amount;
 		}
 		for (i = 0; i <= 10; i++) {
-			window.setTimeout(increaseCounter(), 100);
+			window.setTimeout(increaseCounter, 100);
 			// only run every 0.1 sec
 			function increaseCounter() {
 				console.log(i);
