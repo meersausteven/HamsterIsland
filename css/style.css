@@ -277,6 +277,7 @@ body {
 	background-color: #bf220a;
 }
 #clear_save_dialogue_box {
+	display: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -288,13 +289,22 @@ body {
 	background-color: #1c1c1c;
 	border: 5px dashed #bf220a;
 }
-#clear_save_dialogue_box > div {
+#clear_save_dialogue_box #clear_save {
 	cursor: pointer;
 	background-color: #090909;
 	color: #ffffff;
 	margin: 0px auto;
 }
-#clear_save_dialogue_box > div:hover {
+#clear_save_dialogue_box #clear_save:hover {
+	background-color: #0abd63;
+}
+#clear_save_dialogue_box #abort {
+	cursor: pointer;
+	background-color: #090909;
+	color: #ffffff;
+	margin: 0px auto;
+}
+#clear_save_dialogue_box #abort:hover {
 	background-color: #bf220a;
 }
 /*============================================
@@ -562,4 +572,7 @@ body {
 .shop-buying-impossible {
   pointer-events: none;
   filter: grayscale(75%);
+}
+.visible {
+	display: block !important;
 }
