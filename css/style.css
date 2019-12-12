@@ -289,22 +289,22 @@ body {
 	background-color: #1c1c1c;
 	border: 5px dashed #bf220a;
 }
-#clear_save_dialogue_box #clear_save {
-	cursor: pointer;
-	background-color: #090909;
-	color: #ffffff;
-	margin: 0px auto;
-}
-#clear_save_dialogue_box #clear_save:hover {
-	background-color: #0abd63;
-}
-#clear_save_dialogue_box #abort {
+#clear_save {
 	cursor: pointer;
 	background-color: #090909;
 	color: #ffffff;
 	margin: 10px 20px;
 }
-#clear_save_dialogue_box #abort:hover {
+#clear_save:hover {
+	background-color: #0abd63;
+}
+#abort {
+	cursor: pointer;
+	background-color: #090909;
+	color: #ffffff;
+	margin: 10px 20px;
+}
+#abort:hover {
 	background-color: #bf220a;
 }
 /*============================================
