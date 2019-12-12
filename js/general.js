@@ -41,12 +41,10 @@ function increaseHamsters(amount) {
 		var i = 1;
 		var repeat = setInterval(function() {
 			if (i < 10) {
-				console.log(i + ": " + amount/10);
 				i++;
 				hamstercount += Math.floor(amount / 10);
 				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 			} else {
-				console.log(i + ": " + amount%10);
 				hamstercount += amount % 10;
 				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				clearInterval(repeat);
