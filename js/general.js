@@ -45,6 +45,7 @@ function increaseHamsters(amount) {
 					hamstercount += Math.floor(amount / 10);
 					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				} else {
+					console.log(i + ": " + amount%10);
 					hamstercount += amount % 10;
 					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 					clearInterval(repeat);
