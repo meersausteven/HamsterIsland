@@ -49,8 +49,8 @@ function increaseHamsters(amount) {
 				hamstercount += amount % 10;
 				document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 			}
-			, 100);
 			}
+			, 100);
 		}
 	}
 	addNewUpgradesToShop();
