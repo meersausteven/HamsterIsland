@@ -50,7 +50,7 @@ document.getElementById("delete_progress").addEventListener("click", toggleDialo
 document.getElementById("abort").addEventListener("click", toggleDialogueBox);
 
 function toggleDialogueBox() {
-	var box = document.getElementById("clear_save_dialogue_box");
+	var box = document.getElementById("clear_save_dialogue_box_container");
 	if (box.classList.contains("visible")) {
 		box.classList.remove("visible");
 	} else {
