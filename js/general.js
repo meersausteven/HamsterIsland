@@ -1,15 +1,4 @@
-window.onload = function() {
-	getProgress();
-	updateStats();
-	startTime();
-	updateCageLevel();
-	updateIslandLevel();
-	updateHamsterLevel();
-	updateWorldLevel();
-	updateDrinkLevel();
-	updateFoodLevel();
-	updateHPS();
-}
+window.onload = updateGame();
 
 	//============================
 	//         Variables
