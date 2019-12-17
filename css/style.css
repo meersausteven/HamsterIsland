@@ -156,9 +156,8 @@ body {
   text-shadow: 2px 2px 5px #000000;
   padding: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-
-  background-color: red;
-  border-radius: 12px;
+  background-color: #bf8417;
+  border-radius: 10px;
 }
 #shop {
   width: 100%;
@@ -171,6 +170,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   background-color: rgba(50, 50, 50, 0.4);
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
 }
 #upgrade_info_box {
 	position: absolute;
@@ -235,7 +235,7 @@ body {
 	border-radius: 0px 0px 30px 0px;
 }
 #open_statistics:hover {
-	background-color: #2a6f41;
+	background-color: #5292bf;
 }
 #statistics_screen {
 	width: 100vw;
@@ -298,7 +298,7 @@ body {
 	height: auto;
 	padding: 20px 30px;
 	background-color: #1c1c1c;
-	border: 5px dashed #bf220a;
+	border: 7px double #bf220a;
 }
 #clear_save_dialogue_box > h3 {
 	margin: 20px auto;
@@ -313,10 +313,10 @@ body {
 	display: inline;
 }
 #clear_save:hover {
-	background-color: #0abd63;
+	background-color: #bf220a;
 }
 #abort:hover {
-	background-color: #bf220a;
+	background-color: #0abd63;
 }
 /*============================================
   					Classes
