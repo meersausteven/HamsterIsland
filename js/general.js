@@ -36,7 +36,7 @@ function increaseHamsters(amount) {
 				if (i < amount) {
 					hamstercount++;
 					i++;
-					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+					updateHamsterCount();
 				} else {
 					clearInterval(repeat);
 				}
@@ -47,10 +47,10 @@ function increaseHamsters(amount) {
 				if (i < divider) {
 					i++;
 					hamstercount += Math.floor(amount / divider);
-					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+					updateHamsterCount();
 				} else {
 					hamstercount += amount % divider;
-					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+					updateHamsterCount();
 					clearInterval(repeat);
 				}
 			}, 1000 / divider);
