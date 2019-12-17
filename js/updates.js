@@ -62,5 +62,6 @@ function updateGame() {
 	updateDrinkLevel();
 	updateFoodLevel();
 	updateHPS();
+	updateHamsterMaximum();
 	document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 }
