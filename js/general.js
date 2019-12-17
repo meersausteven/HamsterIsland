@@ -1,4 +1,6 @@
-window.onload = updateGame();
+window.onload = function() { 
+	updateGame();
+};
 
 	//============================
 	//         Variables
