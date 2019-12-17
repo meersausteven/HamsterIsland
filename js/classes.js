@@ -77,7 +77,7 @@ class RareHamster {
 		// on click activate one of two possible effects with a 50% chance for either
 		this.element.onclick = function() {
 			let rarehamstertype = this.id.replace('rare_hamster_','');
-			let fiftyfifty = Math.floor(Math.random() * 101);
+			let coinFlip = Math.floor(Math.random() * 101);
 			let boostDuration = 30000;
 			let hamsterMultiplier;
 			let boostMultiplier;
@@ -119,7 +119,7 @@ class RareHamster {
 					boostDuration = 0;
 					break;
 			}
-			if (fiftyfifty > 50) {
+			if (coinFlip > 50) {
 				increaseHamsters(hamsterspersecond * hamsterMultiplier);
 			} else {
 				rareHamsterBoost(boostMultiplier, boostDuration);
@@ -129,7 +129,7 @@ class RareHamster {
 			let boostInfoBox = document.createElement("div");
 			boostInfoBox.className = "boost-info-box rare-hamster-" + rarehamstertype;
 			boostInfoBox.id = "boost_info_box";
-			if (fiftyfifty > 50) {
+			if (coinFlip > 50) {
 				boostInfoBox.innerHTML = "The " + rarehamstertype + " hamster gifted you " + (Math.floor((hamsterspersecond * hamsterMultiplier)).toLocaleString()) + " hamsters!";
 			} else {
 				boostInfoBox.innerHTML = "The " + rarehamstertype + " hamster boosted your hamsters per second by " + boostMultiplier + " for " + (boostDuration / 1000) + " seconds!";
