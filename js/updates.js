@@ -50,3 +50,17 @@ function updateHamsterLevel() {
 function updateWorldLevel() {
 	document.getElementById("hamster_sea").style.cssText = "background-image: url('pics/world/level_" + worldlevel + ".png');";
 }
+
+function updateGame() {
+	getProgress();
+	updateStats();
+	startTime();
+	updateCageLevel();
+	updateIslandLevel();
+	updateHamsterLevel();
+	updateWorldLevel();
+	updateDrinkLevel();
+	updateFoodLevel();
+	updateHPS();
+	document.getElementById("counter").innerHTML = hamstercount;
+}
