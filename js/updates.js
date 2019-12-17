@@ -51,6 +51,10 @@ function updateWorldLevel() {
 	document.getElementById("hamster_sea").style.cssText = "background-image: url('pics/world/level_" + worldlevel + ".png');";
 }
 
+function updateHamsterCount() {
+	document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+}
+
 function updateGame() {
 	getProgress();
 	updateStats();
@@ -63,5 +67,5 @@ function updateGame() {
 	updateFoodLevel();
 	updateHPS();
 	updateHamsterMaximum();
-	document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+	updateHamsterCount();
 }
