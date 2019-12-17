@@ -26,10 +26,11 @@ function startTime() {
 
 function increaseHamsters(amount) {
 	if (hamstercount < hamstermaximum) {
+		var divider = 20;
 		if (amount > 0) {
 			totalhamstercount += amount;
 		}
-		if (amount < 10 && amount > 0) {
+		if (amount < divider && amount > 0) {
 			var i = 0;
 			var repeat = setInterval(function() {
 				if (i < amount) {
@@ -39,20 +40,20 @@ function increaseHamsters(amount) {
 				} else {
 					clearInterval(repeat);
 				}
-			}, 100);
+			}, 1000 / divider);
 		} else {
 			var i = 0;
 			var repeat = setInterval(function() {
-				if (i < 10) {
+				if (i < divider) {
 					i++;
-					hamstercount += Math.floor(amount / 10);
+					hamstercount += Math.floor(amount / divider);
 					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 				} else {
-					hamstercount += amount % 10;
+					hamstercount += amount % divider;
 					document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
 					clearInterval(repeat);
 				}
-			}, 100);
+			}, 1000 / divider);
 		}
 	}
 	addNewUpgradesToShop();
