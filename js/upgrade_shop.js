@@ -275,6 +275,7 @@ function checkForBuyableUpgrades() {
 			document.getElementById("upgrade_" + upgrade.id).classList.remove("shop-item-unbuyable");
 		} else if ((upgrade.bought === false) && (upgrade.displayed === true) && (hamstercount < upgrade.price)) {
 			document.getElementById("upgrade_" + upgrade.id).classList.add("shop-item-unbuyable");
+			console.log(upgrade);
 		}
 	});
 }
