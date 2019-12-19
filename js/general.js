@@ -27,36 +27,37 @@ function startTime() {
 function increaseHamsters(amount) {
 	if (hamstercount < hamstermaximum) {
 		var divider = 20;
-		if (amount > 0) {
-			totalhamstercount += amount;
-		}
-		if (amount < divider && amount > 0) {
-			var i = 0;
-			var repeat = setInterval(function() {
-				if (i < amount) {
-					hamstercount++;
-					i++;
-					updateHamsterCount();
-				} else {
-					clearInterval(repeat);
-				}
-			}, 1000 / divider);
-		} else {
-			var i = 0;
-			var repeat = setInterval(function() {
-				if (i < divider) {
-					i++;
-					hamstercount += Math.floor(amount / divider);
-					updateHamsterCount();
-					console.log(i + ": " + Math.floor(amount / divider));
-				} else {
-					hamstercount += amount % divider;
-					updateHamsterCount();
-					console.log(i + ": " + amount % divider);
-					clearInterval(repeat);
-				}
-				
-			}, 1000 / divider);
+		if (amount != 0) {
+			if (amount > 0) {
+				totalhamstercount += amount;
+			}
+			if (amount < divider && amount > 0) {
+				var i = 0;
+				var repeat = setInterval(function() {
+					if (i < amount) {
+						hamstercount++;
+						i++;
+						updateHamsterCount();
+					} else {
+						clearInterval(repeat);
+					}
+				}, 1000 / divider);
+			} else {
+				var i = 0;
+				var repeat = setInterval(function() {
+					if (i < divider) {
+						i++;
+						hamstercount += Math.floor(amount / divider);
+						updateHamsterCount();
+					} else {
+						hamstercount += amount % divider;
+						updateHamsterCount();
+						clearInterval(repeat);
+					}
+
+				}, 1000 / divider);
+				console.log(amount);
+			}
 		}
 	}
 	addNewUpgradesToShop();
