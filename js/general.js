@@ -55,7 +55,7 @@ function increaseHamsters(amount) {
 						hamstercount += amount % divider;
 						updateHamsterCount();
 						clearInterval(repeat);
-						sum += amount % divider);
+						sum += amount % divider;
 					}
 
 				}, 1000 / divider);
