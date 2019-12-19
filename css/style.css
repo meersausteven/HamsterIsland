@@ -85,7 +85,6 @@ body {
 #display_right {
 	width: 30px;
 	height: 70px;
-	float: left;
 	box-sizing: border-box;
 	border: 34px solid rgba(122, 159, 111, 0.8);
 	display: inline-block;
@@ -101,7 +100,6 @@ body {
 	border-left-width: 20px;
 }
 #counter_container {
-	float: left;
 	color: #ffffff;
 	text-align: center;
 	text-shadow: 2px 2px 5px #000000;
@@ -114,6 +112,7 @@ body {
 	display: inline-block;
 }
 #counter {
+	display: inline-block;
 	width: 100%;
 	font-size: 25px;
 	margin-top: 5px;
@@ -121,15 +120,14 @@ body {
 	box-sizing: border-box;
 }
 #hps_display {
-	top: 45px;
+	display: inline-block;
 	width: 100%;
 	font-size: 15px;
 	box-sizing: border-box;
 	padding: 0px 20px;
 }
 #maximum_display {
-	position: absolute;
-	top: 30px;
+	display: inline-block;
 	width: 100%;
 	font-size: 12px;
 	box-sizing: border-box;
