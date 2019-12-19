@@ -45,18 +45,21 @@ function increaseHamsters(amount) {
 			} else {
 				var i = 0;
 				var repeat = setInterval(function() {
+					var sum = 0;
 					if (i < divider) {
 						i++;
 						hamstercount += Math.floor(amount / divider);
 						updateHamsterCount();
+						sum += Math.floor(amount / divider);
 					} else {
 						hamstercount += amount % divider;
 						updateHamsterCount();
 						clearInterval(repeat);
+						sum += amount % divider);
 					}
 
 				}, 1000 / divider);
-				console.log(amount);
+				console.log(sum);
 			}
 		}
 	}
