@@ -43,23 +43,7 @@ function increaseHamsters(amount) {
 					}
 				}, 1000 / divider);
 			} else {
-				var sum = 0;
-				var i = 1;
-				var repeat = setInterval(function() {
-					if (i < divider) {
-						i++;
-						hamstercount += Math.floor(amount / divider);
-						updateHamsterCount();
-						sum += Math.floor(amount / divider);
-					} else {
-						hamstercount += amount % divider;
-						updateHamsterCount();
-						clearInterval(repeat);
-						sum += amount % divider;
-					}
-
-				console.log(sum);
-				}, 1000 / divider);
+				hamstercount += amount;
 			}
 		}
 	}
