@@ -44,6 +44,7 @@ function increaseHamsters(amount) {
 				}, 1000 / divider);
 			} else {
 				hamstercount += amount;
+				updateHamsterCount();
 			}
 		}
 	}
