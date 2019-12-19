@@ -161,6 +161,7 @@ function addNewUpgradesToShop() {
 						var upgrade = allupgrades[i];
 					}
 				}
+				upgrade.bought = true;
 				if (hamstercount >= upgrade.price) {
 					switch (upgrade.tag) {
 					case "cage":
@@ -214,7 +215,6 @@ function addNewUpgradesToShop() {
 						updateCageLevel();
 						break;
 					}
-					upgrade.bought = true;
 					increaseHamsters(-(upgrade.price));
 					if (typeof document.getElementById("upgrade_info_box") !== "undefined") {
 						var infobox = document.getElementById("upgrade_info_box");
