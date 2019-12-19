@@ -88,6 +88,7 @@ body {
 	float: left;
 	box-sizing: border-box;
 	border: 34px solid rgba(122, 159, 111, 0.8);
+	display: inline-block;
 }
 #display_left {
 	border-bottom: 36px solid transparent;
@@ -110,17 +111,16 @@ body {
 	height: 70px;
 	width: auto;
 	min-width: 200px;
+	display: inline-block;
 }
 #counter {
-	position: absolute;
 	width: 100%;
 	font-size: 25px;
-	top: 5px;
+	margin-top: 5px;
 	padding: 0px 20px;
 	box-sizing: border-box;
 }
 #hps_display {
-	position: absolute;
 	top: 45px;
 	width: 100%;
 	font-size: 15px;
