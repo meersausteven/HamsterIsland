@@ -5,12 +5,12 @@
 	-ms-user-select: none;
 }
 @font-face {
-  font-family: inconsolata;
-  src: url(../fonts/Inconsolata-Regular.ttf);
+	font-family: inconsolata;
+	src: url(../fonts/Inconsolata-Regular.ttf);
 }
 html {
-  font-family: inconsolata;
-  overflow: hidden;
+	font-family: inconsolata;
+	overflow: hidden;
 }
 body {
 	margin: 0px;
@@ -18,37 +18,33 @@ body {
 
 /* Island Elements */
 
-#hamster_sea {
-	background-image: url(../pics/assets/sea.png);
-}
 #hamster_island {
 	height: 100vh;
 	background-size: 70vw 70vh;
 	background-position: 50%
 }
 #hamster_cage {
-  width: 180px;
-  height: 240px;
-  position: absolute;
-  top: calc(50% - 125px);
-  left: calc(50% - 90px);
-  cursor: pointer;
-  transition: 0.15s;
+	width: 180px;
+	height: 240px;
+	position: absolute;
+	top: calc(50% - 125px);
+	left: calc(50% - 90px);
+	cursor: pointer;
+	transition: 0.15s;
 }
 #hamster_cage:hover {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 #hamster_cage:active {
-  transform: scale(0.95);
+	transform: scale(0.95);
 }
 #caged_hamster {
-  background-image: url(../pics/assets/caged_hamster.png);
-  width: 180px;
-  height: 240px;
-  position: absolute;
-  top: calc(45% - 125px);
-  left: calc(50% - 90px);
-  transition: 0.15s;
+	width: 180px;
+	height: 240px;
+	position: absolute;
+	top: calc(45% - 125px);
+	left: calc(50% - 90px);
+	transition: 0.15s;
 }
 #caged_hamster:hover {
 	transform: scale(1.05);
@@ -76,15 +72,11 @@ body {
 #display_wrapper {
 	position: relative;
 	width: 100%;
-	display: block;
-	min-height: 70px;
+	left: 50%;
 }
 #display {
 	position: absolute;
-	left: 50%;
-	width: auto;
 	transform: translateX(-50%);
-	display: block;
 }
 #display_left,
 #display_right {
