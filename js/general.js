@@ -58,8 +58,8 @@ function increaseHamsters(amount) {
 						sum += amount % divider;
 					}
 
-				}, 1000 / divider);
 				console.log(sum);
+				}, 1000 / divider);
 			}
 		}
 	}
