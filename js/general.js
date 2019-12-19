@@ -43,9 +43,9 @@ function increaseHamsters(amount) {
 					}
 				}, 1000 / divider);
 			} else {
+				var sum = 0;
 				var i = 0;
 				var repeat = setInterval(function() {
-					var sum = 0;
 					if (i < divider) {
 						i++;
 						hamstercount += Math.floor(amount / divider);
