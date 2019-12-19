@@ -48,11 +48,14 @@ function increaseHamsters(amount) {
 					i++;
 					hamstercount += Math.floor(amount / divider);
 					updateHamsterCount();
+					console.log(i + ": " + Math.floor(amount / divider));
 				} else {
 					hamstercount += amount % divider;
 					updateHamsterCount();
+					console.log(i + ": " + amount % divider);
 					clearInterval(repeat);
 				}
+				
 			}, 1000 / divider);
 		}
 	}
