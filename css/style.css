@@ -107,36 +107,33 @@ body {
 	box-sizing: border-box;
 	position: relative;
 	background-color: rgba(122, 159, 111, 0.8);
-}
-#counter {
-	position: relative;
 	height: 70px;
 	width: auto;
 	min-width: 200px;
+}
+#counter {
+	position: absolute;
+	width: 100%;
 	font-size: 25px;
-	float: left;
-	padding: 5px 20px 10px;
+	top: 5px;
+	padding: 0px 20px;
 	box-sizing: border-box;
 }
-#hps_display_container {
+#hps_display {
 	position: absolute;
 	top: 45px;
 	width: 100%;
-	box-sizing: border-box;
-	padding: 0px 20px;
-}
-#hps_display {
-  font-size: 15px;
-}
-#maximum_display_container {
-	position: absolute;
-	top: 30px;
-	width: 100%;
+	font-size: 15px;
 	box-sizing: border-box;
 	padding: 0px 20px;
 }
 #maximum_display {
+	position: absolute;
+	top: 30px;
+	width: 100%;
 	font-size: 12px;
+	box-sizing: border-box;
+	padding: 0px 20px;
 }
 
 /* Shop */
