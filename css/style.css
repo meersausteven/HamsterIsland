@@ -109,7 +109,6 @@ body {
 	float: left;
 }
 #counter {
-	display: inline-block;
 	width: auto;
 	font-size: 25px;
 	margin-top: 5px;
@@ -117,14 +116,12 @@ body {
 	box-sizing: border-box;
 }
 #hps_display {
-	display: inline-block;
 	width: auto;
 	font-size: 15px;
 	box-sizing: border-box;
 	padding: 0px 20px;
 }
 #maximum_display {
-	display: inline-block;
 	width: auto;
 	font-size: 12px;
 	box-sizing: border-box;
