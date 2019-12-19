@@ -120,7 +120,7 @@ body {
 #hps_display_container {
 	position: absolute;
 	top: 45px;
-	width: calc(100% - 60px);
+	width: 100%;
 	min-width: 240px;
 }
 #hps_display {
@@ -129,7 +129,7 @@ body {
 #maximum_display_container {
 	position: absolute;
 	top: 30px;
-	width: calc(100% - 60px);
+	width: 100%;
 	min-width: 240px;
 }
 #maximum_display {
