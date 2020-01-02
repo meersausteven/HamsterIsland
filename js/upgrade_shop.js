@@ -129,7 +129,7 @@ var worldupgrades = [
 var allUpgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, worldupgrades, hamsterupgrades);
 
 function addNewUpgradesToShop() {
-  allupgrades.forEach(function(upgrade) {
+  allUpgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) && (upgrade.world == worldlevel) ) {
 		if ( (upgrade.level != 0) && (upgrade.tag != "world")) {
 			if ((upgrade.tag == "cage") && (cagelevel != upgrade.level - 1)) {
