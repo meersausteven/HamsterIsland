@@ -58,28 +58,30 @@ function updateHamsterCount() {
 }
 
 function convertToReadableNumber(number) {
-	if (number > 1000000) {
+	if (number < 1000000) {
+		return number.toLocaleString();
+	} else if (number < 1000000000) {
 		return (number / 1000000).toLocaleString() + " M";
-	} else if (number > 1000000000) {
+	} else if (number < 1000000000000) {
 		return (number / 1000000000).toLocaleString() + " B";
-	} else if (number > 1000000000000) {
+	} else if (number < 1000000000000000) {
 		return (number / 1000000000000).toLocaleString() + " T";
-	} else if (number > 1000000000000000) {
+	} else if (number < 1000000000000000000) {
 		return (number / 1000000000000000).toLocaleString() + " Qa";
-	} else if (number > 1000000000000000000) {
+	} else if (number < 1000000000000000000000) {
 		return (number / 1000000000000000000).toLocaleString() + " Qi";
-	} else if (number > 1000000000000000000000) {
+	} else if (number < 1000000000000000000000000) {
 		return (number / 1000000000000000000000).toLocaleString() + " Si";
-	} else if (number > 1000000000000000000000000) {
+	} else if (number < 1000000000000000000000000000) {
 		return (number / 1000000000000000000000000).toLocaleString() + " Se";
-	} else if (number > 1000000000000000000000000000) {
+	} else if (number < 1000000000000000000000000000000) {
 		return (number / 1000000000000000000000000000).toLocaleString() + " O";
-	} else if (number > 1000000000000000000000000000000) {
+	} else if (number < 1000000000000000000000000000000000) {
 		return (number / 1000000000000000000000000000000).toLocaleString() + " N";
-	} else if (number > 1000000000000000000000000000000000) {
+	} else if (number < 1000000000000000000000000000000000000) {
 		return (number / 1000000000000000000000000000000000).toLocaleString() + " D";
 	} else {
-		return number.toLocaleString();
+		return (number / 1000000000000000000000000000000000000).toLocaleString() + " UnD";
 	}
 }
 
