@@ -52,7 +52,7 @@ function updateWorldLevel() {
 }
 
 function updateHamsterCount() {
-	document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+	document.getElementById("counter").innerHTML = hamstercount.replace('n', '').toLocaleString() + " Hamsters";
 }
 
 function updateGame() {
