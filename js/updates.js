@@ -77,6 +77,8 @@ function convertToReadableNumber(number) {
 		return (number / 1000000000000000000000000000000).toLocaleString() + " N";
 	} else if (number > 1000000000000000000000000000000000) {
 		return (number / 1000000000000000000000000000000000).toLocaleString() + " D";
+	} else {
+		return number;
 	}
 }
 
