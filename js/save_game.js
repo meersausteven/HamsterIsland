@@ -5,6 +5,7 @@ var saveprogress_interval = setInterval(saveProgress, 120000);
 
 function saveProgress() {
 	playtime = Date.now() - starttime;
+	var boughtUpgradesList;
 	var save = window.btoa(totalhamstercount +
 		"-" + hamstercount +
 		"-" + cagedhamsterclicks +
@@ -19,7 +20,8 @@ function saveProgress() {
 		"-" + hamstermaximum +
 		"-" + hamstersperclick +
 		"-" + starttime +
-		"-" + playtime
+		"-" + playtime +
+		"-" + boughtUpgrades.join()
 	);
 	localStorage.setItem("savegame", save);
 	
@@ -48,5 +50,6 @@ function getProgress() {
 		hamstersperclick = parseInt(save[12]);
 		starttime = parseInt(save[13]);
 		playtime = parseInt(save[14]);
+		boughtUpgrades = save[15].split(",");
 	}
 }
