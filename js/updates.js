@@ -52,7 +52,32 @@ function updateWorldLevel() {
 }
 
 function updateHamsterCount() {
-	document.getElementById("counter").innerHTML = hamstercount.toLocaleString() + " Hamsters";
+	let readableCount = convertToReadableNumber(hamstercount);
+	document.getElementById("counter").innerHTML = readableCount + " Hamsters";
+}
+
+function convertToReadableNumber(number) {
+	if (number > 1000000) {
+		return (number / 1000000).toLocaleString() + " M";
+	} else if (number > 1000000000) {
+		return (number / 1000000000).toLocaleString() + " B";
+	} else if (number > 1000000000000) {
+		return (number / 1000000000000).toLocaleString() + " T";
+	} else if (number > 1000000000000000) {
+		return (number / 1000000000000000).toLocaleString() + " Qa";
+	} else if (number > 1000000000000000000) {
+		return (number / 1000000000000000000).toLocaleString() + " Qi";
+	} else if (number > 1000000000000000000000) {
+		return (number / 1000000000000000000000).toLocaleString() + " Si";
+	} else if (number > 1000000000000000000000000) {
+		return (number / 1000000000000000000000000).toLocaleString() + " Se";
+	} else if (number > 1000000000000000000000000000) {
+		return (number / 1000000000000000000000000000).toLocaleString() + " O";
+	} else if (number > 1000000000000000000000000000000) {
+		return (number / 1000000000000000000000000000000).toLocaleString() + " N";
+	} else if (number > 1000000000000000000000000000000000) {
+		return (number / 1000000000000000000000000000000000).toLocaleString() + " D";
+	}
 }
 
 function updateGame() {
