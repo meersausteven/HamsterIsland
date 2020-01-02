@@ -8,10 +8,11 @@ function updateHPS() {
 
 function updateHamsterMaximum() {
 	maximumdisplay = document.getElementById("maximum_display");
+	let readableMaximum = convertToReadableNumber(hamstermaximum);
 	if (hamstermaximum == "unlimited") {
 		maximumdisplay.innerHTML = "Max: &infin; Hamsters";
 	} else {
-		maximumdisplay.innerHTML = "Max: " + hamstermaximum.toLocaleString() + " Hamsters";
+		maximumdisplay.innerHTML = "Max: " + readableMaximum + " Hamsters";
 	}
 }
 
@@ -78,7 +79,7 @@ function convertToReadableNumber(number) {
 	} else if (number > 1000000000000000000000000000000000) {
 		return (number / 1000000000000000000000000000000000).toLocaleString() + " D";
 	} else {
-		return number;
+		return number.toLocaleString();
 	}
 }
 
