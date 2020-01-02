@@ -6,7 +6,7 @@ window.onload = function() {
 	//         Variables
 	//============================
 
-var totalhamstercount = BigInt(0), hamstercount = BigInt(0);
+var totalhamstercount = 0, hamstercount = 0;
 var hamstersperclick = 1;
 var cagedhamsterclicks = 0, rarehamsterclicks = 0;
 var basehamsterspersecond = 0;
