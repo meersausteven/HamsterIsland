@@ -10,13 +10,13 @@ function updateStats() {
 	var playedhours  = time.getHours() - 1;
 	var totalplaytime = playedhours + " hours " + playedminutes + " minutes " + playedseconds + " seconds";
 
-	document.getElementById("stats_hamsters").innerHTML = hamstercount.toLocaleString();
-	document.getElementById("stats_max").innerHTML = hamstermaximum.toLocaleString();
-	document.getElementById("stats_perclick").innerHTML = hamstersperclick.toLocaleString();
-	document.getElementById("stats_hps").innerHTML = hamsterspersecond.toLocaleString();
-	document.getElementById("stats_total").innerHTML = totalhamstercount.toLocaleString();
-	document.getElementById("stats_clicks").innerHTML = cagedhamsterclicks.toLocaleString();
-	document.getElementById("stats_rareclicks").innerHTML = rarehamsterclicks.toLocaleString();
+	document.getElementById("stats_hamsters").innerHTML = convertToReadableNumber(hamstercount);
+	document.getElementById("stats_max").innerHTML = convertToReadableNumber(hamstermaximum);
+	document.getElementById("stats_perclick").innerHTML = convertToReadableNumber(hamstersperclick);
+	document.getElementById("stats_hps").innerHTML = convertToReadableNumber(hamsterspersecond);
+	document.getElementById("stats_total").innerHTML = convertToReadableNumber(totalhamstercount);
+	document.getElementById("stats_clicks").innerHTML = convertToReadableNumber(cagedhamsterclicks);
+	document.getElementById("stats_rareclicks").innerHTML = convertToReadableNumber(rarehamsterclicks);
 	document.getElementById("stats_playtime").innerHTML = totalplaytime;
 	document.getElementById("stats_food").innerHTML = foodlevel;
 	document.getElementById("stats_drink").innerHTML = drinklevel;
