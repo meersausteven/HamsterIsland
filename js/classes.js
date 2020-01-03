@@ -146,7 +146,7 @@ class RareHamster {
 		document.body.appendChild(this.element);
 		
 		setTimeout(function() {
-			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype;
+			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			if (rarehamster) {
 				document.body.removeChild(rarehamster);
 			}
