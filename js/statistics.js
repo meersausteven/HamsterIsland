@@ -1,7 +1,7 @@
 
 // update statistics every 10 seconds
 
-var updatestats_interval = setInterval(updateStats, 10000);
+var updatestats_interval = setInterval(updateStats, 3720);
 
 function updateStats() {
 	var time = Date.now() - starttime;
