@@ -38,11 +38,12 @@ function rareHamsterBoostDuration(rarehamster) {
 	}
 	countdown.appendChild(countdownOverlay);
 	document.body.appendChild(countdown);
-	document.getElementById("rareHamsterBoostCountdownOverlay").style.cssText = "width: 100%;";
-	let countdownDuration = rarehamster.duration;
+	
+	var countdownDuration = rarehamster.duration;
 	var decreaseDisplay = setInterval(function() {
 		document.getElementById("rareHamsterBoostCountdownOverlay").style.cssText = "width:" + ((countdownDuration / rarehamster.duration) * 100) + "%;";
 		countdownDuration -= 100;
+		console.log("lool");
 	}, 100);
 	setTimeout(function() {
 		if (document.getElementById("rareHamsterBoostCountdown") != null) {
