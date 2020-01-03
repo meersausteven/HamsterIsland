@@ -20,7 +20,6 @@ function saveProgress() {
 		"-" + hamstermaximum +
 		"-" + hamstersperclick +
 		"-" + starttime +
-		"-" + playtime +
 		"-" + boughtUpgrades.join()
 	);
 	localStorage.setItem("savegame", save);
@@ -49,7 +48,6 @@ function getProgress() {
 		hamstermaximum = parseInt(save[11]);
 		hamstersperclick = parseInt(save[12]);
 		starttime = parseInt(save[13]);
-		playtime = parseInt(save[14]);
-		boughtUpgrades = save[15].split(",");
+		boughtUpgrades = save[14].split(",");
 	}
 }
