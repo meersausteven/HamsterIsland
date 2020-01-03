@@ -46,9 +46,9 @@ function rareHamsterBoostDuration(that) {
 		document.getElementById("rareHamsterBoostCountdownOverlay").cssText = "width:" + ((countdownDuration / that.duration) * 100) + "%;";
 		countdownDuration -= 100;
 	}, 100);
-	setTimeout(function() {this.delete()}.bind(this), that.boostDuration);
-	}
-	delete() {
+	setTimeout(deleteCountdown, that.boostDuration);
+	
+	function deleteCountdown() {
 		if (document.getElementById("rareHamsterBoostCountdown") != null) {
 			document.body.removeChild(this.element);
 		}
