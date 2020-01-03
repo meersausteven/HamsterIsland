@@ -40,7 +40,8 @@ function rareHamsterBoostDuration(rarehamster) {
 	document.body.appendChild(countdown);
 	
 	var countdownDuration = rarehamster.duration;
-	var decreaseDisplay = setInterval(function() {console.log((countdownDuration / rarehamster.duration) * 100);
+	var decreaseDisplay = setInterval(function() {
+		console.log("prozent über: " + (countdownDuration / rarehamster.duration) * 100);
 		document.getElementById("rareHamsterBoostCountdownOverlay").style.cssText = "width:" + ((countdownDuration / rarehamster.duration) * 100) + "%;";
 		countdownDuration -= 100;
 	}, 100);
