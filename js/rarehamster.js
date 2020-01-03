@@ -22,35 +22,33 @@ function rareHamsterBoost(that) {
 	}
 }
 
-function rareHamsterBoostDuration(that) {
+function rareHamsterBoostDuration(rarehamster) {
 	let countdown = document.getElementById("rareHamsterBoostCountdown");
 	if (!countdown) {
 		countdown = document.createElement("div");
 		countdown.setAttribute("id", "rareHamsterBoostCountdown");
 	}
-	countdown.classname = "background-preset";
-	countdown.cssText = "background-image: url(rare_hamster_countdown_" + that.rarehamstertype + ".png);";
+	countdown.className = "background-preset";
+	countdown.cssText = "background-image: url(rare_hamster_countdown_" + rarehamster.rarehamstertype + ".png);";
 	
 	let countdownOverlay = document.getElementById("rareHamsterBoostCountdownOverlay");
 	if (!countdownOverlay) {
 		countdownOverlay = document.createElement("div");
 		countdownOverlay.setAttribute("id", "rareHamsterBoostCountdownOverlay");
 	}
-	countdownOverlay.className = "countdown-overlay";
-	countdownOverlay.cssText = "background-image: url(rare_hamster_countdown_" + that.rarehamstertype + ".png);";
 	
 	countdown.appendChild(countdownOverlay);
 	document.body.appendChild(countdown);
-	let countdownDuration = that.duration;
+	let countdownDuration = rarehamster.duration;
 	setInterval(function() {
-		document.getElementById("rareHamsterBoostCountdownOverlay").cssText = "width:" + ((countdownDuration / that.duration) * 100) + "%;";
+		document.getElementById("rareHamsterBoostCountdownOverlay").cssText = "width:" + ((countdownDuration / rarehamster.duration) * 100) + "%;";
 		countdownDuration -= 100;
 	}, 100);
-	setTimeout(deleteCountdown, that.boostDuration);
+	setTimeout(deleteCountdown, rarehamster.boostDuration);
 	
 	function deleteCountdown() {
 		if (document.getElementById("rareHamsterBoostCountdown") != null) {
-			document.body.removeChild(this.element);
+			document.body.removeChild(countdown);
 		}
 	}
 }
