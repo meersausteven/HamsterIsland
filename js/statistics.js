@@ -2,9 +2,9 @@
 // update statistics every 10 seconds
 
 var updatestats_interval = setInterval(updateStats, 10000);
-var time = starttime - new Date().getTime();
 
 function updateStats() {
+	var time = starttime - new Date().getTime();
 	var playedseconds  = new Date(time).getSeconds();
 	var playedminutes  = new Date(time).getMinutes();
 	var playedhours  = new Date(time).getHours();
