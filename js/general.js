@@ -22,7 +22,7 @@ var playtime = 0, starttime = 0;
 	//============================
 
 function startTime() {
-	starttime = Date.getTime();
+	starttime = Date.now();
 }
 
 function increaseHamsters(amount) {
