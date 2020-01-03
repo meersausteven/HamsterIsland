@@ -13,9 +13,9 @@ function spawnRareHamster(type) {
 // boost the hps if a rare hamsters gives that effect
 
 function rareHamsterBoost(rarehamster) {
-	hamsterspersecondboost = rarehamster.multiplier;
+	hamsterspersecondboost = rarehamster.boostMultiplier;
 	updateHPS();
-	var cancelboosttimeout = setTimeout(cancelBoost, rarehamster.duration);
+	var cancelboosttimeout = setTimeout(cancelBoost, rarehamster.boostDuration);
 	function cancelBoost() {
 		hamsterspersecondboost = 1;
 		updateHPS();
