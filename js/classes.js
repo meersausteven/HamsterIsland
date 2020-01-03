@@ -134,7 +134,6 @@ class RareHamster {
 				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster boosted your hamsters per second by " + this.boostMultiplier + " for " + (this.boostDuration / 1000) + " seconds!";
 			}
 			document.body.appendChild(boostInfoBox);
-
 			// remove text box after 10 seconds
 			setTimeout(
 				function() {
@@ -146,13 +145,12 @@ class RareHamster {
 			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			rarehamster.parentNode.removeChild(rarehamster);
 		}
-
 		document.body.appendChild(this.element);
-		setTimeout(function() {this.delete()}.bind(this), 5000);
 	}
-	delete() {
-		if (document.getElementById("rare_hamster_" + this.rarehamstertype) != null) {
-			document.body.removeChild(this.element);
+	setTimeout(function() {
+		let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype;
+		if (rarehamster) {
+			document.body.removeChild(rarehamster);
 		}
-	}
+	}, 5000);
 }
