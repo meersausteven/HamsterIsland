@@ -78,51 +78,50 @@ class RareHamster {
 		this.element.onclick = function() {
 			let rarehamstertype = this.id.replace('rare_hamster_','');
 			let coinFlip = Math.floor(Math.random() * 101);
-			let boostDuration = 30000;
-			let hamsterMultiplier;
-			let boostMultiplier;
+			this.boostDuration = 30000;
 			switch (rarehamstertype) {
 				case "bronze":
 					// gives you 25% of your current hamsters
-					hamsterMultiplier = 0.25;
+					this.hamsterMultiplier = 0.25;
 					// OR multiplies your current H/s by 3 for 30 seconds
-					boostMultiplier = 3;
+					this.boostMultiplier = 3;
 					break;
 				case "silver":
 					// gives you 50% of your current hamsters
-					hamsterMultiplier = 0.5;
+					this.hamsterMultiplier = 0.5;
 					// OR multiplies your current H/s by 7 for 30 seconds
-					boostMultiplier = 7;
+					this.boostMultiplier = 7;
 					break;
 				case "gold":
 					// gives you 100% of your current hamsters
-					hamsterMultiplier = 1;
+					this.hamsterMultiplier = 1;
 					// OR multiplies your current H/s by 15 for 30 seconds
-					boostMultiplier = 15;
+					this.boostMultiplier = 15;
 					break;
 				case "diamond":
 					// gives you 250% of your current hamsters
-					hamsterMultiplier = 2.5;
+					this.hamsterMultiplier = 2.5;
 					// OR multiplies your current H/s by 100 for 30 seconds
-					boostMultiplier = 100;
+					this.boostMultiplier = 100;
 					break;
 				case "alexandrite":
 					// gives you 1000% of your current hamsters
-					hamsterMultiplier = 10;
+					this.hamsterMultiplier = 10;
 					// OR multiplies your current H/s by 1000 for 15 seconds
-					boostMultiplier = 1000;
-					boostDuration = 15000;
+					this.boostMultiplier = 1000;
+					this.boostDuration = 15000;
 					break;
 				default:
-					hamsterMultiplier = 0;
-					boostMultiplier = 0;
-					boostDuration = 0;
+					this.hamsterMultiplier = 0;
+					this.boostMultiplier = 0;
+					this.boostDuration = 0;
 					break;
 			}
 			if (coinFlip > 50) {
-				increaseHamsters(hamsterspersecond * hamsterMultiplier);
+				increaseHamsters(hamsterspersecond * this.hamsterMultiplier);
 			} else {
-				rareHamsterBoost(boostMultiplier, boostDuration);
+				rareHamsterBoost(this);
+				rareHamsterBoostDuration(this);
 			}
 
 			// show a small text box with the activated effect
