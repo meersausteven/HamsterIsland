@@ -5,7 +5,7 @@ var updatestats_interval = setInterval(updateStats, 10000);
 
 function updateStats() {
 	var time = starttime - Date.now();
-	console.log("start: " + starttime + " | now: " + Date.now();
+	console.log("start: " + starttime + " | now: " + Date.now());
 	var playedseconds  = new Date(time).getSeconds();
 	var playedminutes  = new Date(time).getMinutes();
 	var playedhours  = new Date(time).getHours();
