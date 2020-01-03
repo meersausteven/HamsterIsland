@@ -39,7 +39,7 @@ function rareHamsterBoostDuration(rarehamster) {
 	countdown.appendChild(countdownOverlay);
 	document.body.appendChild(countdown);
 	
-	var countdownDuration = rarehamster.duration;
+	var countdownDuration = rarehamster.boostDuration;
 	var decreaseDisplay = setInterval(function() {
 		document.getElementById("rareHamsterBoostCountdownOverlay").style.cssText = "width:" + ((countdownDuration / rarehamster.boostDuration) * 100) + "%;";
 		countdownDuration -= 100;
