@@ -36,6 +36,7 @@ function rareHamsterBoostDuration(rarehamster) {
 		countdownOverlay = document.createElement("div");
 		countdownOverlay.setAttribute("id", "rareHamsterBoostCountdownOverlay");
 	}
+	countdownOverlay.cssText = "width: 100%;";
 	countdown.appendChild(countdownOverlay);
 	document.body.appendChild(countdown);
 	
