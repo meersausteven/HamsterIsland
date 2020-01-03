@@ -8,7 +8,7 @@ function updateStats() {
 	var playedseconds  = new Date(time).getSeconds();
 	var playedminutes  = new Date(time).getMinutes();
 	var playedhours  = new Date(time).getHours();
-	var totalplaytime = playedhours + ((playedhours == 1) ? " hour " : " hours ") + " hours " + playedminutes + ((playedminutes == 1) ? " minute " : " minutes ") + playedseconds + ((playedseconds == 1) ? " second " : " seconds");
+	var totalplaytime = playedhours + ((playedhours == 1) ? " hour " : " hours ") + playedminutes + ((playedminutes == 1) ? " minute " : " minutes ") + playedseconds + ((playedseconds == 1) ? " second " : " seconds");
 
 	document.getElementById("stats_hamsters").innerHTML = convertToReadableNumber(hamstercount);
 	document.getElementById("stats_max").innerHTML = convertToReadableNumber(hamstermaximum);
