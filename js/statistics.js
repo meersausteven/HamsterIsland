@@ -8,7 +8,7 @@ function updateStats() {
 	console.log("start: " + starttime + " | now: " + Date.now() + " | diff: " + time);
 	var playedseconds  = new Date(time).getSeconds();
 	var playedminutes  = new Date(time).getMinutes();
-	var playedhours  = new Date(time).getHours();
+	var playedhours  = new Date(time).getHours() - 1;
 	var totalplaytime = playedhours + ((playedhours == 1) ? " hour " : " hours ") + playedminutes + ((playedminutes == 1) ? " minute " : " minutes ") + playedseconds + ((playedseconds == 1) ? " second " : " seconds");
 
 	document.getElementById("stats_hamsters").innerHTML = convertToReadableNumber(hamstercount);
