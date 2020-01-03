@@ -118,7 +118,7 @@ class RareHamster {
 					break;
 			}
 			if (coinFlip > 50) {
-				increaseHamsters(hamsterspersecond * this.hamsterMultiplier);
+				increaseHamsters(Math.floor(hamstercount * this.hamsterMultiplier));
 			} else {
 				rareHamsterBoost(this);
 				rareHamsterBoostDuration(this);
