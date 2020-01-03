@@ -12,10 +12,10 @@ function spawnRareHamster(type) {
 
 // boost the hps if a rare hamsters gives that effect
 
-function rareHamsterBoost(that) {
-	hamsterspersecondboost = that.multiplier;
+function rareHamsterBoost(rarehamster) {
+	hamsterspersecondboost = rarehamster.multiplier;
 	updateHPS();
-	var cancelboosttimeout = setTimeout(cancelBoost, that.duration);
+	var cancelboosttimeout = setTimeout(cancelBoost, rarehamster.duration);
 	function cancelBoost() {
 		hamsterspersecondboost = 1;
 		updateHPS();
@@ -36,19 +36,18 @@ function rareHamsterBoostDuration(rarehamster) {
 		countdownOverlay = document.createElement("div");
 		countdownOverlay.setAttribute("id", "rareHamsterBoostCountdownOverlay");
 	}
-	
 	countdown.appendChild(countdownOverlay);
 	document.body.appendChild(countdown);
+	
 	let countdownDuration = rarehamster.duration;
-	setInterval(function() {
+	var decreaseDisplay = setInterval(function() {
 		document.getElementById("rareHamsterBoostCountdownOverlay").cssText = "width:" + ((countdownDuration / rarehamster.duration) * 100) + "%;";
 		countdownDuration -= 100;
 	}, 100);
-	setTimeout(deleteCountdown, rarehamster.boostDuration);
-	
-	function deleteCountdown() {
+	setTimeout(function() {
 		if (document.getElementById("rareHamsterBoostCountdown") != null) {
 			document.body.removeChild(countdown);
 		}
-	}
+		clearInterval(decreaseDisplay);
+	}, rarehamster.boostDuration);
 }
