@@ -76,7 +76,7 @@ class RareHamster {
 
 		// on click activate one of two possible effects with a 50% chance for either
 		this.element.onclick = function() {
-			let rarehamstertype = this.id.replace('rare_hamster_','');
+			this.rarehamstertype = this.id.replace('rare_hamster_','');
 			let coinFlip = Math.floor(Math.random() * 101);
 			this.boostDuration = 30000;
 			switch (rarehamstertype) {
