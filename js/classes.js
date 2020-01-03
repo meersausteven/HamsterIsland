@@ -135,22 +135,21 @@ class RareHamster {
 			}
 			document.body.appendChild(boostInfoBox);
 			// remove text box after 10 seconds
-			setTimeout(
-				function() {
-					let infoBox = document.getElementById("boost_info_box");
-					infoBox.parentNode.removeChild(infoBox);
-				}, 10000
-			);
+			setTimeout(function() {
+				let infoBox = document.getElementById("boost_info_box");
+				infoBox.parentNode.removeChild(infoBox);
+			}, 5000);
 			rarehamsterclicks++;
 			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			rarehamster.parentNode.removeChild(rarehamster);
 		}
 		document.body.appendChild(this.element);
+		
+		setTimeout(function() {
+			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype;
+			if (rarehamster) {
+				document.body.removeChild(rarehamster);
+			}
+		}, 5000);
 	}
-	setTimeout(function() {
-		let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype;
-		if (rarehamster) {
-			document.body.removeChild(rarehamster);
-		}
-	}, 5000);
 }
