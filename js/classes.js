@@ -129,7 +129,7 @@ class RareHamster {
 			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype;
 			boostInfoBox.id = "boost_info_box";
 			if (coinFlip > 50) {
-				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster gifted you " + (Math.floor((hamsterspersecond * this.hamsterMultiplier)).toLocaleString()) + " hamsters!";
+				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster gifted you " + (Math.floor((hamstercount * this.hamsterMultiplier)).toLocaleString()) + " hamsters!";
 			} else {
 				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster boosted your hamsters per second by " + this.boostMultiplier + " for " + (this.boostDuration / 1000) + " seconds!";
 			}
