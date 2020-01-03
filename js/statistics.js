@@ -2,12 +2,12 @@
 // update statistics every 10 seconds
 
 var updatestats_interval = setInterval(updateStats, 10000);
-var time = starttime - new Date();
+var time = starttime - new Date().getTime();
 
 function updateStats() {
-	var playedseconds  = time.getSeconds();
-	var playedminutes  = time.getMinutes();
-	var playedhours  = time.getHours() - 1;
+	var playedseconds  = Date(time).getSeconds();
+	var playedminutes  = Date(time).getMinutes();
+	var playedhours  = Date(time).getHours();
 	var totalplaytime = playedhours + ((playedhours == 1) ? " hour " : " hours ") + " hours " + playedminutes + ((playedminutes == 1) ? " minute " : " minutes ") + playedseconds + ((playedseconds == 1) ? " second " : " seconds");
 
 	document.getElementById("stats_hamsters").innerHTML = convertToReadableNumber(hamstercount);
