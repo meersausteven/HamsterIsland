@@ -29,20 +29,19 @@ function rareHamsterBoostDuration(rarehamster) {
 		countdown.setAttribute("id", "rareHamsterBoostCountdown");
 	}
 	countdown.className = "background-preset";
-	countdown.cssText = "background-image: url(rare_hamster_countdown_" + rarehamster.rarehamstertype + ".png);";
+	countdown.style.cssText = "background-image: url(rare_hamster_countdown_" + rarehamster.rarehamstertype + ".png);";
 	
 	let countdownOverlay = document.getElementById("rareHamsterBoostCountdownOverlay");
 	if (!countdownOverlay) {
 		countdownOverlay = document.createElement("div");
 		countdownOverlay.setAttribute("id", "rareHamsterBoostCountdownOverlay");
 	}
-	countdownOverlay.cssText = "width: 100%;";
 	countdown.appendChild(countdownOverlay);
 	document.body.appendChild(countdown);
 	
 	let countdownDuration = rarehamster.duration;
 	let decreaseDisplay = setInterval(function() {
-		countdownOverlay.cssText = "width:" + ((countdownDuration / rarehamster.duration) * 100) + "%;";
+		countdownOverlay.style.cssText = "width:" + ((countdownDuration / rarehamster.duration) * 100) + "%;";
 		countdownDuration -= 100;
 	}, 100);
 	setTimeout(function() {
