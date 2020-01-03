@@ -79,7 +79,7 @@ class RareHamster {
 			this.rarehamstertype = this.id.replace('rare_hamster_','');
 			let coinFlip = Math.floor(Math.random() * 101);
 			this.boostDuration = 30000;
-			switch (rarehamstertype) {
+			switch (this.rarehamstertype) {
 				case "bronze":
 					// gives you 25% of your current hamsters
 					this.hamsterMultiplier = 0.25;
@@ -126,12 +126,12 @@ class RareHamster {
 
 			// show a small text box with the activated effect
 			let boostInfoBox = document.createElement("div");
-			boostInfoBox.className = "boost-info-box rare-hamster-" + rarehamstertype;
+			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype;
 			boostInfoBox.id = "boost_info_box";
 			if (coinFlip > 50) {
-				boostInfoBox.innerHTML = "The " + rarehamstertype + " hamster gifted you " + (Math.floor((hamsterspersecond * this.hamsterMultiplier)).toLocaleString()) + " hamsters!";
+				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster gifted you " + (Math.floor((hamsterspersecond * this.hamsterMultiplier)).toLocaleString()) + " hamsters!";
 			} else {
-				boostInfoBox.innerHTML = "The " + rarehamstertype + " hamster boosted your hamsters per second by " + this.boostMultiplier + " for " + (this.boostDuration / 1000) + " seconds!";
+				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster boosted your hamsters per second by " + this.boostMultiplier + " for " + (this.boostDuration / 1000) + " seconds!";
 			}
 			document.body.appendChild(boostInfoBox);
 
@@ -143,7 +143,7 @@ class RareHamster {
 				}, 10000
 			);
 			rarehamsterclicks++;
-			let rarehamster = document.getElementById("rare_hamster_" + rarehamstertype);
+			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			rarehamster.parentNode.removeChild(rarehamster);
 		}
 
