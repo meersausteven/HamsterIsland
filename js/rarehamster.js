@@ -32,7 +32,7 @@ function rareHamsterBoostDuration(that) {
 	countdown.cssText = "background-image: url(rare_hamster_countdown_" + that.rarehamstertype + ".png);";
 	
 	let countdownOverlay = document.getElementById("rareHamsterBoostCountdownOverlay");
-	if (!element) {
+	if (!countdownOverlay) {
 		countdownOverlay = document.createElement("div");
 		countdownOverlay.setAttribute("id", "rareHamsterBoostCountdownOverlay");
 	}
