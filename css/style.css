@@ -371,14 +371,23 @@ body {
 }
 .animation-snackbar {
 	animation: fade_up 0.5s, fade_down 0.5s 2.5s;
+	-webkit-animation: fade_up 0.5s, fade_down 0.5s 2.5s;
 }
 @keyframes fade_up {
-	0%	{translate(-50%, 30px); opacity: 0;}
-	100%	{translate(-50%, 0px); opacity: 1;}
+	from{translate(-50%, 30px); opacity: 0;}
+	to {translate(-50%, 0px); opacity: 1;}
+}
+@-webkit-keyframes fade_up {
+	from{translate(-50%, 30px); opacity: 0;}
+	to {translate(-50%, 0px); opacity: 1;}
 }
 @keyframes fade_down {
-	0%	{translate(-50%, 0px); opacity: 1;}
-	100%	{translate(-50%, 30px); opacity: 0;}
+	from {translate(-50%, 0px); opacity: 1;}
+	to {translate(-50%, 30px); opacity: 0;}
+}
+@-webkit-keyframes fade_down {
+	from {translate(-50%, 0px); opacity: 1;}
+	to {translate(-50%, 30px); opacity: 0;}
 }
 /* States of the open/closed shop menu */
 
