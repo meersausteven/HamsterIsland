@@ -25,7 +25,7 @@ function saveProgress() {
 	localStorage.setItem("savegame", save);
 	
 	var notice = new SaveNotice();
-	notice.element.className += " animation-fade-up";
+	notice.element.className += " animation-snackbar";
 }
 
 // check for already saved progress
