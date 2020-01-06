@@ -42,7 +42,7 @@ class SaveNotice {
 		this.element.innerHTML = "Game was saved.";
 		this.element.className = "save-notice";
 		document.body.appendChild(this.element);
-		setTimeout(function() {this.delete()}.bind(this), 5000);
+		setTimeout(function() {this.delete()}.bind(this), 3000);
 	}
 	delete() {
 		document.body.removeChild(this.element);
