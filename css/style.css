@@ -360,6 +360,7 @@ body {
 	height: auto;
 	position: absolute;
 	left: 50%;
+	transform: translateX(-50%);
 	bottom: 120px;
 	padding: 10px 20px;
 	color: #ffffff;
