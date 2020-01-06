@@ -6,19 +6,21 @@ document.getElementById("toggle_shop_button").addEventListener("click", toggleSh
 var shopopen = false;
 
 function toggleShop() {
-  var shopbutton = document.getElementById("toggle_shop_button");
-  var shop = document.getElementById("shop");
-  if (shopopen === true) {
-    shop.classList.remove("shop-open");
-    shop.classList.add("shop-buying-impossible");
-    shopbutton.classList.remove("shop-open-button");
-    shopopen = false;
-  } else {
-    shop.classList.add("shop-open");
+	var shopbutton = document.getElementById("toggle_shop_button");
+	var shop = document.getElementById("shop");
+	if (shopopen === true) {
+		shop.classList.remove("shop-open");
+		shop.classList.add("shop-buying-impossible");
+		shopbutton.classList.remove("shop-open-button");
+		shopbutton.innerHTML = "OPEN SHOP";
+		shopopen = false;
+	} else {
+		shop.classList.add("shop-open");
 		shop.classList.remove("shop-buying-impossible");
-    shopbutton.classList.add("shop-open-button");
-    shopopen = true;
-  }
+		shopbutton.classList.add("shop-open-button");
+		shopbutton.innerHTML = "CLOSE SHOP";
+		shopopen = true;
+	}
 }
 
 	//===============================
