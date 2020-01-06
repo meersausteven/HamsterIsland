@@ -369,15 +369,16 @@ body {
 	border-radius: 4px;
 	text-align: center;
 }
-.animation-fade-up {
-	animation-name: fade_up;
-	-webkit-animation-name: fade_up;
-	animation-duration: 0.5s;
-	animation-iteration-count: 1;
+.animation-snackbar {
+	animation: fade-up 0.5s, fade-down 0.5s 2.5s;
 }
 @keyframes fade_up {
-	0%	{transform: translateX(-50%), translateY(30px); opacity: 0;}
-	100%	{transform: translateX(-50%), translateY(0px); opacity: 1;}
+	from	{transform: translateX(-50%), translateY(30px); opacity: 0;}
+	to	{transform: translateX(-50%), translateY(0px); opacity: 1;}
+}
+@keyframes fade_down {
+	from	{transform: translateX(-50%), translateY(0px); opacity: 1;}
+	to	{transform: translateX(-50%), translateY(30px); opacity: 0;}
 }
 /* States of the open/closed shop menu */
 
