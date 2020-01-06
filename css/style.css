@@ -373,12 +373,12 @@ body {
 	animation: fade_up 0.5s, fade_down 0.5s 2.5s;
 }
 @keyframes fade_up {
-	from	{transform: translateX(-50%), translateY(30px); opacity: 0;}
-	to	{transform: translateX(-50%), translateY(0px); opacity: 1;}
+	0%	{transform: translateX(-50%), translateY(30px); opacity: 0;}
+	100%	{transform: translateX(-50%), translateY(0px); opacity: 1;}
 }
 @keyframes fade_down {
-	from	{transform: translateX(-50%), translateY(0px); opacity: 1;}
-	to	{transform: translateX(-50%), translateY(30px); opacity: 0;}
+	0%	{transform: translateX(-50%), translateY(0px); opacity: 1;}
+	100%	{transform: translateX(-50%), translateY(30px); opacity: 0;}
 }
 /* States of the open/closed shop menu */
 
