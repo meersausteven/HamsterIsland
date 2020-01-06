@@ -149,6 +149,7 @@ body {
 }
 #toggle_shop_button_label {
   position: relative;
+  width: 125px;
   left: -50%;
   float: left;
   color: white;
