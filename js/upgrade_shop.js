@@ -12,13 +12,13 @@ function toggleShop() {
 		shop.classList.remove("shop-open");
 		shop.classList.add("shop-buying-impossible");
 		shopbutton.classList.remove("shop-open-button");
-		shopbutton.innerHTML = "OPEN SHOP";
+		document.getElementById("toggle_shop_button_label").innerHTML = "OPEN SHOP";
 		shopopen = false;
 	} else {
 		shop.classList.add("shop-open");
 		shop.classList.remove("shop-buying-impossible");
 		shopbutton.classList.add("shop-open-button");
-		shopbutton.innerHTML = "CLOSE SHOP";
+		document.getElementById("toggle_shop_button_label").innerHTML = "CLOSE SHOP";
 		shopopen = true;
 	}
 }
