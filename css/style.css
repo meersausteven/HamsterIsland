@@ -356,14 +356,15 @@ body {
 /* Game saved notice */
 
 .save-notice {
-	width: 120px;
+	width: 180px;
 	height: auto;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 120px;
-	padding: 10px 20px;
+	bottom: 50px;
+	padding: 20px 40px;
 	color: #ffffff;
+	font-size: 18px;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 	background-color: rgba(0,0,0,0.4);
 	border-radius: 4px;
@@ -374,20 +375,20 @@ body {
 	-webkit-animation: fade_up 0.5s, fade_down 0.5s 2.5s;
 }
 @keyframes fade_up {
-	from{translate(-50%, 30px); opacity: 0;}
-	to {translate(-50%, 0px); opacity: 1;}
+	from{bottom: 50px; opacity: 0;}
+	to {bottom: 0px; opacity: 1;}
 }
 @-webkit-keyframes fade_up {
-	from{translate(-50%, 30px); opacity: 0;}
-	to {translate(-50%, 0px); opacity: 1;}
+	from{bottom: 50px; opacity: 0;}
+	to {bottom: 0px; opacity: 1;}
 }
 @keyframes fade_down {
-	from {translate(-50%, 0px); opacity: 1;}
-	to {translate(-50%, 30px); opacity: 0;}
+	from {bottom: 0px; opacity: 1;}
+	to {bottom: 50px; opacity: 0;}
 }
 @-webkit-keyframes fade_down {
-	from {translate(-50%, 0px); opacity: 1;}
-	to {translate(-50%, 30px); opacity: 0;}
+	from {bottom: 0px; opacity: 1;}
+	to {bottom: 50px; opacity: 0;}
 }
 /* States of the open/closed shop menu */
 
