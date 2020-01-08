@@ -68,7 +68,7 @@ class RareHamster {
 		} else {
 			this.rarehamstertype = type;
 		}
-		this.element.className = "background-preset rare-hamster rare-hamster-" + this.rarehamstertype;
+		this.element.className = "background-preset rare-hamster" + this.rarehamstertype + "-hamster";
 		this.element.id = "rare_hamster_" + this.rarehamstertype;
 		this.posX = (Math.floor(Math.random() * 1001) / 10);
 		this.posY = (Math.floor(Math.random() * 1001) / 10);
