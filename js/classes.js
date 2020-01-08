@@ -23,7 +23,7 @@ class Particle {
 class ClickedHamsters {
 	constructor(e) {
 		this.element = document.createElement("div");
-		this.element.innerHTML = "+" + hamstersperclick.toLocaleString();
+		this.element.innerHTML = "+" + convertToReadableNumber(hamstersperclick);
 		this.element.className = "clicked-hamsters";
 		this.posX = e.clientX - 10;
 		this.posY = e.clientY - 10;
@@ -129,7 +129,7 @@ class RareHamster {
 			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype;
 			boostInfoBox.id = "boost_info_box";
 			if (coinFlip > 50) {
-				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster gifted you " + (Math.floor((hamstercount * this.hamsterMultiplier)).toLocaleString()) + " hamsters!";
+				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster gifted you " + convertToReadableNumber(Math.floor(hamstercount * this.hamsterMultiplier)) + " hamsters!";
 			} else {
 				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster boosted your hamsters per second by " + this.boostMultiplier + " for " + (this.boostDuration / 1000) + " seconds!";
 			}
