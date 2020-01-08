@@ -392,6 +392,26 @@ body {
 	from {bottom: 50px; opacity: 1;}
 	to {bottom: 0px; opacity: 0;}
 }
+.animation-infobox {
+	animation: pop_up 0.5s, pop_down 0.5s 4.5s;
+	-webkit-animation: pop_up 0.5s, pop_down 0.5s 4.5s;
+}
+@keyframes pop_up {
+	from{bottom: 0px; opacity: 0; transform: scale(0);}
+	to {bottom: 100px; opacity: 1; transform: scale(1);}
+}
+@-webkit-keyframes pop_up {
+	from{bottom: 0px; opacity: 0; transform: scale(0);}
+	to {bottom: 100px; opacity: 1; transform: scale(1);}
+}
+@keyframes pop_down {
+	from {bottom: 100px; opacity: 1; transform: scale(1);}
+	to {bottom: 0px; opacity: 0; transform: scale(0);}
+}
+@-webkit-keyframes pop_down {
+	from {bottom: 100px; opacity: 1; transform: scale(1);}
+	to {bottom: 0px; opacity: 0; transform: scale(0);}
+}
 /* States of the open/closed shop menu */
 
 .shop-open {
