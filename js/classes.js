@@ -126,7 +126,7 @@ class RareHamster {
 
 			// show a small text box with the activated effect
 			let boostInfoBox = document.createElement("div");
-			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype;
+			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype + " animation-infobox";
 			boostInfoBox.id = "boost_info_box";
 			if (coinFlip > 50) {
 				boostInfoBox.innerHTML = "The " + this.rarehamstertype + " hamster gifted you " + convertToReadableNumber(Math.floor(hamstercount * this.hamsterMultiplier)) + " hamsters!";
