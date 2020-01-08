@@ -3,17 +3,21 @@
 
 function updateHPS() {
 	hamsterspersecond = basehamsterspersecond * hamsterspersecondboost;
-	document.getElementById("hps_display").innerHTML = hamsterspersecond.toLocaleString() + " H/s";
+	document.getElementById("hps_display").innerHTML = convertToReadableNumber(hamsterspersecond) + " H/s";
 }
 
 function updateHamsterMaximum() {
 	maximumdisplay = document.getElementById("maximum_display");
-	let readableMaximum = convertToReadableNumber(hamstermaximum);
 	if (hamstermaximum == "unlimited") {
 		maximumdisplay.innerHTML = "Max: &infin; Hamsters";
 	} else {
-		maximumdisplay.innerHTML = "Max: " + readableMaximum + " Hamsters";
+		maximumdisplay.innerHTML = "Max: " + convertToReadableNumber(hamstermaximum) + " Hamsters";
 	}
+}
+
+function updateHamsterCount() {
+	let readableCount = convertToReadableNumber(hamstercount);
+	document.getElementById("counter").innerHTML = readableCount + " Hamsters";
 }
 
 function updateCageLevel() {
@@ -50,11 +54,6 @@ function updateHamsterLevel() {
 
 function updateWorldLevel() {
 	document.getElementById("hamster_sea").style.cssText = "background-image: url('pics/world/level_" + worldlevel + ".png');";
-}
-
-function updateHamsterCount() {
-	let readableCount = convertToReadableNumber(hamstercount);
-	document.getElementById("counter").innerHTML = readableCount + " Hamsters";
 }
 
 function convertToReadableNumber(number) {
