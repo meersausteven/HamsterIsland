@@ -397,20 +397,24 @@ body {
 	-webkit-animation: pop_up 0.5s, pop_down 0.5s 4.5s;
 }
 @keyframes pop_up {
-	from{bottom: 0px; opacity: 0; transform: scale(0);}
-	to {bottom: 100px; opacity: 1; transform: scale(1);}
+	0% {opacity: 0; transform: scale(0);}
+	90% {opacity: 1; transform: scale(1.1);}
+	100% {opacity: 1; transform: scale(1);}
 }
 @-webkit-keyframes pop_up {
-	from{bottom: 0px; opacity: 0; transform: scale(0);}
-	to {bottom: 100px; opacity: 1; transform: scale(1);}
+	0% {opacity: 0; transform: scale(0);}
+	90% {opacity: 1; transform: scale(1.1);}
+	100% {opacity: 1; transform: scale(1);}
 }
 @keyframes pop_down {
-	from {bottom: 100px; opacity: 1; transform: scale(1);}
-	to {bottom: 0px; opacity: 0; transform: scale(0);}
+	0% {opacity: 1; transform: scale(1);}
+	10% {opacity: 1; transform: scale(1.1);}
+	100% {opacity: 0; transform: scale(0);}
 }
 @-webkit-keyframes pop_down {
-	from {bottom: 100px; opacity: 1; transform: scale(1);}
-	to {bottom: 0px; opacity: 0; transform: scale(0);}
+	0% {opacity: 1; transform: scale(1);}
+	10% {opacity: 1; transform: scale(1.1);}
+	100% {opacity: 0; transform: scale(0);}
 }
 /* States of the open/closed shop menu */
 
