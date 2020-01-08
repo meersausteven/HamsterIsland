@@ -542,23 +542,23 @@ body {
 }
 .rare-hamster-bronze {
 	background-color: rgba(179,104,0,0.5);
-	border-color: rgba(153,89,0,0.8);
+	border-color: rgba(153,89,0,0.8) !important;
 }
 .rare-hamster-silver {
 	background-color: rgba(204,204,204,0.5);
-	border-color: rgba(179,179,179,0.8);
+	border-color: rgba(179,179,179,0.8) !important;
 }
 .rare-hamster-gold {
 	background-color: rgba(238,209,43,0.5);
-	border-color: rgba(212,183,17,0.8);
+	border-color: rgba(212,183,17,0.8) !important;
 }
 .rare-hamster-diamond {
 	background-color: rgba(182,251,251,0.5);
-	border-color: rgba(134,249,249,0.8);
+	border-color: rgba(134,249,249,0.8) !important;
 }
 .rare-hamster-alexandrite {
 	background-color: rgba(53,23,53,0.5);
-	border-color: rgba(53,23,53,0.8);
+	border-color: rgba(53,23,53,0.8) !important;
 }
 /* Food and Drink Class */
 
