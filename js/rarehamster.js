@@ -28,7 +28,7 @@ function rareHamsterBoostDuration(rarehamster) {
 		countdown = document.createElement("div");
 		countdown.setAttribute("id", "rareHamsterBoostCountdown");
 	}
-	countdown.className = "background-preset";
+	countdown.className = "background-preset rare-hamster-" + rarehamster.rarehamstertype";
 	countdown.style.cssText = "background-image: url(rare_hamster_countdown_" + rarehamster.rarehamstertype + ".png);";
 	
 	let countdownOverlay = document.getElementById("rareHamsterBoostCountdownOverlay");
