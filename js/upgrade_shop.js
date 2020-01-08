@@ -145,7 +145,8 @@ function addNewUpgradesToShop() {
 			} else if ((upgrade.tag == "hamster") && (hamsterlevel != upgrade.level - 1)) {
 				return;
 			}
-		} else if ( (upgrade.level != 0) && (upgrade.tag == "world") && (upgrade.level != worldlevel + 1) ) {
+		} else if ( (upgrade.tag == "world") && (upgrade.level != worldlevel + 1) &&
+			    (islandlevel != 5) && (drinklevel != 8) && (foodlevel != 8) && (cagelevel != 5) && (hamsterlevel != 3) ) {
 			return;
 		}
 		upgrade.displayed = true;
