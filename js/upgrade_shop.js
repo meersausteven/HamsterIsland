@@ -271,7 +271,7 @@ function addNewUpgradesToShop() {
 				}
 				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;" +
 							"top:" + (upgradeposition.top - upgradebox.clientHeight) + "px;" +
-							"left:" + (upgradeposition.left + (upgradeposition.left - e.clientX) ) + "px;";
+							"left:" + (upgradeposition.left + (upgradeposition.left + e.clientX) ) + "px;";
 				document.body.appendChild(infobox);
 			}
 			upgradeelement.onmouseleave = function() {
