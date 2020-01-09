@@ -269,7 +269,7 @@ function addNewUpgradesToShop() {
 					infobox.className = "upgrade_info_box";
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
 				}
-				var correctLeft = upgradeposition.left + (upgradebox.clientWidth / 2);
+				var correctLeft = e.clientX - (upgradebox.clientWidth / 2);
 				if (correctLeft < 10) {
 					correctLeft = 10;
 				} else if (correctLeft > window.screen.width - 10) {
