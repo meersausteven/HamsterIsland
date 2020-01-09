@@ -134,6 +134,7 @@ function addNewUpgradesToShop() {
   allUpgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) && (upgrade.world == worldlevel) ) {
 		if ( (upgrade.level != 0) && (upgrade.tag != "world")) {
+			// only display upgrades that are one level higher than the current level of the upgrade type
 			if ((upgrade.tag == "cage") && (cagelevel != upgrade.level - 1)) {
 				return;
 			} else if ((upgrade.tag == "food") && (foodlevel != upgrade.level - 1)) {
@@ -146,6 +147,7 @@ function addNewUpgradesToShop() {
 				return;
 			}
 		} else if ( (upgrade.tag == "world") && (upgrade.level != worldlevel + 1) &&
+			   // only display world upgrades if all upgrades of the current world have been purchased
 			    (islandlevel != 5) && (drinklevel != 8) && (foodlevel != 8) && (cagelevel != 5) && (hamsterlevel != 3) ) {
 			return;
 		}
@@ -157,6 +159,7 @@ function addNewUpgradesToShop() {
 				"<h2>Costs: " + convertToReadableNumber(upgrade.price) + " Hamsters</h2>" + 
 				"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
 			upgradeelement.onclick = function() {
+				// do all necessary things when clicking the shop item
 				var index = this.id.replace('upgrade_','');
 				for (var i = 0; i < allUpgrades.length; i++) {
 					if (allUpgrades[i].id == index) {
@@ -227,6 +230,7 @@ function addNewUpgradesToShop() {
 				}
 			}
 			upgradeelement.onmouseenter = function() {
+				// display a small description when hovering the shop item
 				var index = this.id.replace("upgrade_","");
 				for (var i = 0; i < allUpgrades.length; i++) {
 					if (allUpgrades[i].id == index) {
@@ -263,6 +267,7 @@ function addNewUpgradesToShop() {
 				document.body.appendChild(infobox);
 			}
 			upgradeelement.onmouseleave = function() {
+				// remove shop item description when de-hovering
 				var infobox = document.getElementById("upgrade_info_box");
 				infobox.parentNode.removeChild(infobox);
 			}
