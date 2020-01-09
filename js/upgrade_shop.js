@@ -272,7 +272,7 @@ function addNewUpgradesToShop() {
 				var correctLeft = upgradeposition.left + (e.clientX - upgradeposition.left);
 				if (correctLeft < upgradeposition.left) {
 					correctLeft = upgradeposition.left;
-				else if (correctLeft > window.screen.width - 5) {
+				} else if (correctLeft > window.screen.width - 5) {
 					 correctLeft = window.screen.width - 5;
 				}
 				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;" +
