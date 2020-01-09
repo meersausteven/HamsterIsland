@@ -39,11 +39,11 @@ var cageupgrades = [
 	{id:"c004", price:6460, level:4, world: 0, action:"add", value:4, name:"Fancy Castle", tag:"cage", description:"With this hamster castle your little kritters will feel protected and secure.", displayed:false},
 	{id:"c005", price:14990, level:5, world: 0, action:"add", value:5, name:"Luxurious Palace", tag:"cage", description:"In this luxury class housing your hamsters will be pampered like real kings.", displayed:false},
 	//world 1 upgrades - City Park Lake
-	{id:"c001", price:50, level:1, world: 1, action:"add", value:2, name:"Lily Pad Hat", tag:"cage", description:"This cute little lily pad hat protects your small friends from the rain. The hamsters kinda look like kappas that way.", displayed:false},
-	{id:"c002", price:150, level:2, world: 1, action:"add", value:2, name:"Leaf Tent", tag:"cage", description:"A small little tent made from fallen leafs you found in the Park.", displayed:false},
-	{id:"c003", price:960, level:3, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", displayed:false},
-	{id:"c004", price:2460, level:4, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", displayed:false},
-	{id:"c005", price:9990, level:5, world: 1, action:"add", value:7, name:"", tag:"cage", description:"", displayed:false},
+	{id:"c006", price:50, level:1, world: 1, action:"add", value:2, name:"Lily Pad Hat", tag:"cage", description:"This cute little lily pad hat protects your small friends from the rain. The hamsters kinda look like kappas that way.", displayed:false},
+	{id:"c007", price:150, level:2, world: 1, action:"add", value:2, name:"Leaf Tent", tag:"cage", description:"A small little tent made from fallen leafs you found in the Park.", displayed:false},
+	{id:"c008", price:960, level:3, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", displayed:false},
+	{id:"c009", price:2460, level:4, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", displayed:false},
+	{id:"c010", price:9990, level:5, world: 1, action:"add", value:7, name:"", tag:"cage", description:"", displayed:false},
 	// world 2 upgrades - 
 ];
 // Food upgrades increase hamsters generated per second
