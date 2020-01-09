@@ -260,10 +260,15 @@ function addNewUpgradesToShop() {
 				}
 				var upgradebox = document.getElementById("upgrade_" + upgrade.id);
 				var upgradeposition = upgradebox.getBoundingClientRect();
-				var infobox = document.createElement("div");
-					infobox.setAttribute("id", "upgrade_info_box");
+				var infobox;
+				if (document.getElementById("upgrade_info_box_" + upgrade.id)) {
+					infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
+				} else {
+					var infobox = document.createElement("div");
+					infobox.setAttribute("id", "upgrade_info_box_" + upgrade.id);
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
-					infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;top:" + (e.screenY - 20) + "px;left:" + (upgradeposition.left + 5) + "px;";
+				}
+				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;top:" + (e.screenY - 20) + "px;left:" + (upgradeposition.left + 5) + "px;";
 				document.body.appendChild(infobox);
 			}
 			upgradeelement.onmouseleave = function() {
