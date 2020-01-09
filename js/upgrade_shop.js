@@ -273,7 +273,13 @@ function addNewUpgradesToShop() {
 			}
 			upgradeelement.onmouseleave = function() {
 				// remove shop item description when de-hovering
-				var infobox = document.getElementById("upgrade_info_box");
+				var index = this.id.replace("upgrade_","");
+				for (var i = 0; i < allUpgrades.length; i++) {
+					if (allUpgrades[i].id == index) {
+						var upgrade = allUpgrades[i];
+					}
+				}
+				var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 				infobox.parentNode.removeChild(infobox);
 			}
 		document.getElementById("shop").appendChild(upgradeelement);
