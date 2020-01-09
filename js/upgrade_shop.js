@@ -266,6 +266,7 @@ function addNewUpgradesToShop() {
 				} else {
 					var infobox = document.createElement("div");
 					infobox.setAttribute("id", "upgrade_info_box_" + upgrade.id);
+					infobox.className = "upgrade_info_box";
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
 				}
 				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;top:" + (e.screenY - 20) + "px;left:" + (upgradeposition.left + 5) + "px;";
