@@ -269,9 +269,15 @@ function addNewUpgradesToShop() {
 					infobox.className = "upgrade_info_box";
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
 				}
+				var correctLeft = upgradeposition.left + (e.clientX - upgradeposition.left);
+				if (correctLeft < upgradeposition.left) {
+					correctLeft = upgradeposition.left;
+				else if (correctLeft > window.screen.width - 5) {
+					 correctLeft = window.screen.width - 5;
+				}
 				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;" +
 							"top:" + (upgradeposition.top - upgradebox.clientHeight) + "px;" +
-							"left:" + (upgradeposition.left + ( (upgradebox.clientWidth / 2 + e.clientX) - upgradeposition.left) ) + "px;";
+							"left:" + correctLeft + "px;";
 				document.body.appendChild(infobox);
 			}
 			upgradeelement.onmouseleave = function() {
