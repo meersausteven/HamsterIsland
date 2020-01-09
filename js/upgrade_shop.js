@@ -229,7 +229,7 @@ function addNewUpgradesToShop() {
 					thiselement.parentNode.removeChild(thiselement);
 				}
 			}
-			upgradeelement.onmouseenter = function() {
+			upgradeelement.onmouseenter = function(e) {
 				// display a small description when hovering the shop item
 				var index = this.id.replace("upgrade_","");
 				for (var i = 0; i < allUpgrades.length; i++) {
@@ -263,7 +263,7 @@ function addNewUpgradesToShop() {
 				var infobox = document.createElement("div");
 					infobox.setAttribute("id", "upgrade_info_box");
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
-					infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;top:" + (upgradeposition.top - upgradebox.clientHeight) + "px;left:" + (upgradeposition.left + 5) + "px;";
+					infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;top:" + (e.screenY - upgradebox.clientHeight) + "px;left:" + (upgradeposition.left + 5) + "px;";
 				document.body.appendChild(infobox);
 			}
 			upgradeelement.onmouseleave = function() {
