@@ -229,7 +229,7 @@ function addNewUpgradesToShop() {
 					thiselement.parentNode.removeChild(thiselement);
 				}
 			}
-			upgradeelement.onmouseenter = function(e) {
+			upgradeelement.onmousemove = function(e) {
 				// display a small description when hovering the shop item
 				var index = this.id.replace("upgrade_","");
 				for (var i = 0; i < allUpgrades.length; i++) {
