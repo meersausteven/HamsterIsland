@@ -269,7 +269,9 @@ function addNewUpgradesToShop() {
 					infobox.className = "upgrade_info_box";
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
 				}
-				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;top:" + (upgradeposition.top - upgradebox.clientHeight) + "px;left:" + (upgradeposition.left + 5) + "px;";
+				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;" +
+							"top:" + (upgradeposition.top - upgradebox.clientHeight) + "px;" +
+							"left:" + (upgradeposition.left + (upgradeposition.left - e.clientX) ) + "px;";
 				document.body.appendChild(infobox);
 			}
 			upgradeelement.onmouseleave = function() {
