@@ -269,11 +269,11 @@ function addNewUpgradesToShop() {
 					infobox.className = "upgrade_info_box";
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
 				}
-				var correctLeft = upgradeposition.left + (e.clientX + (upgradebox.clientWidth / 2) - upgradeposition.left);
-				if (correctLeft < upgradeposition.left) {
-					correctLeft = upgradeposition.left;
-				} else if (correctLeft > window.screen.width - upgradebox.clientWidth - upgradeposition.left) {
-					 correctLeft = window.screen.width - upgradebox.clientWidth - upgradeposition.left;
+				var correctLeft = upgradeposition.left + (upgradebox.clientWidth / 2));
+				if (correctLeft < 10) {
+					correctLeft = 10;
+				} else if (correctLeft > window.screen.width - 10) {
+					 correctLeft = window.screen.width - 10;
 				}
 				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;" +
 							"top:" + (upgradeposition.top - upgradebox.clientHeight) + "px;" +
