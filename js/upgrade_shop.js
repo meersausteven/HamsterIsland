@@ -158,15 +158,11 @@ function addNewUpgradesToShop() {
 			upgradeelement.innerHTML = "<h1>" + upgrade.name + "</h1>" +
 				"<h2>Costs: " + convertToReadableNumber(upgrade.price) + " Hamsters</h2>" + 
 				"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
+			// MOUSE CLICK EVENT
 			upgradeelement.onclick = function() {
-				// do all necessary things when clicking the shop item
-				var index = this.id.replace('upgrade_','');
-				for (var i = 0; i < allUpgrades.length; i++) {
-					if (allUpgrades[i].id == index) {
-						var upgrade = allUpgrades[i];
-					}
-				}
+				var upgrade = getUpgrade(this);
 				boughtUpgrades.push(upgrade.id);
+				// do necessary stuff depending on upgrade type (increase level, hps/maximum/etc.)
 				if (hamstercount >= upgrade.price) {
 					switch (upgrade.tag) {
 					case "cage":
@@ -221,22 +217,19 @@ function addNewUpgradesToShop() {
 						break;
 					}
 					increaseHamsters(-(upgrade.price));
-					if (typeof document.getElementById("upgrade_info_box_" + upgrade.id) !== "undefined") {
-						var infobox = document.getElementById("upgrade_info_box");
+					// delete the info box of the bought shop item
+					if (document.getElementById("upgrade_info_box_" + upgrade.id)) {
+						var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 						infobox.parentNode.removeChild(infobox);
 					}
 					var thiselement = document.getElementById(this.id);
 					thiselement.parentNode.removeChild(thiselement);
 				}
 			}
+			// MOUSE MOVE EVENT
 			upgradeelement.onmousemove = function(e) {
 				// display a small description when hovering the shop item
-				var index = this.id.replace("upgrade_","");
-				for (var i = 0; i < allUpgrades.length; i++) {
-					if (allUpgrades[i].id == index) {
-						var upgrade = allUpgrades[i];
-					}
-				}
+				var upgrade = getUpgrade(this);
 				var action;
 				if (upgrade.tag == "food" || upgrade.tag == "drink") {
 					if (upgrade.action == "multiply") {
@@ -261,14 +254,17 @@ function addNewUpgradesToShop() {
 				var upgradebox = document.getElementById("upgrade_" + upgrade.id);
 				var upgradeposition = upgradebox.getBoundingClientRect();
 				var infobox;
+				// check if there is already an info box on screen
 				if (document.getElementById("upgrade_info_box_" + upgrade.id)) {
 					infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 				} else {
+					// if not, create one
 					var infobox = document.createElement("div");
 					infobox.setAttribute("id", "upgrade_info_box_" + upgrade.id);
 					infobox.className = "upgrade_info_box";
 					infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
 				}
+				// move info box with mouse but keep it from moving outside of the screen
 				var correctLeft = e.clientX - (upgradebox.clientWidth / 2);
 				if (correctLeft < 10) {
 					correctLeft = 10;
@@ -280,14 +276,10 @@ function addNewUpgradesToShop() {
 							"left:" + correctLeft + "px;";
 				document.body.appendChild(infobox);
 			}
+			// MOUSE LEAVE EVENT
 			upgradeelement.onmouseleave = function() {
 				// remove shop item description when de-hovering
-				var index = this.id.replace("upgrade_","");
-				for (var i = 0; i < allUpgrades.length; i++) {
-					if (allUpgrades[i].id == index) {
-						var upgrade = allUpgrades[i];
-					}
-				}
+				var upgrade = getUpgrade(this);
 				var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 				infobox.parentNode.removeChild(infobox);
 			}
@@ -305,4 +297,13 @@ function checkForBuyableUpgrades() {
 			document.getElementById("upgrade_" + upgrade.id).classList.add("shop-item-unbuyable");
 		}
 	});
+}
+
+function getUpgrade(item) {
+	var itemId = item.id.replace("upgrade_","");
+	for (var i = 0; i < allUpgrades.length; i++) {
+		if (allUpgrades[i].id == itemId) {
+			return allUpgrades[i];
+		}
+	}	
 }
