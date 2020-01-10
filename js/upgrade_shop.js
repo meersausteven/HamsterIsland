@@ -221,11 +221,10 @@ function addNewUpgradesToShop() {
 						break;
 					}
 					increaseHamsters(-(upgrade.price));
-					/*
-					if (typeof document.getElementById("upgrade_info_box") !== "undefined") {
+					if (typeof document.getElementById("upgrade_info_box_" + upgrade.id) !== "undefined") {
 						var infobox = document.getElementById("upgrade_info_box");
 						infobox.parentNode.removeChild(infobox);
-					}*/
+					}
 					var thiselement = document.getElementById(this.id);
 					thiselement.parentNode.removeChild(thiselement);
 				}
