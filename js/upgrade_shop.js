@@ -271,7 +271,7 @@ function addNewUpgradesToShop() {
 				} else if (correctLeft > window.innerWidth - upgradebox.clientWidth - 10) {
 					 correctLeft = window.innerWidth - upgradebox.clientWidth - 10;
 				}
-				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 20) + "px;" +
+				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 10) + "px;" +
 							"top:" + (upgradeposition.top - upgradebox.clientHeight) + "px;" +
 							"left:" + correctLeft + "px;";
 				document.body.appendChild(infobox);
