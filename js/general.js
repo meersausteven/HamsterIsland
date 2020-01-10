@@ -43,7 +43,7 @@ function increaseHamsters(amount) {
 						i++;
 					} else {
 						clearInterval(repeat);
-						hamstercount += amount & divider;
+						hamstercount += amount % divider;
 						updateHamsterCount();
 					}
 				}, 1000 / divider);
