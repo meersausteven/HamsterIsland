@@ -643,3 +643,24 @@ body {
 	bottom: 0px;
 	font-weight: 300;
 }
+table#statistics_menu {
+	width: calc(100% - 50px);
+	margin: 0px auto;
+	max-width: 1000px;
+	border-collapse: collapse;
+	max-height: 600px;
+	overflow-y: scroll;
+	display: block;
+}
+table#statistics_menu td {
+	font-size: 20px;
+	width: 50%;
+	padding: 15px 0px 5px;
+	border-bottom: 1px solid #ffffff;
+}
+table#statistics_menu td.statistics_name {
+	text-align: left;
+}
+table#statistics_menu td.statistics_value {
+	text-align: right;
+}
