@@ -656,7 +656,7 @@ table#statistics_menu tr {
 }
 table#statistics_menu td {
 	font-size: 20px;
-	width: 50%;
+	width: auto;
 	padding: 20px 0px 5px;
 }
 table#statistics_menu td.statistics_name {
