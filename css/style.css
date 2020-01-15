@@ -648,22 +648,21 @@ table#statistics_menu {
 	margin: 0px auto;
 	max-width: 1000px;
 	border-collapse: collapse;
-	max-height: 600px;
-	display: block;
 }
 table#statistics_menu tr {
-	border-bottom: 1px solid #ffffff;
+	width: auto;
 }
 table#statistics_menu td {
+	display: inline-block;
 	font-size: 20px;
 	width: auto;
-	padding: 20px 0px 5px;
+	padding: 20px 30px 5px;
 }
 table#statistics_menu td.statistics_name {
-	text-align: left;
-	padding-left: 10px;
-}
-table#statistics_menu td.statistics_value {
 	text-align: right;
 	padding-right: 10px;
+}
+table#statistics_menu td.statistics_value {
+	text-align: left;
+	padding-left: 10px;
 }
