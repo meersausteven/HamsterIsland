@@ -17,5 +17,4 @@ Also, after increasing your automatically generated hamsters, rare hamsters will
 you more hamsters or boost your current hamsters per second ratio.
 
 
-© Meersausteven
-Code, idea and graphics
+© Meersausteven - Code, idea and graphics
