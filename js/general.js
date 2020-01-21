@@ -59,7 +59,7 @@ function increaseHamsters(amount) {
 					} else {
 						clearInterval(repeat);
 					}
-				}, Math.floor(1000 / amount));
+				}, Math.floor(1000 / (amount * 10)) );
 			}
 		}
 	}
