@@ -57,30 +57,31 @@ function updateWorldLevel() {
 }
 
 function convertToReadableNumber(number) {
-	if (number < 1000000) {
+	var digits = number.toString().length;
+	if (digits < 6) {
 		return number.toLocaleString();
-	} else if (number < 1000000000) {
-		return (number / 1000000).toLocaleString() + " M";
-	} else if (number < 1000000000000) {
-		return (number / 1000000000).toLocaleString() + " B";
-	} else if (number < 1000000000000000) {
-		return (number / 1000000000000).toLocaleString() + " T";
-	} else if (number < 1000000000000000000) {
-		return (number / 1000000000000000).toLocaleString() + " Qa";
-	} else if (number < 1000000000000000000000) {
-		return (number / 1000000000000000000).toLocaleString() + " Qi";
-	} else if (number < 1000000000000000000000000) {
-		return (number / 1000000000000000000000).toLocaleString() + " Si";
-	} else if (number < 1000000000000000000000000000) {
-		return (number / 1000000000000000000000000).toLocaleString() + " Se";
-	} else if (number < 1000000000000000000000000000000) {
-		return (number / 1000000000000000000000000000).toLocaleString() + " O";
-	} else if (number < 1000000000000000000000000000000000) {
-		return (number / 1000000000000000000000000000000).toLocaleString() + " N";
-	} else if (number < 1000000000000000000000000000000000000) {
-		return (number / 1000000000000000000000000000000000).toLocaleString() + " D";
+	} else if (digits < 9) {
+		return (number / (10 ** 9)).toLocaleString() + " M";
+	} else if (digits < 12) {
+		return (number / (10 ** 12)).toLocaleString() + " B";
+	} else if (digits < 15) {
+		return (number / (10 ** 15)).toLocaleString() + " T";
+	} else if (digits < 18) {
+		return (number / (10 ** 18)).toLocaleString() + " Qa";
+	} else if (digits < 21) {
+		return (number / (10 ** 21)).toLocaleString() + " Qi";
+	} else if (digits < 24) {
+		return (number / (10 ** 24)).toLocaleString() + " Si";
+	} else if (digits < 27) {
+		return (number / (10 ** 27)).toLocaleString() + " Se";
+	} else if (digits < 30) {
+		return (number / (10 ** 30)).toLocaleString() + " O";
+	} else if (digits < 33) {
+		return (number / (10 ** 33)).toLocaleString() + " N";
+	} else if (digits < 36) {
+		return (number / (10 ** 36)).toLocaleString() + " D";
 	} else {
-		return (number / 1000000000000000000000000000000000000).toLocaleString() + " UnD";
+		return (number / (10 ** 39)).toLocaleString() + " UnD";
 	}
 }
 
