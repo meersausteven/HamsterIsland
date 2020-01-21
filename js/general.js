@@ -50,24 +50,19 @@ function increaseHamsters(amount) {
 				}, 1000 / divider);
 			} else {
 				// increase hamstercount smoothly, for amount < divider
-				if (amount == 1) {
-					hamstercount++;
-					updateHamsterCount();
-				} else {
-					hamstercount++;
-					updateHamsterCount();
-					
-					var i = 1;
-					var repeat = setInterval(function() {
-						if (i < amount) {
-							hamstercount++;
-							i++;
-							updateHamsterCount();
-						} else {
-							clearInterval(repeat);
-						}
-					}, Math.floor(1000 / amount));
-				}
+				var i = 1;
+				hamstercount++;
+				updateHamsterCount();
+				
+				var repeat = setInterval(function() {
+					if (i < amount) {
+						hamstercount++;
+						i++;
+						updateHamsterCount();
+					} else {
+						clearInterval(repeat);
+					}
+				}, Math.floor(1000 / amount));
 			}
 		}
 	}
