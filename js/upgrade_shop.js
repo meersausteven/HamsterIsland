@@ -1,7 +1,7 @@
 
  // open / close the shop menu
 
-document.getElementById("toggle_shop_button").addEventListener("click", toggleShop);
+document.getElementById("shop_button").addEventListener("click", toggleShop);
 
 var shopopen = false;
 
