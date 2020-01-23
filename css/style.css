@@ -215,6 +215,7 @@ body {
 	opacity: 0;
 	padding: 80px 0px;
 	font-size: 16px;
+	display: none;
 }
 #close_statistics {
 	font-size: 24px;
@@ -317,6 +318,7 @@ body {
 
 .stats-open {
 	opacity: 1 !important;
+	display: block !important;
 	z-index: 11 !important;
 }
 
@@ -651,11 +653,9 @@ table#statistics_menu tr {
 	width: auto;
 }
 table#statistics_menu td {
-	display: inline-block;
 	font-size: 20px;
-	width: auto;
+	width: 50%;
 	padding: 20px 30px 5px;
-	border-bottom: 1px solid #ffffff;
 }
 table#statistics_menu td.statistics_name {
 	text-align: right;
