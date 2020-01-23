@@ -621,7 +621,7 @@ body {
 	font-weight: light;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
-	background-color: rgba(150, 150, 150, 0.5);
+	background-color: rgb(150, 150, 150);
 }
 .upgrade_info_box > h3 {
 	font-size: 18px;
