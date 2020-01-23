@@ -391,7 +391,7 @@ body {
 }
 .shop-open-button {
 	bottom: 210px !important;
-	border-bottom-color: rgba(0,0,0,0.7);
+	border-bottom-color: rgba(0,0,0,0.6) !important;
 }
 
 /* Particles that are created when clicking the cage */
