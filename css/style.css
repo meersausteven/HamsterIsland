@@ -152,10 +152,10 @@ body {
 	text-shadow: 2px 2px 5px #000000;
 	border-left: 120px solid transparent;
 	border-right: 120px solid transparent;
-	border-bottom: 40px solid rgba(50, 50, 50, 0.4);
+	border-bottom: 40px solid rgba(50, 50, 50, 0.3);
 }
 #shop_button:hover {
-	border-image: linear-gradient(rgba(0,0,0,0.4), transparent);
+	border-bottom-color: rgba(0,0,0,0.6);
 }
 #shop {
 	width: 100%;
@@ -166,7 +166,7 @@ body {
 	transition: 0.4s;
 	overflow: hidden;
 	white-space: nowrap;
-	background-color: rgba(50, 50, 50, 0.4);
+	background-color: rgba(0, 0, 0, 0.6);
 }
 #version_number {
 	position: absolute;
@@ -391,6 +391,7 @@ body {
 }
 .shop-open-button {
 	bottom: 210px !important;
+	border-bottom-color: rgba(0,0,0,0.7);
 }
 
 /* Particles that are created when clicking the cage */
