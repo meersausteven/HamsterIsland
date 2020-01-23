@@ -192,7 +192,7 @@ body {
 	border-right: 40px solid transparent;
 }
 #open_statistics:hover {
-	background-color: #5292bf;
+	border-top-color: #5292bf;
 }
 #open_statistics > p {
 	margin-left: 15px;
