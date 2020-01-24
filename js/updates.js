@@ -6,12 +6,12 @@ function updateHPS() {
 	document.getElementById("hps_display").innerHTML = convertToReadableNumber(hamsterspersecond) + " H/s";
 }
 
-function updateHamsterMaximum() {
-	maximumdisplay = document.getElementById("maximum_display");
-	if (hamstermaximum == "unlimited") {
-		maximumdisplay.innerHTML = "Max: &infin; Hamsters";
+function updateHamsterCapacity() {
+	capacitydisplay = document.getElementById("capacity_display");
+	if (hamstercapacity == "unlimited") {
+		capacitydisplay.innerHTML = "Max: &infin; Hamsters";
 	} else {
-		maximumdisplay.innerHTML = "Max: " + convertToReadableNumber(hamstermaximum) + " Hamsters";
+		capacitydisplay.innerHTML = "Max: " + convertToReadableNumber(hamstercapacity) + " Hamsters";
 	}
 }
 
@@ -95,7 +95,7 @@ function updateGame() {
 	updateDrinkLevel();
 	updateFoodLevel();
 	updateHPS();
-	updateHamsterMaximum();
+	updateHamsterCapacity();
 	updateHamsterCount();
 	updateStats();
 }
