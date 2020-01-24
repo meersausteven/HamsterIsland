@@ -17,7 +17,7 @@ function saveProgress() {
 		"-" + foodlevel +
 		"-" + drinklevel +
 		"-" + basehamsterspersecond +
-		"-" + hamstermaximum +
+		"-" + hamstercapacity +
 		"-" + hamstersperclick +
 		"-" + starttime +
 		"-" + boughtUpgrades.join()
@@ -45,7 +45,7 @@ function getProgress() {
 		foodlevel = parseInt(save[8]);
 		drinklevel = parseInt(save[9]);
 		basehamsterspersecond = parseInt(save[10]);
-		hamstermaximum = parseInt(save[11]);
+		hamstercapacity = parseInt(save[11]);
 		hamstersperclick = parseInt(save[12]);
 		starttime = parseInt(save[13]);
 		boughtUpgrades = save[14].split(",");
