@@ -86,6 +86,7 @@ body {
 	border: 34px solid rgba(122, 159, 111, 0.8);
 	float: left;
 }
+/* not sure if i'll need this later, so it'll stay
 #display_left {
 	border-bottom: 36px solid transparent;
 	border-left: 20px solid transparent;
@@ -124,6 +125,37 @@ body {
 #maximum_display {
 	width: auto;
 	font-size: 12px;
+	box-sizing: border-box;
+	padding: 0px 20px;
+}
+*/
+#counter_container {
+	border-top: 80px solid rgba(122, 159, 111, 0.8);
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	min-width: 200px;
+	width: auto;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 2px 2px 5px #000000;
+	box-sizing: border-box;
+}
+#counter {
+	width: auto;
+	font-size: 32px;
+	margin-top: -80px;
+	padding: 0px 20px;
+	box-sizing: border-box;
+}
+#hps_display {
+	width: auto;
+	font-size: 20px;
+	box-sizing: border-box;
+	padding: 0px 20px;
+}
+#capacity_display {
+	width: auto;
+	font-size: 18px;
 	box-sizing: border-box;
 	padding: 0px 20px;
 }
