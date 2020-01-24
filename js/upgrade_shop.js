@@ -90,7 +90,7 @@ var drinkupgrades = [
 	{id:"d016", price:9130000, level:8, world: 1, action:"add", value:7, name:"", tag:"drink", description:"", displayed:false},
 	// world 2 upgrades - 
 ];
-// Island upgrades increase maximum amount of hamsters currently allowed
+// Island upgrades increase capcity amount of hamsters currently allowed
 var islandupgrades = [
 	// world 0 upgrades - Pet Shop
 	{id:"i001", price:10000, level:1, world: 0, action:"add", value:7500, name:"Medium Cage", tag:"island", description:"A medium sized cage. Barely big enough for a small family of hamsters.", displayed:false},
@@ -162,7 +162,7 @@ function addNewUpgradesToShop() {
 			upgradeelement.onclick = function() {
 				var upgrade = getUpgrade(this);
 				boughtUpgrades.push(upgrade.id);
-				// do necessary stuff depending on upgrade type (increase level, hps/maximum/etc.)
+				// do necessary stuff depending on upgrade type (increase level, hps/capacity/etc.)
 				if (hamstercount >= upgrade.price) {
 					switch (upgrade.tag) {
 					case "cage":
@@ -186,12 +186,11 @@ function addNewUpgradesToShop() {
 						break;
 					case "island":
 						if (upgrade.action == "add") {
-							hamstermaximum += upgrade.value;
-							updateHamsterMaximum();
+							hamstercapacity += upgrade.value;
 						} else if (upgrade.action == "multiply") {
-							hamstermaximum *= upgrade.value;
-							updateHamsterMaximum();
+							hamstercapacity *= upgrade.value;
 						}
+						updateHamsterCapacity();
 						islandlevel++;
 						updateIslandLevel();
 						break;
