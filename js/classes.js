@@ -144,7 +144,8 @@ class RareHamster {
 			rarehamster.parentNode.removeChild(rarehamster);
 			}
 		document.body.appendChild(this.element);
-		setTimeout(function() {this.delete()}.bind(this), 5000);
+		// remove rare hamster after 10 seconds of not being clicked
+		setTimeout(function() {this.delete()}.bind(this), 10000);
 		}
 	delete() {
 		document.body.removeChild(this.element);
