@@ -166,7 +166,7 @@ body {
 	transition: 0.4s;
 	overflow: hidden;
 	white-space: nowrap;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(50, 50, 50, 0.3);
 }
 #version_number {
 	position: absolute;
@@ -388,6 +388,7 @@ body {
 .shop-open {
 	height: 210px !important;
 	overflow-x: auto !important;
+	background-color: rgba(0, 0, 0, 0.6) !important;
 }
 .shop-open-button {
 	bottom: 210px !important;
