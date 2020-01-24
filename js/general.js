@@ -119,7 +119,7 @@ function increaseHPS(amount, type) {
 	updateHPS();
 }
 
-function flipCoin(max) {
+function randomGenerator(max) {
 	// generate random int from 0 - max
 	return Math.floor(Math.random() * max + 1);
 }
