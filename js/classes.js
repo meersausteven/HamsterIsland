@@ -53,7 +53,7 @@ class RareHamster {
 	constructor(type) {
 		this.element = document.createElement("div");
 		if (type == null) {
-			this.random1000 = randomGenerator(1000) / 10);
+			this.random1000 = randomGenerator(1000) / 10;
 			if (this.random1000 > 99.9) {
 				this.rarehamstertype = "alexandrite";
 			} else if (this.random1000 > 95.0) {
