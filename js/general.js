@@ -44,7 +44,7 @@ function increaseHamsters(amount) {
 						updateHamsterCount();
 					}
 				}, 1000 / divider);
-			} else if (amount < divider) {
+			} else if ( (amount < divider) && (amount > 0) ) {
 				// increase hamstercount smoothly, for amount < divider
 				var i = 1;
 				hamstercount++;
