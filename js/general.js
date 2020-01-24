@@ -12,7 +12,7 @@ var cagedhamsterclicks = 0, rarehamsterclicks = 0;
 var basehamsterspersecond = 0;
 var hamsterspersecondboost = 1;
 var hamsterspersecond = 0;
-var hamstermaximum = 10000;
+var hamstercapacity = 10000;
 var boughtUpgrades = [];
 var cagelevel = 0, foodlevel = 0, drinklevel = 0, islandlevel = 0, hamsterlevel = 0, worldlevel = 0;
 var starttime = 0;
@@ -26,7 +26,7 @@ function startTime() {
 }
 
 function increaseHamsters(amount) {
-	if (hamstercount < hamstermaximum) {
+	if (hamstercount < hamstercapacity) {
 		if (amount != 0) {
 			// two different functions to increase the count because i'm too dumb for an easy solution
 			var divider = 20;
@@ -82,7 +82,7 @@ function cageClick(e) {
   addNewUpgradesToShop();
   checkForBuyableUpgrades();
   cagedhamsterclicks++;
-	if (hamstercount < hamstermaximum) {
+	if (hamstercount < hamstercapacity) {
 		// create a particle with each click and move it in a random direction
 		var particle = new Particle();
 		var cagedHamster = document.querySelector("#caged_hamster");
