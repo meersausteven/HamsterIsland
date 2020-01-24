@@ -11,7 +11,7 @@ function updateStats() {
 	var totalplaytime = playedhours + ((playedhours == 1) ? " hour " : " hours ") + playedminutes + ((playedminutes == 1) ? " minute " : " minutes ") + playedseconds + ((playedseconds == 1) ? " second " : " seconds");
 
 	document.getElementById("stats_hamsters").innerHTML = convertToReadableNumber(hamstercount);
-	document.getElementById("stats_max").innerHTML = convertToReadableNumber(hamstermaximum);
+	document.getElementById("stats_max").innerHTML = convertToReadableNumber(hamstercapacity);
 	document.getElementById("stats_perclick").innerHTML = convertToReadableNumber(hamstersperclick);
 	document.getElementById("stats_hps").innerHTML = convertToReadableNumber(hamsterspersecond);
 	document.getElementById("stats_total").innerHTML = convertToReadableNumber(totalhamstercount);
