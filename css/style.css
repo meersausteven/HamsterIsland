@@ -140,24 +140,22 @@ body {
 	text-shadow: 2px 2px 5px #000000;
 	box-sizing: border-box;
 }
-#counter {
-	width: auto;
-	font-size: 32px;
-	margin-top: -80px;
-	padding: 0px 20px;
-	box-sizing: border-box;
-}
-#hps_display {
-	width: auto;
-	font-size: 20px;
-	box-sizing: border-box;
-	padding: 0px 20px;
-}
+#counter,
+#hps_display,
 #capacity_display {
 	width: auto;
-	font-size: 18px;
-	box-sizing: border-box;
 	padding: 0px 20px;
+	box-sizing: border-box;
+}
+#counter {
+	font-size: 32px;
+	margin-top: -80px;
+}
+#hps_display {
+	font-size: 20px;
+}
+#capacity_display {
+	font-size: 18px;
 }
 
 /* Shop */
