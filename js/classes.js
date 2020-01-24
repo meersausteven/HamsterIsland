@@ -142,9 +142,9 @@ class RareHamster {
 			rarehamsterclicks++;
 			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			rarehamster.parentNode.removeChild(rarehamster);
-			document.body.appendChild(this.element);
-			setTimeout(function() {this.delete()}.bind(this), 5000);
 			}
+		document.body.appendChild(this.element);
+		setTimeout(function() {this.delete()}.bind(this), 5000);
 		}
 	delete() {
 		document.body.removeChild(this.element);
