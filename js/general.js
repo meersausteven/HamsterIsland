@@ -59,12 +59,13 @@ function increaseHamsters(amount) {
 						clearInterval(repeat);
 					}
 				}, Math.floor(1000 / amount));
+			} else {
+				hamstercount += amount;
+				updateHamsterCount();
 			}
 			if (amount > 0) {
 				// don't change totalhamstercount for purchases
 				totalhamstercount += amount;
-			} else {
-				hamstercount += amount;
 			}
 		}
 	}
