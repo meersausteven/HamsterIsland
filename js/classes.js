@@ -7,10 +7,10 @@ class Particle {
 	constructor() {
 		this.element = document.createElement("div");
 		this.element.className = "background-preset particle";
-		this.hamstertype = Math.floor(Math.random() * hamsterlevel + 1);
-		this.randeg = Math.floor(Math.random() * 361);
-		this.posX = 100 * Math.cos(Math.floor(Math.random() * 361));
-		this.posY = 100 * Math.sin(Math.floor(Math.random() * 361));
+		this.hamstertype = randomGenerator(hamsterlevel);
+		this.randeg = randomGenerator(360);
+		this.posX = 100 * Math.cos(randomGenerator(360));
+		this.posY = 100 * Math.sin(randomGenerator(360));
 		this.element.style.cssText = "transform: rotate(" + this.randeg + "deg);";
 		document.body.appendChild(this.element);
 		setTimeout(function() {this.delete()}.bind(this), 1000);
@@ -53,7 +53,7 @@ class RareHamster {
 	constructor(type) {
 		this.element = document.createElement("div");
 		if (type == null) {
-			this.random1000 = (Math.floor(Math.random() * 1001) / 10);
+			this.random1000 = randomGenerator(1000) / 10);
 			if (this.random1000 > 99.9) {
 				this.rarehamstertype = "alexandrite";
 			} else if (this.random1000 > 95.0) {
@@ -70,14 +70,14 @@ class RareHamster {
 		}
 		this.element.className = "background-preset rare-hamster " + this.rarehamstertype + "-hamster";
 		this.element.id = "rare_hamster_" + this.rarehamstertype;
-		this.posX = (Math.floor(Math.random() * 1001) / 10);
-		this.posY = (Math.floor(Math.random() * 1001) / 10);
+		this.posX = randomGenerator(1000) / 10;
+		this.posY = randomGenerator(1000) / 10;
 		this.element.style.cssText = "top: " + this.posY + "vh; left: " + this.posX + "vw;";
 
 		// on click activate one of two possible effects with a 50% chance for either
 		this.element.onclick = function() {
 			this.rarehamstertype = this.id.replace('rare_hamster_','');
-			let coinFlip = Math.floor(Math.random() * 101);
+			let coinFlip = randomGenerator(100);
 			this.boostDuration = 30000;
 			switch (this.rarehamstertype) {
 				case "bronze":
