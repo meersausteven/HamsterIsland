@@ -9,15 +9,14 @@ function updateHPS() {
 function updateHamsterCapacity() {
 	capacitydisplay = document.getElementById("capacity_display");
 	if (hamstercapacity == "unlimited") {
-		capacitydisplay.innerHTML = "Max: &infin; Hamsters";
+		capacitydisplay.innerHTML = "Capacity: &infin; Hamsters";
 	} else {
-		capacitydisplay.innerHTML = "Max: " + convertToReadableNumber(hamstercapacity) + " Hamsters";
+		capacitydisplay.innerHTML = "Capacity: " + convertToReadableNumber(hamstercapacity) + " Hamsters";
 	}
 }
 
 function updateHamsterCount() {
-	let readableCount = convertToReadableNumber(hamstercount);
-	document.getElementById("counter").innerHTML = readableCount + " Hamsters";
+	document.getElementById("counter").innerHTML = convertToReadableNumber(hamstercount) + " Hamsters";
 }
 
 function updateCageLevel() {
