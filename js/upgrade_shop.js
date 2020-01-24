@@ -266,7 +266,7 @@ function addNewUpgradesToShop() {
 				}
 				// move info box with mouse but keep it from moving outside of the screen
 				//var correctLeft = e.clientX - (upgradebox.clientWidth / 2);
-				var correctLeft = (e.clientX - (upgradebox.clientWidth / 2)) - ((e.clientX - upgradeposition.left - (upgradebox.clientWidth / 2)) * 0,5);
+				var correctLeft = (e.clientX - ((upgradebox.clientWidth - 10) / 2)) - ((e.clientX - upgradeposition.left - (upgradebox.clientWidth / 2)) / 2);
 				if (correctLeft < 10) {
 					correctLeft = 10;
 				} else if (correctLeft > window.innerWidth - upgradebox.clientWidth - 10) {
