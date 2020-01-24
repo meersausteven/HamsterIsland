@@ -30,7 +30,7 @@ function increaseHamsters(amount) {
 		if (amount != 0) {
 			// two different functions to increase the count because i'm too dumb for an easy solution
 			var divider = 20;
-			if (amount > divider || amount < 0) {
+			if (amount > divider) {
 				// increase hamstercount smoothly, for amount > divider
 				var i = 0;
 				var repeat = setInterval(function() {
@@ -44,7 +44,7 @@ function increaseHamsters(amount) {
 						updateHamsterCount();
 					}
 				}, 1000 / divider);
-			} else if ( (amount < divider) && (amount > 0) ) {
+			} else if (amount < divider) {
 				// increase hamstercount smoothly, for amount < divider
 				var i = 1;
 				hamstercount++;
@@ -63,6 +63,8 @@ function increaseHamsters(amount) {
 			if (amount > 0) {
 				// don't change totalhamstercount for purchases
 				totalhamstercount += amount;
+			} else {
+				hamstercount += amount;
 			}
 		}
 	}
