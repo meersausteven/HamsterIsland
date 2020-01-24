@@ -58,30 +58,30 @@ function updateWorldLevel() {
 
 function convertToReadableNumber(number) {
 	var digits = number.toString().length;
-	if (digits < 6) {
+	if (digits < 7) {
 		return number.toLocaleString();
-	} else if (digits < 9) {
-		return (number / (10 ** 9)).toLocaleString() + " M";
-	} else if (digits < 12) {
-		return (number / (10 ** 12)).toLocaleString() + " B";
-	} else if (digits < 15) {
-		return (number / (10 ** 15)).toLocaleString() + " T";
-	} else if (digits < 18) {
-		return (number / (10 ** 18)).toLocaleString() + " Qa";
-	} else if (digits < 21) {
-		return (number / (10 ** 21)).toLocaleString() + " Qi";
-	} else if (digits < 24) {
-		return (number / (10 ** 24)).toLocaleString() + " Si";
-	} else if (digits < 27) {
-		return (number / (10 ** 27)).toLocaleString() + " Se";
-	} else if (digits < 30) {
-		return (number / (10 ** 30)).toLocaleString() + " O";
-	} else if (digits < 33) {
-		return (number / (10 ** 33)).toLocaleString() + " N";
-	} else if (digits < 36) {
-		return (number / (10 ** 36)).toLocaleString() + " D";
+	} else if (digits < 10) {
+		return (number / (10 ** 10)).toLocaleString() + " M";
+	} else if (digits < 13) {
+		return (number / (10 ** 13)).toLocaleString() + " B";
+	} else if (digits < 16) {
+		return (number / (10 ** 16)).toLocaleString() + " T";
+	} else if (digits < 19) {
+		return (number / (10 ** 19)).toLocaleString() + " Qa";
+	} else if (digits < 22) {
+		return (number / (10 ** 22)).toLocaleString() + " Qi";
+	} else if (digits < 25) {
+		return (number / (10 ** 25)).toLocaleString() + " Si";
+	} else if (digits < 28) {
+		return (number / (10 ** 28)).toLocaleString() + " Se";
+	} else if (digits < 31) {
+		return (number / (10 ** 31)).toLocaleString() + " O";
+	} else if (digits < 34) {
+		return (number / (10 ** 34)).toLocaleString() + " N";
+	} else if (digits < 37) {
+		return (number / (10 ** 37)).toLocaleString() + " D";
 	} else {
-		return (number / (10 ** 39)).toLocaleString() + " UnD";
+		return (number / (10 ** 40)).toLocaleString() + " UnD";
 	}
 }
 
