@@ -61,27 +61,27 @@ function convertToReadableNumber(number) {
 	if (digits < 7) {
 		return number.toLocaleString();
 	} else if (digits < 10) {
-		return (number / (10 ** 9)).toLocaleString() + " M";
+		return (number / (10 ** 6)).toLocaleString() + " M";
 	} else if (digits < 13) {
-		return (number / (10 ** 12)).toLocaleString() + " B";
+		return (number / (10 ** 9)).toLocaleString() + " B";
 	} else if (digits < 16) {
-		return (number / (10 ** 15)).toLocaleString() + " T";
+		return (number / (10 ** 12)).toLocaleString() + " T";
 	} else if (digits < 19) {
-		return (number / (10 ** 18)).toLocaleString() + " Qa";
+		return (number / (10 ** 15)).toLocaleString() + " Qa";
 	} else if (digits < 22) {
-		return (number / (10 ** 21)).toLocaleString() + " Qi";
+		return (number / (10 ** 18)).toLocaleString() + " Qi";
 	} else if (digits < 25) {
-		return (number / (10 ** 24)).toLocaleString() + " Si";
+		return (number / (10 ** 21)).toLocaleString() + " Si";
 	} else if (digits < 28) {
-		return (number / (10 ** 27)).toLocaleString() + " Se";
+		return (number / (10 ** 24)).toLocaleString() + " Se";
 	} else if (digits < 31) {
-		return (number / (10 ** 30)).toLocaleString() + " O";
+		return (number / (10 ** 27)).toLocaleString() + " O";
 	} else if (digits < 34) {
-		return (number / (10 ** 33)).toLocaleString() + " N";
+		return (number / (10 ** 30)).toLocaleString() + " N";
 	} else if (digits < 37) {
-		return (number / (10 ** 36)).toLocaleString() + " D";
+		return (number / (10 ** 33)).toLocaleString() + " D";
 	} else {
-		return (number / (10 ** 39)).toLocaleString() + " UnD";
+		return (number / (10 ** 36)).toLocaleString() + " UnD";
 	}
 }
 
