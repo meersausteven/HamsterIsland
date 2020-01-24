@@ -135,17 +135,18 @@ body {
 	border-right: 60px solid transparent;
 	min-width: 200px;
 	width: auto;
-	color: #ffffff;
 	text-align: center;
-	text-shadow: 2px 2px 5px #000000;
 	box-sizing: border-box;
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.5));
 }
 #counter,
 #hps_display,
 #capacity_display {
+	color: #ffffff;
 	width: auto;
 	padding: 0px 20px;
 	box-sizing: border-box;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 #counter {
 	font-size: 32px;
@@ -203,8 +204,8 @@ body {
 	position: absolute;
 	top: 5px;
 	right: 5px;
-	font-size: 15px;
-	text-shadow: 3px 3px 7px #000000;
+	font-size: 16px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	color: #ffffff;
 }
 #open_statistics, #statistics_screen {
@@ -221,7 +222,7 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
 	border-top: 50px solid #3b3b3b;
 	border-right: 40px solid transparent;
 }
@@ -232,6 +233,7 @@ body {
 	margin-left: 15px;
 	margin-top: -40px;
 	font-size: 25px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 #statistics_screen {
 	width: 100vw;
