@@ -118,3 +118,7 @@ function increaseHPS(amount, type) {
 	}
 	updateHPS();
 }
+
+function flipCoin() {
+	return Math.floor(Math.random() * 101);
+}
