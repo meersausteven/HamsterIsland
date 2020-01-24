@@ -531,7 +531,7 @@ body {
 	height: auto;
 	position: absolute;
 	bottom: 100px;
-	left: calc(50vw - 150px);
+	left: calc(50% - 150px);
 	margin: 0px auto;
 	color: #ffffff;
 	font-weight: 600;
