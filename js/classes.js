@@ -7,7 +7,7 @@ class Particle {
 	constructor() {
 		this.element = document.createElement("div");
 		this.element.className = "background-preset particle";
-		this.hamsterId = boughtHamsters[Math.floor(Math.random() * boughtHamsters.length))];
+		this.hamsterId = boughtHamsters[Math.floor(Math.random() * boughtHamsters.length)];
 		this.randeg = randomGenerator(360);
 		this.posX = 100 * Math.cos(randomGenerator(360));
 		this.posY = 100 * Math.sin(randomGenerator(360));
