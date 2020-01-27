@@ -25,12 +25,12 @@ function startTime() {
 	starttime = Date.now();
 }
 
+			var moreThanMax = 0;
 function increaseHamsters(amount) {
 	if (hamstercount < hamstercapacity) {
 		if (amount != 0) {
 			// two different functions to increase the count because i'm too dumb for an easy solution
 			var divider = 20;
-			var moreThanMax = 0;
 			if (amount > divider) {
 				// increase hamstercount smoothly, for amount > divider
 				var i = 0;
@@ -92,6 +92,7 @@ function increaseHamsters(amount) {
 			}
 			if (amount > 0) {
 				// don't change totalhamstercount for purchases
+				console.log(moreThanMax);
 				if (moreThanMax == 0) {
 					totalhamstercount += amount;
 				} else {
