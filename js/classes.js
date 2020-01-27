@@ -139,7 +139,7 @@ class RareHamster {
 			setTimeout(function() {
 				let infoBox = document.getElementById("boost_info_box");
 				infoBox.parentNode.removeChild(infoBox);
-			}, 500000);
+			}, 5000);
 			rarehamsterclicks++;
 			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			rarehamster.parentNode.removeChild(rarehamster);
