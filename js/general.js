@@ -13,7 +13,7 @@ var basehamsterspersecond = 0;
 var hamsterspersecondboost = 1;
 var hamsterspersecond = 0;
 var hamstercapacity = 10000;
-var boughtUpgrades = [], boughtHamsters = [h000];
+var boughtUpgrades = [], boughtHamsters = ['h000'];
 var cagelevel = 0, foodlevel = 0, drinklevel = 0, islandlevel = 0, hamsterlevel = 0, worldlevel = 0;
 var starttime = 0;
 
