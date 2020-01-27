@@ -200,6 +200,7 @@ function addNewUpgradesToShop() {
 						} else if (upgrade.action == "add") {
 							hamstersperclick += upgrade.value;
 						}
+						boughtHamsters.push(upgrade.id);
 						hamsterlevel++;
 						updateHamsterLevel();
 						break;
