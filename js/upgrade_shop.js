@@ -268,7 +268,7 @@ function addNewUpgradesToShop() {
 				if (correctLeft < 10) {
 					correctLeft = 10;
 				} else if (correctLeft > window.innerWidth - upgradebox.clientWidth - 10) {
-					 correctLeft = window.innerWidth - upgradebox.clientWidth - 10;
+					 correctLeft = window.innerWidth - upgradebox.clientWidth - 20;
 				}
 				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 10) + "px;" +
 							"bottom:" + (document.getElementById("shop").clientHeight + 10) + "px;" +
