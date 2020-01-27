@@ -73,7 +73,8 @@ class RareHamster {
 		this.posX = randomGenerator(1000) / 10;
 		this.posY = randomGenerator(1000) / 10;
 		this.element.style.cssText = "top: " + this.posY + "vh; left: " + this.posX + "vw;";
-
+		// remove rare hamster after 10 seconds of not being clicked
+		this.timer = setTimeout(function() {this.delete()}.bind(this), 10000);
 		// on click activate one of two possible effects with a 50% chance for either
 		this.element.onclick = function() {
 			this.rarehamstertype = this.id.replace('rare_hamster_','');
@@ -123,7 +124,7 @@ class RareHamster {
 				rareHamsterBoost(this);
 				rareHamsterBoostDuration(this);
 			}
-
+			clearTimeout(this.timer);
 			// show a small text box with the activated effect
 			let boostInfoBox = document.createElement("div");
 			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype + " animation-infobox";
@@ -143,8 +144,6 @@ class RareHamster {
 			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			rarehamster.parentNode.removeChild(rarehamster);
 			}
-		// remove rare hamster after 10 seconds of not being clicked
-		setTimeout(function() {this.delete()}.bind(this), 10000);
 		document.body.appendChild(this.element);
 		}
 	delete() {
