@@ -669,13 +669,15 @@ body {
 }
 .upgrade_info_box > h4::before {
 	content: '';
-	bottom: 20px;
+	bottom: 30px;
 	height: 1px;
 	background-color: #ffffff;
 	width: 320px;
+	position: absolute;
 }
 .upgrade_info_box > h4 {
 	font-size: 13px;
+	margin-bottom: 0px;
 	bottom: 0px;
 	font-weight: 300;
 }
