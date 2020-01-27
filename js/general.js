@@ -25,7 +25,8 @@ function startTime() {
 	starttime = Date.now();
 }
 
-			var moreThanMax = 0;
+var moreThanMax = 0;
+
 function increaseHamsters(amount) {
 	if (hamstercount < hamstercapacity) {
 		if (amount != 0) {
