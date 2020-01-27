@@ -267,7 +267,7 @@ function addNewUpgradesToShop() {
 				var correctLeft = (e.clientX - ((upgradebox.clientWidth - 10) / 2)) + ((e.clientX - upgradeposition.left - (upgradebox.clientWidth / 2)) / 2);
 				if (correctLeft < 10) {
 					correctLeft = 10;
-				} else if (correctLeft > window.innerWidth - upgradebox.clientWidth - 10) {
+				} else if (correctLeft > window.innerWidth - upgradebox.clientWidth - 20) {
 					 correctLeft = window.innerWidth - upgradebox.clientWidth - 20;
 				}
 				infobox.style.cssText = "width:" + (upgradebox.clientWidth - 10) + "px;" +
