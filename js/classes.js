@@ -49,6 +49,8 @@ class SaveNotice {
 	}
 }
 
+var removeRareHamster;
+
 class RareHamster {
 	constructor(type) {
 		this.element = document.createElement("div");
@@ -74,10 +76,10 @@ class RareHamster {
 		this.posY = randomGenerator(1000) / 10;
 		this.element.style.cssText = "top: " + this.posY + "vh; left: " + this.posX + "vw;";
 		// remove rare hamster after 10 seconds of not being clicked
-		this.timer = setTimeout(function() {this.delete()}.bind(this), 10000);
+		removeRareHamster = setTimeout(function() {this.delete()}.bind(this), 10000);
 		// on click activate one of two possible effects with a 50% chance for either
 		this.element.onclick = function() {
-			clearTimeout(this.timer);
+			clearTimeout(removeRareHamster);
 			this.rarehamstertype = this.id.replace('rare_hamster_','');
 			let coinFlip = randomGenerator(100);
 			this.boostDuration = 30000;
