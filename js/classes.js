@@ -77,6 +77,7 @@ class RareHamster {
 		this.timer = setTimeout(function() {this.delete()}.bind(this), 10000);
 		// on click activate one of two possible effects with a 50% chance for either
 		this.element.onclick = function() {
+			clearTimeout(this.timer);
 			this.rarehamstertype = this.id.replace('rare_hamster_','');
 			let coinFlip = randomGenerator(100);
 			this.boostDuration = 30000;
@@ -124,7 +125,6 @@ class RareHamster {
 				rareHamsterBoost(this);
 				rareHamsterBoostDuration(this);
 			}
-			clearTimeout(this.timer);
 			// show a small text box with the activated effect
 			let boostInfoBox = document.createElement("div");
 			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype + " animation-infobox";
