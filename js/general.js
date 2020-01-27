@@ -41,7 +41,7 @@ function increaseHamsters(amount) {
 								hamstercount += Math.floor(amount / divider);
 								moreThanMax = Math.floor(amount / divider) - (hamstercount - hamstercapacity);
 								hamstercount = hamstercapacity;
-								break;
+								clearInterval(repeat);
 							} else {
 								hamstercount += Math.floor(amount / divider);
 							}
@@ -55,7 +55,7 @@ function increaseHamsters(amount) {
 								hamstercount += amount % divider;
 								moreThanMax = (amount % divider) - (hamstercount - hamstercapacity);
 								hamstercount = hamstercapacity;
-								break;
+								clearInterval(repeat);
 							} else {
 								hamstercount += amount % divider;
 							}
@@ -86,7 +86,7 @@ function increaseHamsters(amount) {
 						hamstercount += amount;
 						moreThanMax = amount - (hamstercount - hamstercapacity);
 						hamstercount = hamstercapacity;
-						break;
+						clearInterval(repeat);
 					} else {
 						hamstercount += amount;
 					}
