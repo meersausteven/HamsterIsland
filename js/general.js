@@ -36,9 +36,9 @@ function increaseHamsters(amount) {
 				var i = 0;
 				var repeat = setInterval(function() {
 					if (i < divider) {
-						if ( (hamstercount + Math.floor(amount / divider)) > hamstercapacity) {
+						if ( (hamstercount + Math.floor(amount / divider)) >= hamstercapacity) {
 							hamstercount += Math.floor(amount / divider);
-							moreThanMax = hamstercount - hamstercapacity;
+							moreThanMax = (hamstercount - hamstercapacity) - Math.floor(amount / divider);
 							hamstercount = hamstercapacity;
 						} else {
 							hamstercount += Math.floor(amount / divider);
@@ -47,9 +47,9 @@ function increaseHamsters(amount) {
 						i++;
 					} else {
 						clearInterval(repeat);
-						if ( (hamstercount + (amount % divider)) > hamstercapacity) {
+						if ( (hamstercount + (amount % divider)) >= hamstercapacity) {
 							hamstercount += amount % divider;
-							moreThanMax = hamstercount - hamstercapacity;
+							moreThanMax = (hamstercount - hamstercapacity) - (amount % divider);
 							hamstercount = hamstercapacity;
 						} else {
 							hamstercount += amount % divider;
@@ -75,9 +75,9 @@ function increaseHamsters(amount) {
 					}
 				}, Math.floor(1000 / amount));
 			} else {
-				if ( (hamstercount + amount) > hamstercapacity) {
-					hamstercount + amount;
-					moreThanMax = hamstercount - hamstercapacity;
+				if ( (hamstercount + amount) >= hamstercapacity) {
+					hamstercount += amount;
+					moreThanMax = (hamstercount - hamstercapacity) - amount;
 					hamstercount = hamstercapacity;
 				} else {
 					hamstercount += amount;
