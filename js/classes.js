@@ -23,7 +23,11 @@ class Particle {
 class ClickedHamsters {
 	constructor(e) {
 		this.element = document.createElement("div");
-		this.element.innerHTML = "+" + convertToReadableNumber(hamstersperclick);
+		var displayedNumber = hamstersperclick;
+		if ( (hamstersperclick + hamsterocunt) > hamstercapacity) {
+			displayedNumber -= (hamstersperclick + hamsterocunt) - hamstercapacity;
+		}
+		this.element.innerHTML = "+" + convertToReadableNumber(displayedNumber);
 		this.element.className = "clicked-hamsters";
 		this.posX = e.clientX - 10;
 		this.posY = e.clientY - 10;
