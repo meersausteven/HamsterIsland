@@ -158,7 +158,7 @@ class RareHamster {
 }
 
 class ShopItem {
-	constructor(upgrade) {
+	constructor(upgrade, e) {
 		this.element = document.createElement("div");
 		this.element.className = "shop-upgrade shop-item shop-item-unbuyable shop-" + upgrade.tag + "-upgrade";
 		this.element.setAttribute("id", "upgrade_" + upgrade.id);
