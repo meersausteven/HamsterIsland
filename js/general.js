@@ -96,7 +96,7 @@ function increaseHamsters(amount) {
 			}
 			if (amount > 0) {
 				// don't change totalhamstercount for purchases
-				console.log(moreThanMax);
+				console.log("will be added to total: " + moreThanMax);
 				if (moreThanMax == 0) {
 					totalhamstercount += amount;
 				} else {
