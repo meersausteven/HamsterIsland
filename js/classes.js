@@ -166,7 +166,7 @@ class ShopItem {
 			"<h2>Costs: " + convertToReadableNumber(upgrade.price) + " Hamsters</h2>" + 
 			"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
 		// MOUSE CLICK EVENT
-		/*this.element.onclick = function() {
+		this.element.onclick = function() {
 			var upgrade = getUpgrade(this.element);
 			boughtUpgrades.push(upgrade.id);
 			// do necessary stuff depending on upgrade type (increase level, hps/capacity/etc.)
@@ -288,7 +288,7 @@ class ShopItem {
 			var upgrade = getUpgrade(this.element);
 			var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 			infobox.parentNode.removeChild(infobox);
-		}*/
+		}
 		document.getElementById("shop").appendChild(this.element);
 	}
 	delete() {
