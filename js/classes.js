@@ -167,7 +167,7 @@ class ShopItem {
 			"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
 		// MOUSE CLICK EVENT
 		this.element.onclick = function() {
-			var upgrade = getUpgrade(this.element);
+			var upgrade = getUpgrade(this);
 			boughtUpgrades.push(upgrade.id);
 			// do necessary stuff depending on upgrade type (increase level, hps/capacity/etc.)
 			if (hamstercount >= upgrade.price) {
