@@ -146,10 +146,11 @@ function addNewUpgradesToShop() {
 			} else if ((upgrade.tag == "hamster") && (hamsterlevel != upgrade.level - 1)) {
 				return;
 			}
-		} else if ( (upgrade.tag == "world") && (upgrade.level == worldlevel + 1) &&
-			   // only display world upgrades if all upgrades of the current world have been purchased
-			    (islandlevel != 5) && (drinklevel != 8) && (foodlevel != 8) && (cagelevel != 5) && (hamsterlevel != 3) ) {
-			return;
+		} else if ( (upgrade.tag == "world") && (worldlevel != upgrade.level -1) ) {
+			// only display world upgrades if all upgrades of the current world have been purchased
+			if ( (islandlevel != 5) || (drinklevel != 8) || (foodlevel != 8) || (cagelevel != 5) || (hamsterlevel != 3) ) {
+				return;
+			}
 		}
 		upgrade.displayed = true;
 		var shopitem = new ShopItem(upgrade);
