@@ -77,7 +77,7 @@ function increaseHamsters(amount) {
 				}, Math.floor(1000 / amount));
 			} else {
 				if ( (hamstercount + amount) > hamstercapacity) {
-					amount = amount - ( (hamstercount + amount) - hamstercapacity ;
+					amount = amount - ( (hamstercount + amount) - hamstercapacity );
 					hamstercount += amount;
 				} else {
 					hamstercount += amount;
