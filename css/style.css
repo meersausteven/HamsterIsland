@@ -87,7 +87,7 @@ body {
 	transform: translateX(-50%);
 }
 #counter_container {
-	border-top: 80px solid rgba(122, 159, 111, 0.8);
+	border-top: 80px solid rgb(122, 159, 111);
 	border-left: 60px solid transparent;
 	border-right: 60px solid transparent;
 	min-width: 200px;
