@@ -229,7 +229,8 @@ class ShopItem {
 					var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 					infobox.parentNode.removeChild(infobox);
 				}
-				document.getElementById("shop").removeChild(this.element);
+				var shopItem = document.getElementById("upgrade_" + upgrade.id);
+				shopItem.parentNode.removeChild(shopItem);
 			}
 		}
 		// MOUSE MOVE EVENT
