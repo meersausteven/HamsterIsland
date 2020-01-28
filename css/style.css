@@ -65,12 +65,12 @@ body {
 	top: calc(53vh - 50px);
 }
 #hamster_food {
-	left: calc(50% - 120px);
+	left: calc(50% - 170px);
 	
 	border: green solid 2px;
 }
 #hamster_drink {
-	left: calc(50% + 120px);
+	left: calc(50% + 70px);
 	
 	border: blue solid 2px;
 }
