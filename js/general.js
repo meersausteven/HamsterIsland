@@ -37,9 +37,11 @@ function increaseHamsters(amount) {
 					if (i < divider) {
 						if ( ( hamstercount + Math.floor(amount / divider) ) > hamstercapacity ) {
 							amount -= ( hamstercount + Math.floor(amount / divider) ) - hamstercapacity;
+							console.log("i<divider, >capacity: " + amount);
 							hamstercount += amount;
 							totalhamstercount += amount;
 						} else {
+							console.log("i<divider, <capacity: " + amount);
 							hamstercount += Math.floor(amount / divider);
 							totalhamstercount += Math.floor(amount / divider);
 						}
@@ -48,9 +50,11 @@ function increaseHamsters(amount) {
 					} else {
 						if ( ( hamstercount + (amount % divider) ) > hamstercapacity ) {
 							amount -= ( hamstercount + (amount % divider) ) - hamstercapacity;
+							console.log("i>divider, >capacity: " + amount);
 							hamstercount += amount;
 							totalhamstercount += amount;
 						} else {
+							console.log("i>divider, <capacity: " + amount);
 							hamstercount += amount % divider;
 							totalhamstercount += amount % divider;
 						}
