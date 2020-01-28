@@ -133,7 +133,7 @@ var allUpgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrade
 function addNewUpgradesToShop() {
   allUpgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) && (upgrade.world == worldlevel) ) {
-		if ( (upgrade.level != 0) && (upgrade.tag != "world")) {
+		if (upgrade.tag != "world") {
 			// only display upgrades that are one level higher than the current level of the upgrade type
 			if ((upgrade.tag == "cage") && (cagelevel != upgrade.level - 1)) {
 				return;
@@ -146,7 +146,7 @@ function addNewUpgradesToShop() {
 			} else if ((upgrade.tag == "hamster") && (hamsterlevel != upgrade.level - 1)) {
 				return;
 			}
-		} else if ( (upgrade.tag == "world") && (worldlevel != upgrade.level -1) ) {
+		} else if ( (upgrade.tag == "world") && (worldlevel == upgrade.level -1) ) {
 			// only display world upgrades if all upgrades of the current world have been purchased
 			if ( (islandlevel != 5) || (drinklevel != 8) || (foodlevel != 8) || (cagelevel != 5) || (hamsterlevel != 3) ) {
 				return;
