@@ -289,6 +289,8 @@ class ShopItem {
 			var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 			infobox.parentNode.removeChild(infobox);
 		}*/
+		
+		document.getElementById("shop").appendChild(this.element);
 	}
 	delete() {
 		document.body.removeChild(this.element);
