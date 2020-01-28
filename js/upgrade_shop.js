@@ -153,7 +153,6 @@ function addNewUpgradesToShop() {
 		}
 		upgrade.displayed = true;
 		var shopitem = new ShopItem(upgrade);
-		document.getElementById("shop").appendChild(shopitem);
 		checkForBuyableUpgrades();
     }
   });
