@@ -156,3 +156,141 @@ class RareHamster {
 		document.body.removeChild(this.element);
 	}
 }
+
+class ShopItem {
+	constructor(upgrade) {
+		this.element = document.createElement("div");
+		this.element.className = "shop-upgrade shop-item shop-item-unbuyable shop-" + upgrade.tag + "-upgrade";
+		this.element.setAttribute("id", "upgrade_" + upgrade.id);
+		this.element.innerHTML = "<h1>" + upgrade.name + "</h1>" +
+			"<h2>Costs: " + convertToReadableNumber(upgrade.price) + " Hamsters</h2>" + 
+			"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
+		// MOUSE CLICK EVENT
+		this.element.onclick = function() {
+			var upgrade = getUpgrade(this.element);
+			boughtUpgrades.push(upgrade.id);
+			// do necessary stuff depending on upgrade type (increase level, hps/capacity/etc.)
+			if (hamstercount >= upgrade.price) {
+				switch (upgrade.tag) {
+				case "cage":
+					if (upgrade.action == "multiply") {
+						hamstersperclick *= upgrade.value;
+					} else if (upgrade.action == "add") {
+						hamstersperclick += upgrade.value;
+					}
+					cagelevel++;
+					updateCageLevel();
+					break;
+				case "drink":
+					increaseHPS(upgrade.value, upgrade.action);
+					drinklevel++;
+					updateDrinkLevel();
+					break;
+				case "food":
+					increaseHPS(upgrade.value, upgrade.action);
+					foodlevel++;
+					updateFoodLevel();
+					break;
+				case "island":
+					if (upgrade.action == "add") {
+						hamstercapacity += upgrade.value;
+					} else if (upgrade.action == "multiply") {
+						hamstercapacity *= upgrade.value;
+					}
+					updateHamsterCapacity();
+					islandlevel++;
+					updateIslandLevel();
+					break;
+				case "hamster":
+					if (upgrade.action == "multiply") {
+						hamstersperclick *= upgrade.value;
+					} else if (upgrade.action == "add") {
+						hamstersperclick += upgrade.value;
+					}
+					boughtHamsters.push(upgrade.id);
+					hamsterlevel++;
+					updateHamsterLevel();
+					break;
+				case "world":
+					worldlevel++;
+					updateWorldLevel();
+					hamsterlevel = 0;
+					foodlevel = 0;
+					drinklevel = 0;
+					islandlevel = 0;
+					updateIslandLevel();
+					cagelevel = 0;
+					updateCageLevel();
+					break;
+				}
+				increaseHamsters(-(upgrade.price));
+				// delete the info box of the bought shop item
+				if (document.getElementById("upgrade_info_box_" + upgrade.id)) {
+					var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
+					infobox.parentNode.removeChild(infobox);
+				}
+				this.delete();
+			}
+		}
+		// MOUSE MOVE EVENT
+		this.element.onmousemove = function(e) {
+			// display a small description when hovering the shop item
+			var upgrade = getUpgrade(this.element);
+			var action;
+			if (upgrade.tag == "food" || upgrade.tag == "drink") {
+				if (upgrade.action == "multiply") {
+					action = "Increases your hamsters generated per second by " + upgrade.value + " times.";
+				} else if (upgrade.action == "add") {
+					action = "Increases your hamsters generated per second by " + upgrade.value + ".";
+				}
+			} else if (upgrade.tag == "cage" ||upgrade.tag == "hamster") {
+				if (upgrade.action == "multiply") {
+					action = "Increases your hamsters generated per click by " + upgrade.value + " times.";
+				} else if (upgrade.action == "add") {
+					action = "Increases your hamsters generated per click by " + upgrade.value + ".";
+				}
+			} else if (upgrade.tag == "island") {
+				action = "Increases your max. amount of hamsters to " + upgrade.value.toLocaleString() + ".";
+			} else if (upgrade.tag == "world") {
+				action = "Sends your hamsters to a new world with new upgrades. You will keep all your already bought upgrades.";
+			} else {
+				// something went wrong, upgrade.tag not known
+				action = "Error: Unknown upgrade-tag. If you see this, please tell the developer.";
+			}
+			var upgradebox = document.getElementById("upgrade_" + upgrade.id);
+			var upgradeposition = upgradebox.getBoundingClientRect();
+			var infobox;
+			// check if there is already an info box on screen
+			if (document.getElementById("upgrade_info_box_" + upgrade.id)) {
+				infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
+			} else {
+				// if not, create one
+				var infobox = document.createElement("div");
+				infobox.setAttribute("id", "upgrade_info_box_" + upgrade.id);
+				infobox.className = "upgrade_info_box";
+				infobox.innerHTML = "<h3>" + upgrade.description + "</h3><h4>" + action + "</h4>";
+			}
+			// move info box with mouse but keep it from moving outside of the screen
+			var correctLeft = (e.clientX - ((upgradebox.clientWidth - 10) / 2)) + ((e.clientX - upgradeposition.left - (upgradebox.clientWidth / 2)) / 2);
+			if (correctLeft < 10) {
+				correctLeft = 10;
+			} else if (correctLeft > window.innerWidth - upgradebox.clientWidth - 20) {
+				 correctLeft = window.innerWidth - upgradebox.clientWidth - 20;
+			}
+			infobox.style.cssText = "width:" + (upgradebox.clientWidth - 10) + "px;" +
+						"bottom:" + (document.getElementById("shop").clientHeight + 10) + "px;" +
+						"left:" + correctLeft + "px;";
+			document.body.appendChild(infobox);
+		}
+		// MOUSE LEAVE EVENT
+		this.element.onmouseleave = function() {
+			// remove shop item description when de-hovering
+			var upgrade = getUpgrade(this.element);
+			var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
+			infobox.parentNode.removeChild(infobox);
+		}
+	}
+	delete() {
+		document.body.removeChild(this.element);
+	}
+}
