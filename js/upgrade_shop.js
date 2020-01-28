@@ -133,7 +133,7 @@ var allUpgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrade
 function addNewUpgradesToShop() {
   allUpgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) ) {
-		if ( (upgrade.tag != "world") && (upgrade.world == worldlevel) {
+		if ( (upgrade.tag != "world") && (upgrade.world == worldlevel) ) {
 			// only display upgrades that are one level higher than the current level of the upgrade type
 			if ((upgrade.tag == "cage") && (cagelevel != upgrade.level - 1)) {
 				return;
