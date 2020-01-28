@@ -59,6 +59,7 @@ function increaseHamsters(amount) {
 							console.log("i>divider, <capacity: " + amount);
 							hamstercount += amount % divider;
 							totalhamstercount += amount % divider;
+							clearInterval(repeat);
 						}
 						updateHamsterCount();
 					}
