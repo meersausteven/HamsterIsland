@@ -132,7 +132,7 @@ class RareHamster {
 				rareHamsterBoostDuration(this);
 			}
 			// show a small text box with the activated effect
-			let boostInfoBox = document.createElement("div");
+			var boostInfoBox = document.createElement("div");
 			boostInfoBox.className = "boost-info-box rare-hamster-" + this.rarehamstertype + " animation-infobox";
 			boostInfoBox.id = "boost_info_box";
 			if (coinFlip > 50) {
@@ -143,11 +143,11 @@ class RareHamster {
 			document.body.appendChild(boostInfoBox);
 			// remove text box after 5 seconds
 			setTimeout(function() {
-				let infoBox = document.getElementById("boost_info_box");
+				var infoBox = document.getElementById("boost_info_box");
 				infoBox.parentNode.removeChild(infoBox);
 			}, 5000);
 			rarehamsterclicks++;
-			let rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
+			var rarehamster = document.getElementById("rare_hamster_" + this.rarehamstertype);
 			rarehamster.parentNode.removeChild(rarehamster);
 			}
 		document.body.appendChild(this.element);
@@ -289,7 +289,6 @@ class ShopItem {
 			var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 			infobox.parentNode.removeChild(infobox);
 		}*/
-		
 		document.getElementById("shop").appendChild(this.element);
 	}
 	delete() {
