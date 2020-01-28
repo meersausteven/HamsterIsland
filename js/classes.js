@@ -24,8 +24,8 @@ class ClickedHamsters {
 	constructor(e) {
 		this.element = document.createElement("div");
 		var displayedNumber = hamstersperclick;
-		if ( (hamstersperclick + hamsterocunt) > hamstercapacity) {
-			displayedNumber -= (hamstersperclick + hamsterocunt) - hamstercapacity;
+		if ( (hamstersperclick + hamstercount) > hamstercapacity) {
+			displayedNumber -= (hamstersperclick + hamstercount) - hamstercapacity;
 		}
 		this.element.innerHTML = "+" + convertToReadableNumber(displayedNumber);
 		this.element.className = "clicked-hamsters";
