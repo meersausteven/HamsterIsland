@@ -36,7 +36,7 @@ function increaseHamsters(amount) {
 				var repeat = setInterval(function() {
 					if (i < divider) {
 						if ( (hamstercount + Math.floor(amount / divider)) >= hamstercapacity) {
-							amount = Math.floor(amount / divider) - ((hamstercount + Math.floor(amount / divider) - hamstercapacity);
+							amount = Math.floor(amount / divider) - ((hamstercount + Math.floor(amount / divider)) - hamstercapacity);
 							hamstercount += amount;
 							totalhamstercount += amount;
 						} else {
