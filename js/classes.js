@@ -85,7 +85,7 @@ class RareHamster {
 		this.element.onclick = function() {
 			clearTimeout(removeRareHamster);
 			this.rarehamstertype = this.id.replace('rare_hamster_','');
-			let coinFlip = randomGenerator(100);
+			var coinFlip = randomGenerator(100);
 			this.boostDuration = 30000;
 			switch (this.rarehamstertype) {
 				case "bronze":
@@ -158,7 +158,7 @@ class RareHamster {
 }
 
 class ShopItem {
-	constructor(upgrade, e) {
+	constructor(upgrade) {
 		this.element = document.createElement("div");
 		this.element.className = "shop-upgrade shop-item shop-item-unbuyable shop-" + upgrade.tag + "-upgrade";
 		this.element.setAttribute("id", "upgrade_" + upgrade.id);
@@ -166,7 +166,7 @@ class ShopItem {
 			"<h2>Costs: " + convertToReadableNumber(upgrade.price) + " Hamsters</h2>" + 
 			"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
 		// MOUSE CLICK EVENT
-		this.element.onclick = function() {
+		/*this.element.onclick = function() {
 			var upgrade = getUpgrade(this.element);
 			boughtUpgrades.push(upgrade.id);
 			// do necessary stuff depending on upgrade type (increase level, hps/capacity/etc.)
@@ -288,7 +288,7 @@ class ShopItem {
 			var upgrade = getUpgrade(this.element);
 			var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 			infobox.parentNode.removeChild(infobox);
-		}
+		}*/
 	}
 	delete() {
 		document.body.removeChild(this.element);
