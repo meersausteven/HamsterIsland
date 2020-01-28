@@ -235,7 +235,7 @@ class ShopItem {
 		// MOUSE MOVE EVENT
 		this.element.onmousemove = function(e) {
 			// display a small description when hovering the shop item
-			var upgrade = getUpgrade(this.element);
+			var upgrade = getUpgrade(this);
 			var action;
 			if (upgrade.tag == "food" || upgrade.tag == "drink") {
 				if (upgrade.action == "multiply") {
@@ -285,7 +285,7 @@ class ShopItem {
 		// MOUSE LEAVE EVENT
 		this.element.onmouseleave = function() {
 			// remove shop item description when de-hovering
-			var upgrade = getUpgrade(this.element);
+			var upgrade = getUpgrade(this);
 			var infobox = document.getElementById("upgrade_info_box_" + upgrade.id);
 			infobox.parentNode.removeChild(infobox);
 		}
