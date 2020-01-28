@@ -133,17 +133,17 @@ var allUpgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrade
 function addNewUpgradesToShop() {
   allUpgrades.forEach(function(upgrade) {
 	if ((upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) ) {
-		if ( (upgrade.tag != "world") && (upgrade.world == worldlevel) ) {
+		if ( (upgrade.tag != "world") && (typeOf(upgrade.world) != 'undefined') ) {
 			// only display upgrades that are one level higher than the current level of the upgrade type
-			if ((upgrade.tag == "cage") && (cagelevel != upgrade.level - 1)) {
+			if ( (upgrade.tag == "cage") && (cagelevel != upgrade.level - 1) && (upgrade.world == worldlevel) ) {
 				return;
-			} else if ((upgrade.tag == "food") && (foodlevel != upgrade.level - 1)) {
+			} else if ( (upgrade.tag == "food") && (foodlevel != upgrade.level - 1) && (upgrade.world == worldlevel) ) {
 				return;
-			} else if ((upgrade.tag == "drink") && (drinklevel != upgrade.level - 1)) {
+			} else if ( (upgrade.tag == "drink") && (drinklevel != upgrade.level - 1) && (upgrade.world == worldlevel) ) {
 				return;
-			} else if ((upgrade.tag == "island") && (islandlevel != upgrade.level - 1)) {
+			} else if ( (upgrade.tag == "island") && (islandlevel != upgrade.level - 1) && (upgrade.world == worldlevel) ) {
 				return;
-			} else if ((upgrade.tag == "hamster") && (hamsterlevel != upgrade.level - 1)) {
+			} else if ( (upgrade.tag == "hamster") && (hamsterlevel != upgrade.level - 1) && (upgrade.world == worldlevel) ) {
 				return;
 			}
 		} else if ( (upgrade.tag == "world") && (worldlevel == upgrade.level - 1) ) {
