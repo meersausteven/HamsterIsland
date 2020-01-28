@@ -25,8 +25,6 @@ function startTime() {
 	starttime = Date.now();
 }
 
-var moreThanMax = 0;
-
 function increaseHamsters(amount) {
 	if (hamstercount < hamstercapacity) {
 		if (amount != 0) {
@@ -37,25 +35,24 @@ function increaseHamsters(amount) {
 				var i = 0;
 				var repeat = setInterval(function() {
 					if (i < divider) {
-						if (moreThanMax == 0) {
-							if ( (hamstercount + Math.floor(amount / divider)) >= hamstercapacity) {
-								amount = Math.floor(amount / divider) - (hamstercount - hamstercapacity);
-								hamstercount += amount;
-							} else {
-								hamstercount += Math.floor(amount / divider);
-							}
+						if ( (hamstercount + Math.floor(amount / divider)) >= hamstercapacity) {
+							amount = Math.floor(amount / divider) - ((hamstercount + Math.floor(amount / divider) - hamstercapacity);
+							hamstercount += amount;
+							totalhamstercount += amount;
+						} else {
+							hamstercount += Math.floor(amount / divider);
+							totalhamstercount += Math.floor(amount / divider);
 						}
 						updateHamsterCount();	
 						i++;
 					} else {
-						if (moreThanMax == 0) {
-							clearInterval(repeat);
-							if ( (hamstercount + (amount % divider)) >= hamstercapacity) {
-								amount = (amount % divider) - (hamstercount - hamstercapacity);
-								hamstercount += amount;
-							} else {
-								hamstercount += amount % divider;
-							}
+						if ( (hamstercount + (amount % divider)) >= hamstercapacity) {
+							amount = (amount % divider) - (hamstercount + (amount % divider) - hamstercapacity);
+							hamstercount += amount;
+							totalhamstercount += amount;
+						} else {
+							hamstercount += amount % divider;
+							totalhamstercount += amount % divider;
 						}
 						updateHamsterCount();
 					}
@@ -70,6 +67,7 @@ function increaseHamsters(amount) {
 					if (i < amount) {
 						if (hamstercount < hamstercapacity) {
 							hamstercount++;
+							totalhamstercount++;
 						}
 						i++;
 						updateHamsterCount();
@@ -78,19 +76,13 @@ function increaseHamsters(amount) {
 					}
 				}, Math.floor(1000 / amount));
 			} else {
-				if (moreThanMax == 0) {
-					if ( (hamstercount + amount) >= hamstercapacity) {
-						amount = amount - (hamstercount - hamstercapacity);
-						hamstercount += amount;
-					} else {
-						hamstercount += amount;
-					}
+				if ( (hamstercount + amount) >= hamstercapacity) {
+					amount = amount - ((hamstercount + amount) - hamstercapacity);
+					hamstercount += amount;
+				} else {
+					hamstercount += amount;
 				}
 				updateHamsterCount();
-			}
-			if (amount > 0) {
-				// don't change totalhamstercount for purchases
-				totalhamstercount += amount;
 			}
 		}
 	}
