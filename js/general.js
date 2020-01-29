@@ -2,9 +2,7 @@ window.onload = function() {
 	updateGame();
 };
 
-	//============================
-	//         Variables
-	//============================
+// DECLARE GLOBAL VARIABLES
 
 var totalhamstercount = 0, hamstercount = 0;
 var hamstersperclick = 1;
@@ -17,9 +15,7 @@ var boughtUpgrades = [], boughtHamsters = ['h000'];
 var cagelevel = 0, foodlevel = 0, drinklevel = 0, islandlevel = 0, hamsterlevel = 0, worldlevel = 0;
 var starttime = 0;
 
-	//============================
-	//         Functions
-	//============================
+// FUNCTIONS
 
 function startTime() {
 	starttime = Date.now();
