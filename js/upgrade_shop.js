@@ -135,7 +135,7 @@ function addNewUpgradesToShop() {
 	if ( (upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) ) {
 		if ( (upgrade.tag != "world") && (typeof upgrade.world !== "undefined") ) {
 			// only display upgrades that are one level higher than the current level of the upgrade type
-			if ( (upgrade.tag == "cage") && (cagelevel != upgrade.level - 1) && (upgrade.world != worldlevel) ) {
+			if ( (upgrade.tag == "cage") && (upgrade.level != cagelevel + 1) && (upgrade.world != worldlevel) ) {
 				return;
 			} else if ( (upgrade.tag == "food") && (upgrade.level != foodlevel + 1) || (upgrade.world != worldlevel) ) {
 				return;
