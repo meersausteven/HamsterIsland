@@ -89,7 +89,6 @@ function increaseHamsters(amount) {
 				updateHamsterCount();
 			}
 			addNewUpgradesToShop();
-			checkForBuyableUpgrades();
 		}
 	}
 }
@@ -99,8 +98,9 @@ function increaseHamsters(amount) {
 document.getElementById("hamster_cage").addEventListener("click", cageClick);
 
 function cageClick(e) {
-  increaseHamsters(hamstersperclick);
-  cagedhamsterclicks++;
+	checkForBuyableUpgrades();
+	increaseHamsters(hamstersperclick);
+	cagedhamsterclicks++;
 	if (hamstercount < hamstercapacity) {
 		// create a particle with each click and move it in a random direction
 		var particle = new Particle();
@@ -125,6 +125,7 @@ var hamsterspersecond_interval = setInterval(hamstersPerSecond, 1000);
 
 function hamstersPerSecond() {
 	increaseHamsters(hamsterspersecond);
+	checkForBuyableUpgrades();
 }
 
 function increaseHPS(amount, type) {
