@@ -88,7 +88,6 @@ function increaseHamsters(amount) {
 				}
 				updateHamsterCount();
 			}
-			addNewUpgradesToShop();
 		}
 	}
 }
@@ -99,6 +98,7 @@ document.getElementById("hamster_cage").addEventListener("click", cageClick);
 
 function cageClick(e) {
 	checkForBuyableUpgrades();
+	addNewUpgradesToShop();
 	increaseHamsters(hamstersperclick);
 	cagedhamsterclicks++;
 	if (hamstercount < hamstercapacity) {
@@ -126,6 +126,7 @@ var hamsterspersecond_interval = setInterval(hamstersPerSecond, 1000);
 function hamstersPerSecond() {
 	increaseHamsters(hamsterspersecond);
 	checkForBuyableUpgrades();
+	addNewUpgradesToShop();
 }
 
 function increaseHPS(amount, type) {
