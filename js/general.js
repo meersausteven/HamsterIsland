@@ -64,6 +64,7 @@ function increaseHamsters(amount) {
 				// increase hamstercount smoothly, for amount < divider
 				var i = 1;
 				hamstercount++;
+				totalhamstercount++;
 				updateHamsterCount();
 				
 				var repeat = setInterval( function() {
