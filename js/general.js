@@ -88,6 +88,8 @@ function increaseHamsters(amount) {
 				}
 				updateHamsterCount();
 			}
+			checkForBuyableUpgrades();
+			addNewUpgradesToShop();
 		}
 	}
 }
