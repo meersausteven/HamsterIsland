@@ -85,8 +85,8 @@ function convertToReadableNumber(number) {
 }
 
 function updateGame() {
-	getProgress();
 	startTime();
+	getProgress();
 	updateCageLevel();
 	updateIslandLevel();
 	updateHamsterLevel();
