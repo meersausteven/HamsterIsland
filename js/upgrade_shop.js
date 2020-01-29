@@ -135,7 +135,7 @@ function addNewUpgradesToShop() {
 	if ( (upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) ) {
 		if ( (upgrade.tag != "world") && (typeof upgrade.world !== "undefined") ) {
 			// only display upgrades that are one level higher than the current level of the upgrade type
-			if ( (upgrade.tag == "cage") && (upgrade.level != cagelevel + 1) && (upgrade.world != worldlevel) ) {
+			if ( (upgrade.tag == "cage") && (upgrade.level != cagelevel + 1) || (upgrade.world != worldlevel) ) {
 				return;
 			} else if ( (upgrade.tag == "food") && (upgrade.level != foodlevel + 1) || (upgrade.world != worldlevel) ) {
 				return;
@@ -146,7 +146,7 @@ function addNewUpgradesToShop() {
 			} else if ( (upgrade.tag == "hamster") && (upgrade.level != hamsterlevel + 1) || (upgrade.world != worldlevel) ) {
 				return;
 			}
-		} else if ( (upgrade.tag == "world") && (upgrade.level == worldlevel) ) {
+		} else if ( (upgrade.tag == "world") && (upgrade.level == worldlevel + 1) ) {
 			// only display world upgrades if all upgrades of the current world have been purchased
 			if ( (islandlevel != 5) || (drinklevel != 8) || (foodlevel != 8) || (cagelevel != 5) || (hamsterlevel != 3) ) {
 				return;
