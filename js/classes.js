@@ -81,7 +81,7 @@ class RareHamster {
 		this.element.style.cssText = "top: " + this.posY + "vh; left: " + this.posX + "vw;";
 		// remove rare hamster after 10 seconds of not being clicked
 		removeRareHamster = setTimeout(function() {this.delete()}.bind(this), 10000);
-		// on click activate one of two possible effects with a 50% chance for either
+		// MOUSE CLICK EVENT
 		this.element.onclick = function() {
 			clearTimeout(removeRareHamster);
 			this.rarehamstertype = this.id.replace('rare_hamster_','');
@@ -238,20 +238,24 @@ class ShopItem {
 			// display a small description when hovering the shop item
 			var upgrade = getUpgrade(this);
 			var action;
-			if (upgrade.tag == "food" || upgrade.tag == "drink") {
+			if ( (upgrade.tag == "food" || upgrade.tag == "drink") ) {
 				if (upgrade.action == "multiply") {
-					action = "Increases your hamsters generated per second by " + upgrade.value + " times.";
+					action = "Multiplies your hamsters generated per second by " + upgrade.value + " times.";
 				} else if (upgrade.action == "add") {
 					action = "Increases your hamsters generated per second by " + upgrade.value + ".";
 				}
-			} else if (upgrade.tag == "cage" ||upgrade.tag == "hamster") {
+			} else if ( (upgrade.tag == "cage") || (upgrade.tag == "hamster") ) {
 				if (upgrade.action == "multiply") {
-					action = "Increases your hamsters generated per click by " + upgrade.value + " times.";
+					action = "Multiplies your hamsters generated per click by " + upgrade.value + " times.";
 				} else if (upgrade.action == "add") {
 					action = "Increases your hamsters generated per click by " + upgrade.value + ".";
 				}
 			} else if (upgrade.tag == "island") {
-				action = "Increases your max. amount of hamsters to " + upgrade.value.toLocaleString() + ".";
+				if (upgrade.action == "multiply") {
+					action = "Multiplies your islands hamster capacity by " + upgrade.value + " times.";
+				} else if (upgrade.action == "add") {
+					action = "Increases your islands hamster capacity by " + convertToReadableNumber(upgrade.value) + ".";
+				}
 			} else if (upgrade.tag == "world") {
 				action = "Sends your hamsters to a new world with new upgrades. You will keep all your already bought upgrades.";
 			} else {
