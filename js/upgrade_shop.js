@@ -148,8 +148,8 @@ function addNewUpgradesToShop() {
 			}
 		} else if ( (upgrade.tag == "world") && (upgrade.level == worldlevel + 1) ) {
 			// only display world upgrades if all upgrades of the current world have been purchased
-			console.log(upgrade);
-			if ( (islandlevel != 5) || (drinklevel != 8) || (foodlevel != 8) || (cagelevel != 5) || (hamsterlevel != 3) ) {console.log(upgrade);
+			console.log("filter 1: " + upgrade);
+			if ( (islandlevel != 5) || (drinklevel != 8) || (foodlevel != 8) || (cagelevel != 5) || (hamsterlevel != 3) ) {console.log("denied: " + upgrade);
 				return;
 			}
 		}
