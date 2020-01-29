@@ -88,8 +88,8 @@ function increaseHamsters(amount) {
 				}
 				updateHamsterCount();
 			}
-			checkForBuyableUpgrades();
 			addNewUpgradesToShop();
+			checkForBuyableUpgrades();
 		}
 	}
 }
@@ -99,8 +99,8 @@ function increaseHamsters(amount) {
 document.getElementById("hamster_cage").addEventListener("click", cageClick);
 
 function cageClick(e) {
-	checkForBuyableUpgrades();
 	addNewUpgradesToShop();
+	checkForBuyableUpgrades();
 	increaseHamsters(hamstersperclick);
 	cagedhamsterclicks++;
 	if (hamstercount < hamstercapacity) {
@@ -127,8 +127,8 @@ var hamsterspersecond_interval = setInterval(hamstersPerSecond, 1000);
 
 function hamstersPerSecond() {
 	increaseHamsters(hamsterspersecond);
-	checkForBuyableUpgrades();
 	addNewUpgradesToShop();
+	checkForBuyableUpgrades();
 }
 
 function increaseHPS(amount, type) {
