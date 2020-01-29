@@ -89,9 +89,9 @@ function increaseHamsters(amount) {
 				updateHamsterCount();
 			}
 		}
+		addNewUpgradesToShop();
+		checkForBuyableUpgrades();
 	}
-	addNewUpgradesToShop();
-	checkForBuyableUpgrades();
 }
 
 // Cage Click
