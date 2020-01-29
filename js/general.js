@@ -100,8 +100,6 @@ document.getElementById("hamster_cage").addEventListener("click", cageClick);
 
 function cageClick(e) {
   increaseHamsters(hamstersperclick);
-  addNewUpgradesToShop();
-  checkForBuyableUpgrades();
   cagedhamsterclicks++;
 	if (hamstercount < hamstercapacity) {
 		// create a particle with each click and move it in a random direction
