@@ -171,7 +171,7 @@ function addNewUpgradesToShop() {
 function checkForBuyableUpgrades() {
 	allUpgrades.forEach(function(upgrade) {
 		var itemList = document.getElementsByClassName("shop-item");
-		for (i = 0; i <= itemList.length; i++) {
+		for (i = 0; i < itemList.length; i++) {
 			var itemId = itemList[i].id;
 			var upgrade = getUpgrade(itemId);
 			if (upgrade.displayed === true) {
