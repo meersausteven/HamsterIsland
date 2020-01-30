@@ -30,21 +30,21 @@ function toggleShop() {
 	// Upgrade names max. 3 word  each 12 letters
 	// Upgrade description max. 160 letters
 
-// Cage upgrades increase hamsters per click 
-var cageupgrades = [
+// Housing upgrades increase hamsters per click 
+var housingupgrades = [
 	// world 0 upgrades - Pet Shop
-	{id:"c000", price:0, level:0, world: 0, action:"none", value:0, name:"Nothing", tag:"cage", description:"-", displayed:true},
-	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"Cardboard Box", tag:"cage", description:"Alternatively you could use an empty toilet paper roll.", displayed:false},
-	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"Small Hamster Stall", tag:"cage", description:"Keeps your hamsters dry from the rain. Even though you keep them inside.", displayed:false},
-	{id:"c003", price:2360, level:3, world: 0, action:"add", value:3, name:"Wooden House", tag:"cage", description:"A little wooden hamster house. Makes your hamsters feel at home.", displayed:false},
-	{id:"c004", price:6460, level:4, world: 0, action:"add", value:4, name:"Fancy Castle", tag:"cage", description:"With this hamster castle your little kritters will feel protected and secure.", displayed:false},
-	{id:"c005", price:14990, level:5, world: 0, action:"add", value:5, name:"Luxurious Palace", tag:"cage", description:"In this luxury class housing your hamsters will be pampered like real kings.", displayed:false},
+	{id:"c000", price:0, level:0, world: 0, action:"none", value:0, name:"Nothing", tag:"housing", description:"-", displayed:true},
+	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"Cardboard Box", tag:"housing", description:"Alternatively you could use an empty toilet paper roll.", displayed:false},
+	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"Small Hamster Stall", tag:"housing", description:"Keeps your hamsters dry from the rain. Even though you keep them inside.", displayed:false},
+	{id:"c003", price:2360, level:3, world: 0, action:"add", value:3, name:"Wooden House", tag:"housing", description:"A little wooden hamster house. Makes your hamsters feel at home.", displayed:false},
+	{id:"c004", price:6460, level:4, world: 0, action:"add", value:4, name:"Fancy Castle", tag:"housing", description:"With this hamster castle your little kritters will feel protected and secure.", displayed:false},
+	{id:"c005", price:14990, level:5, world: 0, action:"add", value:5, name:"Luxurious Palace", tag:"housing", description:"In this luxury class housing your hamsters will be pampered like real kings.", displayed:false},
 	//world 1 upgrades - City Park Lake
-	{id:"c006", price:50, level:1, world: 1, action:"add", value:2, name:"Lily Pad Hat", tag:"cage", description:"This cute little lily pad hat protects your small friends from the rain. The hamsters kinda look like kappas that way.", displayed:false},
-	{id:"c007", price:150, level:2, world: 1, action:"add", value:2, name:"Leaf Tent", tag:"cage", description:"A small little tent made from fallen leafs you found in the Park.", displayed:false},
-	{id:"c008", price:960, level:3, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", displayed:false},
-	{id:"c009", price:2460, level:4, world: 1, action:"add", value:5, name:"", tag:"cage", description:"", displayed:false},
-	{id:"c010", price:9990, level:5, world: 1, action:"add", value:7, name:"", tag:"cage", description:"", displayed:false},
+	{id:"c006", price:50, level:1, world: 1, action:"add", value:2, name:"Lily Pad Hat", tag:"housing", description:"This cute little lily pad hat protects your small friends from the rain. The hamsters kinda look like kappas that way.", displayed:false},
+	{id:"c007", price:150, level:2, world: 1, action:"add", value:2, name:"Leaf Tent", tag:"housing", description:"A small little tent made from fallen leafs you found in the Park.", displayed:false},
+	{id:"c008", price:960, level:3, world: 1, action:"add", value:5, name:"", tag:"housing", description:"", displayed:false},
+	{id:"c009", price:2460, level:4, world: 1, action:"add", value:5, name:"", tag:"housing", description:"", displayed:false},
+	{id:"c010", price:9990, level:5, world: 1, action:"add", value:7, name:"", tag:"housing", description:"", displayed:false},
 	// world 2 upgrades - 
 ];
 // Food upgrades increase hamsters generated per second
@@ -103,7 +103,7 @@ var islandupgrades = [
 	{id:"i004", price:70000, level:4, world: 0, action:"add", value:80000, name:"Deluxe Cage", tag:"island", description:"The deluxe model. An entire town of hamsters could live in there!", displayed:false},
 	{id:"i005", price:150000, level:5, world: 0, action:"multiply", value:2, name:"Ultra Supreme Cage", tag:"island", description:"The best of the best. The enitre earth population of hamsters could fit in there!", displayed:false},
 	// world 1 upgrades - City Park Lake
-	{id:"i006", price:0, level:0, world: 0, action:"none", value:0, name:"Nothing", tag:"food", description:"-", displayed:true},
+	{id:"i006", price:0, level:0, world: 1, action:"none", value:0, name:"Nothing", tag:"island", description:"-", displayed:true},
 	{id:"i007", price:300000, level:1, world: 1, action:"add", value:200000, name:"Small Lily Pads", tag:"island", description:"These lily pads will keep your hamsters afloat on the lake surface.", displayed:false},
 	{id:"i008", price:500000, level:2, world: 1, action:"add", value:350000, name:"Big Lily Pads", tag:"island", description:"Big lily pads that help your hamsters stay dry.", displayed:false},
 	{id:"i009", price:850000, level:3, world: 1, action:"add", value:425000, name:"Single Lotus Blad", tag:"island", description:"Bigger than any lily pads in the lake.", displayed:false},
@@ -135,14 +135,14 @@ var worldupgrades = [
 
 ];
 
-var allUpgrades = cageupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, hamsterupgrades, worldupgrades);
+var allUpgrades = housingupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, hamsterupgrades, worldupgrades);
 
 function addNewUpgradesToShop() {
 	allUpgrades.forEach(function(upgrade) {
 		if ( (upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) ) {
 			if ( (upgrade.tag != "world") && (typeof upgrade.world !== "undefined") ) {
 				// only display upgrades that are one level higher than the current level of the upgrade type
-				if ( (upgrade.tag == "cage") && (upgrade.level != cagelevel + 1) || (upgrade.world != worldlevel) ) {
+				if ( (upgrade.tag == "housing") && (upgrade.level != housinglevel + 1) || (upgrade.world != worldlevel) ) {
 					return;
 				} else if ( (upgrade.tag == "food") && (upgrade.level != foodlevel + 1) || (upgrade.world != worldlevel) ) {
 					return;
@@ -155,7 +155,7 @@ function addNewUpgradesToShop() {
 				}
 			} else if ( (upgrade.tag == "world") && (upgrade.level == worldlevel + 1) ) {
 				// only display world upgrades if all upgrades of the current world have been purchased
-				if ( (islandlevel != 5) || (drinklevel != 8) || (foodlevel != 8) || (cagelevel != 5) || (hamsterlevel != 3) ) {
+				if ( (islandlevel != 5) || (drinklevel != 8) || (foodlevel != 8) || (housinglevel != 5) || (hamsterlevel != 3) ) {
 					return;
 				}
 			} else {
