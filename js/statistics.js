@@ -15,7 +15,7 @@ function updateStats() {
 	document.getElementById("stats_perclick").innerHTML = convertToReadableNumber(hamstersperclick);
 	document.getElementById("stats_hps").innerHTML = convertToReadableNumber(hamsterspersecond);
 	document.getElementById("stats_total").innerHTML = convertToReadableNumber(totalhamstercount);
-	document.getElementById("stats_clicks").innerHTML = convertToReadableNumber(cagedhamsterclicks);
+	document.getElementById("stats_clicks").innerHTML = convertToReadableNumber(bighamsterclicks);
 	document.getElementById("stats_rareclicks").innerHTML = convertToReadableNumber(rarehamsterclicks);
 	document.getElementById("stats_playtime").innerHTML = totalplaytime;
 	document.getElementById("stats_food").innerHTML = foodupgrades[foodlevel].name;
