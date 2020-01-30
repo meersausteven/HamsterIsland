@@ -172,14 +172,14 @@ class ShopItem {
 			// do necessary stuff depending on upgrade type (increase level, hps/capacity/etc.)
 			if (hamstercount >= upgrade.price) {
 				switch (upgrade.tag) {
-				case "cage":
+				case "housing":
 					if (upgrade.action == "multiply") {
 						hamstersperclick *= upgrade.value;
 					} else if (upgrade.action == "add") {
 						hamstersperclick += upgrade.value;
 					}
-					cagelevel++;
-					updateCageLevel();
+					housinglevel++;
+					updateHousingLevel();
 					break;
 				case "drink":
 					increaseHPS(upgrade.value, upgrade.action);
@@ -219,8 +219,8 @@ class ShopItem {
 					drinklevel = 0;
 					islandlevel = 0;
 					updateIslandLevel();
-					cagelevel = 0;
-					updateCageLevel();
+					housinglevel = 0;
+					updateHousingLevel();
 					break;
 				}
 				increaseHamsters(-(upgrade.price));
@@ -244,7 +244,7 @@ class ShopItem {
 				} else if (upgrade.action == "add") {
 					action = "Increases your hamsters generated per second by " + upgrade.value + ".";
 				}
-			} else if ( (upgrade.tag == "cage") || (upgrade.tag == "hamster") ) {
+			} else if ( (upgrade.tag == "housing") || (upgrade.tag == "hamster") ) {
 				if (upgrade.action == "multiply") {
 					action = "Multiplies your hamsters generated per click by " + upgrade.value + " times.";
 				} else if (upgrade.action == "add") {
