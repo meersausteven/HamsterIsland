@@ -8,12 +8,12 @@ function saveProgress() {
 	var boughtUpgradesList;
 	var save = window.btoa(totalhamstercount +
 		"-" + hamstercount +
-		"-" + cagedhamsterclicks +
+		"-" + bighamsterclicks +
 		"-" + rarehamsterclicks +
 		"-" + islandlevel +
 		"-" + worldlevel +
 		"-" + hamsterlevel +
-		"-" + cagelevel +
+		"-" + housinglevel +
 		"-" + foodlevel +
 		"-" + drinklevel +
 		"-" + basehamsterspersecond +
@@ -36,12 +36,12 @@ function getProgress() {
 		
 		totalhamstercount = parseInt(save[0]);
 		hamstercount = parseInt(save[1]);
-		cagedhamsterclicks = parseInt(save[2]);
+		bighamsterclicks = parseInt(save[2]);
 		rarehamsterclicks = parseInt(save[3]);
 		islandlevel = parseInt(save[4]);
 		worldlevel = parseInt(save[5]);
 		hamsterlevel = parseInt(save[6]);
-		cagelevel = parseInt(save[7]);
+		housinglevel = parseInt(save[7]);
 		foodlevel = parseInt(save[8]);
 		drinklevel = parseInt(save[9]);
 		basehamsterspersecond = parseInt(save[10]);
