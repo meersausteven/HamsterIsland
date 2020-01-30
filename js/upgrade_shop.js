@@ -33,6 +33,7 @@ function toggleShop() {
 // Cage upgrades increase hamsters per click 
 var cageupgrades = [
 	// world 0 upgrades - Pet Shop
+	{id:"c000", price:0, level:0, world: 0, action:"none", value:0, name:"Nothing", tag:"cage", description:"-", displayed:true},
 	{id:"c001", price:50, level:1, world: 0, action:"add", value:1, name:"Cardboard Box", tag:"cage", description:"Alternatively you could use an empty toilet paper roll.", displayed:false},
 	{id:"c002", price:150, level:2, world: 0, action:"add", value:2, name:"Small Hamster Stall", tag:"cage", description:"Keeps your hamsters dry from the rain. Even though you keep them inside.", displayed:false},
 	{id:"c003", price:2360, level:3, world: 0, action:"add", value:3, name:"Wooden House", tag:"cage", description:"A little wooden hamster house. Makes your hamsters feel at home.", displayed:false},
