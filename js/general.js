@@ -6,19 +6,21 @@ window.onload = function() {
 
 var totalhamstercount = 0, hamstercount = 0;
 var hamstersperclick = 1;
-var cagedhamsterclicks = 0, rarehamsterclicks = 0;
+var bighamsterclicks = 0, rarehamsterclicks = 0;
 var basehamsterspersecond = 0;
 var hamsterspersecondboost = 1;
 var hamsterspersecond = 0;
 var hamstercapacity = 10000;
 var boughtUpgrades = [], boughtHamsters = ['h000'];
-var cagelevel = 0, foodlevel = 0, drinklevel = 0, islandlevel = 0, hamsterlevel = 0, worldlevel = 0;
+var housinglevel = 0, foodlevel = 0, drinklevel = 0, islandlevel = 0, hamsterlevel = 0, worldlevel = 0;
 var starttime = 0;
 
 // FUNCTIONS
 
 function startTime() {
-	starttime = Date.now();
+	if (starttime == 0) {
+		starttime = Date.now();
+	}
 }
 
 function increaseHamsters(amount) {
@@ -93,23 +95,23 @@ function increaseHamsters(amount) {
 
 // Cage Click
 
-document.getElementById("hamster_cage").addEventListener("click", cageClick);
+document.getElementById("hamster").addEventListener("click", hamsterClick);
 
-function cageClick(e) {
+function hamsterClick(e) {
 	addNewUpgradesToShop();
 	checkForBuyableUpgrades();
 	increaseHamsters(hamstersperclick);
-	cagedhamsterclicks++;
+	bighamsterclicks++;
 	if (hamstercount < hamstercapacity) {
 		// create a particle with each click and move it in a random direction
 		var particle = new Particle();
-		var cagedHamster = document.querySelector("#caged_hamster");
-		var hamsterStyle = getComputedStyle(cagedHamster);
+		var bigHamster = document.querySelector("#big_hamster");
+		var hamsterStyle = getComputedStyle(bigHamster);
 		var hamsterHeight = parseFloat(hamsterStyle.height.replace("px", ""));
 		var hamsterWidth = parseFloat(hamsterStyle.width.replace("px", ""));
 		var hamsterTop = parseFloat(hamsterStyle.top.replace("px", ""));
 		var hamsterLeft = parseFloat(hamsterStyle.left.replace("px", ""));
-		particle.element.style.cssText = "background-image: url(../pics/hamsters/particle_" + particle.hamsterId + ".png); top: " + (hamsterTop + hamsterHeight / 2 + particle.posY) + "px; left: " + (hamsterLeft + hamsterWidth / 2 + particle.posX) + "px; transform: rotate(" + Math.floor(Math.random() * 361) + "deg);";
+		particle.element.style.cssText = "background-image: url(../pics/hamsters/particle_" + particle.hamsterId + ".png); top: " + (hamsterTop + hamsterHeight / 2 + particle.posY) + "px; left: " + (hamsterLeft + hamsterWidth / 2 + particle.posX) + "px; transform: rotate(" + randomGenerator(360) + "deg);";
 		particle.element.className += " animation-fade-out";
 
 		// create a node that displays the clicked hamsters
