@@ -175,9 +175,9 @@ function checkForBuyableUpgrades() {
 			return;
 		}
 		for (i = 0; i < itemList.length; i++) {
-			var itemId = itemList[i].id;
-			console.log(itemId);
-			var upgrade = getUpgrade(itemId);
+			var item = itemList[i];
+			console.log(item);
+			var upgrade = getUpgrade(item);
 			if (upgrade.displayed !== true) {
 				return;
 			}
