@@ -20,7 +20,7 @@ function updateHamsterCount() {
 }
 
 function updateHousingLevel() {
-	document.getElementById("hamster_housing").style.cssText = "background-image: url('pics/cage/world_" + worldlevel + "/level_" + housinglevel + ".png');";
+	document.getElementById("hamster").style.cssText = "background-image: url('pics/housing/world_" + worldlevel + "/level_" + housinglevel + ".png');";
 }
 
 function updateFoodLevel() {
