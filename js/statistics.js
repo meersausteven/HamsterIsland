@@ -20,8 +20,8 @@ function updateStats() {
 	document.getElementById("stats_playtime").innerHTML = totalplaytime;
 	document.getElementById("stats_food").innerHTML = foodupgrades[foodlevel].name;
 	document.getElementById("stats_drink").innerHTML = drinkupgrades[drinklevel].name;
-	document.getElementById("stats_cage").innerHTML = cageupgrades[cagelevel].name;
-	document.getElementById("stats_island").innerHTML = islandupgrades[islandlevel].name;
+	document.getElementById("stats_housing").innerHTML = housingupgrades[housinglevel].name;
+	document.getElementById("stats_island").innerHTML = !(islandlevel > 0) ? islandupgrades[islandlevel].name : islandupgrades[islandlevel + worldlevel * 6];
 	document.getElementById("stats_hamsterlevel").innerHTML = hamsterupgrades[hamsterlevel].name;
 	document.getElementById("stats_world").innerHTML = worldupgrades[worldlevel].name;
 }
@@ -34,16 +34,16 @@ document.getElementById("close_statistics").addEventListener("click", toggleStat
 var statsopen = false;
 
 function toggleStats() {
-  var openstats = document.getElementById("open_statistics");
-  var closestats = document.getElementById("close_statistics");
-  var stats = document.getElementById("statistics_screen");
-  if (statsopen === true) {
-    stats.classList.remove("stats-open");
-    statsopen = false;
-  } else {
-    stats.classList.add("stats-open");
-    statsopen = true;
-  }
+	var openstats = document.getElementById("open_statistics");
+	var closestats = document.getElementById("close_statistics");
+	var stats = document.getElementById("statistics_screen");
+	if (statsopen === true) {
+		stats.classList.remove("stats-open");
+		statsopen = false;
+	} else {
+		stats.classList.add("stats-open");
+		statsopen = true;
+	}
 }
 
 document.getElementById("delete_progress").addEventListener("click", toggleDialogueBox);
