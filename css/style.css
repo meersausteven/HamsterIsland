@@ -25,7 +25,7 @@ body {
 	background-size: 70vw 70vh;
 	background-position: 50%
 }
-#hamster_cage {
+#hamster {
 	width: 180px;
 	height: 240px;
 	position: absolute;
@@ -36,13 +36,13 @@ body {
 	
 	border: brown solid 2px;
 }
-#hamster_cage:hover {
+#hamster_housing:hover {
 	transform: scale(1.05);
 }
-#hamster_cage:active {
+#hamster_housing:active {
 	transform: scale(0.95);
 }
-#caged_hamster {
+#big_hamster {
 	width: 180px;
 	height: 240px;
 	position: absolute;
@@ -50,10 +50,10 @@ body {
 	left: calc(50% - 90px);
 	transition: 0.15s;
 }
-#caged_hamster:hover {
+#big_hamster:hover {
 	transform: scale(1.05);
 }
-#caged_hamster:active {
+#big_hamster:active {
 	transform: scale(0.95);
 }
 #hamster_food, #hamster_drink {
@@ -576,7 +576,7 @@ body {
 	z-index: -1;
 	margin: 0px;
 }
-.shop-cage-upgrade {
+.shop-housing-upgrade {
 	border: 5px solid rgb(142, 69, 161);
 	background-color: rgb(111, 54, 125);
 }
