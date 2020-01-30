@@ -97,4 +97,6 @@ function updateGame() {
 	updateHamsterCapacity();
 	updateHamsterCount();
 	updateStats();
+	adUpgradesToShop();
+	checkForBuyableUpgrades();
 }
