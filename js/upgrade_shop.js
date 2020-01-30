@@ -49,6 +49,7 @@ var cageupgrades = [
 // Food upgrades increase hamsters generated per second
 var foodupgrades = [
 	// world 0 upgrades - Pet Shop
+	{id:"f000", price:0, level:0, world: 0, action:"none", value:0, name:"Nothing", tag:"food", description:"-", displayed:true},
 	{id:"f001", price:75, level:1, world: 0, action:"add", value:1, name:"Basic Hamster Food", tag:"food", description:"Just normal hamster food. Nothing more. Nothing less.", displayed:false},
 	{id:"f002", price:375, level:2, world: 0, action:"add", value:1, name:"Dry Oats", tag:"food", description:"Oats are packed with carbohydrates and supply your hamsters with energy.", displayed:false},
 	{id:"f003", price:1750, level:3, world: 0, action:"add", value:1, name:"Dried Barley", tag:"food", description:"Barley contains a lot of vitamins, keeping your hamsters healthy!", displayed:false},
@@ -71,6 +72,7 @@ var foodupgrades = [
 // Drink upgrades increase hamsters generated per second
 var drinkupgrades = [
 	// world 0 upgrades - Pet Shop
+	{id:"d000", price:0, level:0, world: 0, action:"none", value:0, name:"Nothing", tag:"drink", description:"-", displayed:true},
 	{id:"d001", price:125, level:1, world: 0, action:"add", value:1, name:"Water", tag:"drink", description:"Just basic tap water. You gotta start somewhere.", displayed:false},
 	{id:"d002", price:650, level:2, world: 0, action:"add", value:1, name:"Mineral Water", tag:"drink", description:"Mineral water drawn from a fountain on top of a volcano. Healthy and refreshing!", displayed:false},
 	{id:"d003", price:2200, level:3, world: 0, action:"add", value:1, name:"Camomile Tea", tag:"drink", description:"Cooled down camomile tea keeps your hamsters healthy and hydrated.", displayed:false},
@@ -93,22 +95,25 @@ var drinkupgrades = [
 // Island upgrades increase capcity amount of hamsters currently allowed
 var islandupgrades = [
 	// world 0 upgrades - Pet Shop
+	{id:"i000", price:0, level:0, world: 0, action:"none", value:0, name:"Tiny Cage", tag:"island", description:"-", displayed:true},
 	{id:"i001", price:10000, level:1, world: 0, action:"add", value:7500, name:"Medium Cage", tag:"island", description:"A medium sized cage. Barely big enough for a small family of hamsters.", displayed:false},
 	{id:"i002", price:17500, level:2, world: 0, action:"add", value:16500, name:"Big Cage", tag:"island", description:"A big cage. It even fits your hamsters' parent in-laws!", displayed:false},
 	{id:"i003", price:34000, level:3, world: 0, action:"add", value:36000, name:"Large Cage", tag:"island", description:"A large cage. Large enough to house huge quantities of hamsters.", displayed:false},
 	{id:"i004", price:70000, level:4, world: 0, action:"add", value:80000, name:"Deluxe Cage", tag:"island", description:"The deluxe model. An entire town of hamsters could live in there!", displayed:false},
 	{id:"i005", price:150000, level:5, world: 0, action:"multiply", value:2, name:"Ultra Supreme Cage", tag:"island", description:"The best of the best. The enitre earth population of hamsters could fit in there!", displayed:false},
 	// world 1 upgrades - City Park Lake
-	{id:"i006", price:300000, level:1, world: 1, action:"add", value:200000, name:"Small Lily Pads", tag:"island", description:"These lily pads will keep your hamsters afloat on the lake surface.", displayed:false},
-	{id:"i007", price:500000, level:2, world: 1, action:"add", value:350000, name:"Big Lily Pads", tag:"island", description:"Big lily pads that help your hamsters stay dry.", displayed:false},
-	{id:"i008", price:850000, level:3, world: 1, action:"add", value:425000, name:"Single Lotus Blad", tag:"island", description:"Bigger than any lily pads in the lake.", displayed:false},
-	{id:"i009", price:1275000, level:4, world: 1, action:"add", value:725000, name:"Mutliple Lotus Blads", tag:"island", description:"Even bigger lotus blads for all your hamsters.", displayed:false},
-	{id:"i010", price:2000000, level:5, world: 1, action:"multiply", value:5, name:"Victoria Lotus Leaves", tag:"island", description:"The world's biggest lotus leaves, keeping your hamsters from drowning.", displayed:false},
+	{id:"i006", price:0, level:0, world: 0, action:"none", value:0, name:"Nothing", tag:"food", description:"-", displayed:true},
+	{id:"i007", price:300000, level:1, world: 1, action:"add", value:200000, name:"Small Lily Pads", tag:"island", description:"These lily pads will keep your hamsters afloat on the lake surface.", displayed:false},
+	{id:"i008", price:500000, level:2, world: 1, action:"add", value:350000, name:"Big Lily Pads", tag:"island", description:"Big lily pads that help your hamsters stay dry.", displayed:false},
+	{id:"i009", price:850000, level:3, world: 1, action:"add", value:425000, name:"Single Lotus Blad", tag:"island", description:"Bigger than any lily pads in the lake.", displayed:false},
+	{id:"i010", price:1275000, level:4, world: 1, action:"add", value:725000, name:"Mutliple Lotus Blads", tag:"island", description:"Even bigger lotus blads for all your hamsters.", displayed:false},
+	{id:"i011", price:2000000, level:5, world: 1, action:"multiply", value:5, name:"Victoria Lotus Leaves", tag:"island", description:"The world's biggest lotus leaves, keeping your hamsters from drowning.", displayed:false},
 	// world 2 upgrades - 
 ];
 // Hamster upgrades increase hamsters per click 
 var hamsterupgrades = [
 	// world 0 upgrades - Pet Shop
+	{id:"h000", price:0, level:0, world: 0, action:"none", value:0, name:"Common Hamster", tag:"hamster", description:"-", displayed:true},
 	{id:"h001", price:13000, level:1, world: 0, action:"add", value:5, name:"Syrian Hamster", tag:"hamster", description:"The syrian hamster is very popular because of their soft fur.", displayed:false},
 	{id:"h002", price:78500, level:2, world: 0, action:"add", value:10, name:"Chinese Hamster", tag:"hamster", description:"The stripes of the chinese hamsters are the same with race cars. They make them go faster.", displayed:false},
 	{id:"h003", price:215000, level:3, world: 0, action:"add", value:25, name:"Golden Hamster", tag:"hamster", description:"As a kid I always thought golden hamsters are made of gold. Oh well, maybe in the future...", displayed:false},
@@ -121,6 +126,7 @@ var hamsterupgrades = [
 ];
 // World upgrades unlock new upgrades (new world starts with small island but same amount of max. hamsters. New design/theme for upgrades)
 var worldupgrades = [
+	{id: "w00", price: 0, level: 0, name:"Pet Shop", tag:"world", description:"-", displayed: true},
 	{id: "w01", price: 300000, level: 1, name:"City Park Lake", tag:"world", description:"Taking your hamsters out for some fresh air is a brilliant idea!", displayed: false},
 	{id: "w02", price: 10000000, level: 2, name:"Underground Sanctuary", tag:"world", description:"Deep down under your hamsters will be safe from any predators, I think.", displayed: false},
 	{id: "w03", price: 99999999999, level: 3, name:"Bermuda Triangle", tag:"world", description:"Ohhh, so the hamsters were responsible for all the ships and airplanes vanishing near the Bermuda Triangle...", displayed: false},
