@@ -169,10 +169,11 @@ function addNewUpgradesToShop() {
 }
 
 function checkForBuyableUpgrades() {
+	
 	allUpgrades.forEach(function(upgrade) {
-		if (!boughtUpgrades.includes(upgrade.id) && (upgrade.displayed === true) && (hamstercount >= upgrade.price)) {
+		if ( (upgrade.displayed === true) && (hamstercount >= upgrade.price) ) {
 			document.getElementById("upgrade_" + upgrade.id).classList.remove("shop-item-unbuyable");
-		} else if (!boughtUpgrades.includes(upgrade.id) && (upgrade.displayed === true) && (hamstercount < upgrade.price)) {
+		} else if ( (upgrade.displayed === true) && (hamstercount < upgrade.price) ) {
 			document.getElementById("upgrade_" + upgrade.id).classList.add("shop-item-unbuyable");
 		}
 	});
