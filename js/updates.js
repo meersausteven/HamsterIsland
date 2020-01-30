@@ -19,8 +19,8 @@ function updateHamsterCount() {
 	document.getElementById("counter").innerHTML = convertToReadableNumber(hamstercount) + " Hamsters";
 }
 
-function updateCageLevel() {
-	document.getElementById("hamster_cage").style.cssText = "background-image: url('pics/cage/world_" + worldlevel + "/level_" + cagelevel + ".png');";
+function updateHousingLevel() {
+	document.getElementById("hamster_housing").style.cssText = "background-image: url('pics/cage/world_" + worldlevel + "/level_" + housinglevel + ".png');";
 }
 
 function updateFoodLevel() {
@@ -48,7 +48,7 @@ function updateIslandLevel() {
 }
 
 function updateHamsterLevel() {
-	document.getElementById("caged_hamster").style.cssText = "background-image: url('pics/hamster/world_" + worldlevel + "/level_" + hamsterlevel + ".png');";
+	document.getElementById("big_hamster").style.cssText = "background-image: url('pics/hamster/world_" + worldlevel + "/level_" + hamsterlevel + ".png');";
 }
 
 function updateWorldLevel() {
@@ -87,7 +87,7 @@ function convertToReadableNumber(number) {
 function updateGame() {
 	startTime();
 	getProgress();
-	updateCageLevel();
+	updateHousingLevel();
 	updateIslandLevel();
 	updateHamsterLevel();
 	updateWorldLevel();
