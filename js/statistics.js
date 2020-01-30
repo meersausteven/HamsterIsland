@@ -18,12 +18,12 @@ function updateStats() {
 	document.getElementById("stats_clicks").innerHTML = convertToReadableNumber(cagedhamsterclicks);
 	document.getElementById("stats_rareclicks").innerHTML = convertToReadableNumber(rarehamsterclicks);
 	document.getElementById("stats_playtime").innerHTML = totalplaytime;
-	document.getElementById("stats_food").innerHTML = foodlevel;
-	document.getElementById("stats_drink").innerHTML = drinklevel;
-	document.getElementById("stats_cage").innerHTML = cagelevel;
-	document.getElementById("stats_island").innerHTML = islandlevel;
-	document.getElementById("stats_hamsterlevel").innerHTML = hamsterlevel;
-	document.getElementById("stats_world").innerHTML = worldlevel;
+	document.getElementById("stats_food").innerHTML = foodupgrades[foodlevel].name;
+	document.getElementById("stats_drink").innerHTML = drinkupgrades[drinklevel].name;
+	document.getElementById("stats_cage").innerHTML = cageupgrades[cagelevel].name;
+	document.getElementById("stats_island").innerHTML = islandupgrades[islandlevel].name;
+	document.getElementById("stats_hamsterlevel").innerHTML = hamsterupgrades[hamsterlevel].name;
+	document.getElementById("stats_world").innerHTML = worldupgrades[worldlevel].name;
 }
 
 // open / close the statistics
