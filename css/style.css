@@ -67,7 +67,7 @@ body {
 	position: absolute;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	top: calc(53vh - 50px);
+	top: 60%;
 }
 #hamster_food {
 	left: calc(50% - 170px);
