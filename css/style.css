@@ -241,7 +241,6 @@ body {
 	right: 0;
 	border-top: 50px solid #2c2c2c;
 	border-left: 40px solid transparent;
-	z-index: 12;
 	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
 }
 #delete_progress:hover {
