@@ -21,9 +21,13 @@ body {
 /* Island Elements */
 
 #hamster_island {
-	height: 100vh;
-	background-size: 70vw 70vh;
-	background-position: 50%
+	position: absolute;
+	height: 360px;
+	width: 640px;
+	left: calc(50% - 320px);
+	top: calc(50% - 180px);
+	
+	border: 3px solid green;
 }
 #hamster {
 	width: 180px;
@@ -36,10 +40,10 @@ body {
 	
 	border: brown solid 2px;
 }
-#hamster_housing:hover {
+#hamster:hover {
 	transform: scale(1.05);
 }
-#hamster_housing:active {
+#hamster:active {
 	transform: scale(0.95);
 }
 #big_hamster {
@@ -49,6 +53,7 @@ body {
 	top: calc(45% - 125px);
 	left: calc(50% - 90px);
 	transition: 0.15s;
+	z-index: 2;
 }
 #big_hamster:hover {
 	transform: scale(1.05);
@@ -315,6 +320,15 @@ body {
 .background-preset {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+}
+
+.environment-image {
+	z-index: 0;
+	box-sizing: border-box;
+	height: 100%;
+	width: auto;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 /* open statistics screen */
