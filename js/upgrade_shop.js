@@ -203,6 +203,9 @@ function countShopItems() {
 	if (itemList != null) {
 		// First count all items currently displayed in shop
 		var totalItemCount = itemList.length;
+		if (totalItemCount == 0) {
+			return;
+		}
 		var unbuyableItemCount = 0;
 		// Then count all items that can't be bought at the moment
 		for (i = 0; i < itemList.length; i++) {
