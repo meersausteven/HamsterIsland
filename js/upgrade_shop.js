@@ -210,7 +210,7 @@ function countShopItems() {
 				unbuyableItemCount++;
 			}
 		}
-		var affordableItemCount = totalItemCount - unbuyableItemcount;
+		var affordableItemCount = totalItemCount - unbuyableItemCount;
 		var totalCountText = totalItemCount + " Items in Shop"
 		var affordableCountText = "";
 		if (affordableItemCount != 0) {
