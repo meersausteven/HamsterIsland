@@ -339,7 +339,6 @@ body {
 .stats-open {
 	opacity: 1 !important;
 	display: block !important;
-	z-index: 11 !important;
 }
 
 /* Game saved notice */
