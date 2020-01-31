@@ -169,11 +169,11 @@ function addNewUpgradesToShop() {
 }
 
 function checkForBuyableUpgrades() {
+	var itemList = document.getElementsByClassName("shop-item");
+	if (itemList == null) {
+		return;
+	}
 	allUpgrades.forEach(function(upgrade) {
-		var itemList = document.getElementsByClassName("shop-item");
-		if (itemList == null) {
-			return;
-		}
 		for (i = 0; i < itemList.length; i++) {
 			var upgrade = getUpgrade(itemList[i]);
 			if (upgrade.displayed !== true) {
@@ -186,6 +186,7 @@ function checkForBuyableUpgrades() {
 			}
 		}
 	});
+	countShopItems();
 }
 
 function getUpgrade(item) {
@@ -195,4 +196,26 @@ function getUpgrade(item) {
 			return allUpgrades[i];
 		}
 	}	
+}
+
+function countShopItems() {
+	var itemList = document.getElementsByClassName("shop-item");
+	if (itemList != null) {
+		// First count all items currently displayed in shop
+		var totalItemCount = itemList.length;
+		var unbuyableItemCount = 0;
+		// Then count all items that can't be bought at the moment
+		for (i = 0; i < itemList.length; i++) {
+			if ( itemList[i].classList.contains("shop-item-unbuyable") ) {
+				unbuyableItemCount++;
+			}
+		}
+		var affordableItemCount = totalItemCount - unbuyableItemcount;
+		var totalCountText = totalItemCount + " Items in Shop"
+		var affordableCountText = "";
+		if (affordableItemCount != 0) {
+			var affordableCountText = " | " + affordableItemCount + " Items affordable";
+		}
+		document.getElementById("shop_button_item_count").innerHTML = totalCountText + affordableCountText;		
+	}
 }
