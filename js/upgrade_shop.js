@@ -214,10 +214,10 @@ function countShopItems() {
 			}
 		}
 		var affordableItemCount = totalItemCount - unbuyableItemCount;
-		var totalCountText = totalItemCount + " Items in Shop"
+		var totalCountText = (totalItemCount > 1) ? (totalItemCount + " Items in Shop") : ("1 Item in Shop");
 		var affordableCountText = "";
 		if (affordableItemCount != 0) {
-			var affordableCountText = " | " + affordableItemCount + " Items affordable";
+			var affordableCountText = " | " + (affordableItemCount > 1) ? (affordableItemCount + " Items affordable") : ("1 Item affordable");
 		}
 		document.getElementById("shop_button_item_count").innerHTML = totalCountText + affordableCountText;		
 	}
