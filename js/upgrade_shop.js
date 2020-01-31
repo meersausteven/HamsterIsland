@@ -6,19 +6,22 @@ document.getElementById("shop_button").addEventListener("click", toggleShop);
 var shopopen = false;
 
 function toggleShop() {
-	var shopbutton = document.getElementById("shop_button");
+	var shopButton = document.getElementById("shop_button");
+	var shopItemCounter = document.getElementById("shop_button_item_count");
 	var shop = document.getElementById("shop");
 	if (shopopen === true) {
 		shop.classList.remove("shop-open");
 		shop.classList.add("shop-buying-impossible");
-		shopbutton.classList.remove("shop-open-button");
-		shopbutton.innerHTML = "OPEN SHOP";
+		shopButton.classList.remove("shop-open-button");
+		shopItemCounter.classList.remove("shop-open-button");
+		shopButton.innerHTML = "OPEN SHOP";
 		shopopen = false;
 	} else {
 		shop.classList.add("shop-open");
 		shop.classList.remove("shop-buying-impossible");
-		shopbutton.classList.add("shop-open-button");
-		shopbutton.innerHTML = "CLOSE SHOP";
+		shopButton.classList.add("shop-open-button");
+		shopItemCounter.classList.add("shop-open-button");
+		shopButton.innerHTML = "CLOSE SHOP";
 		shopopen = true;
 	}
 }
