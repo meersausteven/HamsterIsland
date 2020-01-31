@@ -52,7 +52,10 @@ function updateHamsterLevel() {
 }
 
 function updateWorldLevel() {
-	document.getElementById("hamster_sea").style.cssText = "background-image: url('pics/world/level_" + worldlevel + ".png');";
+	document.getElementById("hamster_sea").style.cssText = "background-image: url('pics/world/level_" + worldlevel + "/back_far.png');";
+	document.getElementById("game_background_near").style.cssText = "background-image: url('pics/world/level_" + worldlevel + "/back_near.png');";
+	document.getElementById("game_foreground_far").style.cssText = "background-image: url('pics/world/level_" + worldlevel + "/front_far.png');";
+	document.getElementById("game_foreground_near").style.cssText = "background-image: url('pics/world/level_" + worldlevel + "/front_near.png');";
 }
 
 function convertToReadableNumber(number) {
