@@ -140,10 +140,24 @@ body {
 	text-shadow: 2px 2px 5px #000000;
 	border-left: 120px solid transparent;
 	border-right: 120px solid transparent;
-	border-bottom: 40px solid rgba(50, 50, 50, 0.3);
+	border-bottom: 55px solid rgba(50, 50, 50, 0.3);
 }
 #shop_button:hover {
 	border-bottom-color: rgba(0,0,0,0.6);
+}
+#shop_button_item_count {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	color: #ffffff;
+	z-index: 1;
+	text-align: center;
+	text-shadow: 2px 2px 5px #000000;
+	opacity: 1;
+	transition: 0.2s;
+}
+#shop_button_item_count.shop-open-button {
+	opacity: 0;
 }
 #shop {
 	width: 100%;
