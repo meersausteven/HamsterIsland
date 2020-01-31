@@ -696,3 +696,6 @@ table#statistics_menu td.statistics_value {
 	text-align: left;
 	padding-left: 10px;
 }
+.gui_element {
+	z-index: 100;
+}
