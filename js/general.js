@@ -126,6 +126,8 @@ var hamsterspersecond_interval = setInterval(hamstersPerSecond, 1000);
 
 function hamstersPerSecond() {
 	increaseHamsters(hamsterspersecond);
+	addNewUpgradesToShop();
+	checkForBuyableUpgrades();
 }
 
 function increaseHPS(amount, type) {
