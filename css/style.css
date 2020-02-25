@@ -650,7 +650,7 @@ body {
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	font-weight: light;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-	z-index: 3;
+	z-index: 101;
 	background-color: rgb(150, 150, 150);
 }
 .upgrade_info_box > h3 {
