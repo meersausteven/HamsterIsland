@@ -141,7 +141,7 @@ var worldupgrades = [
 var allUpgrades = housingupgrades.concat(foodupgrades, drinkupgrades, islandupgrades, hamsterupgrades, worldupgrades);
 
 function addNewUpgradesToShop() {
-	allUpgrades.forEach(function(upgrade) {
+	for (upgrade of allUpgrades) {
 		if ( (upgrade.price <= totalhamstercount) && (!boughtUpgrades.includes(upgrade.id)) && (upgrade.displayed === false) ) {
 			if ( (upgrade.tag != "world") && (typeof upgrade.world !== "undefined") ) {
 				// only display upgrades that are one level higher than the current level of the upgrade type
@@ -176,7 +176,7 @@ function checkForBuyableUpgrades() {
 	if (itemList == null) {
 		return;
 	}
-	allUpgrades.forEach(function(upgrade) {
+	for (upgrade of allUpgrades) {
 		for (i = 0; i < itemList.length; i++) {
 			var upgrade = getUpgrade(itemList[i]);
 			if (upgrade.displayed !== true) {
