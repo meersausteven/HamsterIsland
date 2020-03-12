@@ -29,7 +29,7 @@ function rareHamsterBoostDuration(rarehamster) {
 		countdown.setAttribute("id", "rareHamsterBoostCountdown");
 	}
 	countdown.className = "background-preset rare-hamster-" + rarehamster.rarehamstertype;
-	countdown.style.cssText = "background-image: url(rare_hamster_countdown_" + rarehamster.rarehamstertype + ".png);";
+	countdown.style.cssText = "background-image: url(../pics/hamsters/rare_hamsters/" + rarehamster.rarehamstertype + "/boost_countdown.png);";
 	
 	let countdownOverlay = document.getElementById("rareHamsterBoostCountdownOverlay");
 	if (!countdownOverlay) {

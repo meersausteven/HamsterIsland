@@ -48,7 +48,7 @@ function updateIslandLevel() {
 }
 
 function updateHamsterLevel() {
-	document.getElementById("big_hamster").style.cssText = "background-image: url('pics/hamster/world_" + worldlevel + "/level_" + hamsterlevel + ".png');";
+	document.getElementById("big_hamster").style.cssText = "background-image: url('pics/hamster/upgrades/world_" + worldlevel + "/level_" + hamsterlevel + ".png');";
 }
 
 function updateWorldLevel() {

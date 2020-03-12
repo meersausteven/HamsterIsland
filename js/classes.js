@@ -164,7 +164,7 @@ class ShopItem {
 		this.element.setAttribute("id", "upgrade_" + upgrade.id);
 		this.element.innerHTML = "<h1>" + upgrade.name + "</h1>" +
 			"<h2>Costs: " + convertToReadableNumber(upgrade.price) + " Hamsters</h2>" + 
-			"<p class='shop-item-icon' style='background-image: url(./pics/upgrades/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
+			"<p class='shop-item-icon' style='background-image: url(./pics/shop/world_" + worldlevel + "/" + upgrade.id + ".png)';'></p>";
 		// MOUSE CLICK EVENT
 		this.element.onclick = function() {
 			var upgrade = getUpgrade(this);

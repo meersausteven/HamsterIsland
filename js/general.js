@@ -111,7 +111,7 @@ function hamsterClick(e) {
 		var hamsterWidth = parseFloat(hamsterStyle.width.replace("px", ""));
 		var hamsterTop = parseFloat(hamsterStyle.top.replace("px", ""));
 		var hamsterLeft = parseFloat(hamsterStyle.left.replace("px", ""));
-		particle.element.style.cssText = "background-image: url(../pics/hamsters/particle_" + particle.hamsterId + ".png); top: " + (hamsterTop + hamsterHeight / 2 + particle.posY) + "px; left: " + (hamsterLeft + hamsterWidth / 2 + particle.posX) + "px; transform: rotate(" + randomGenerator(360) + "deg);";
+		particle.element.style.cssText = "background-image: url(../pics/hamsters/particles/" + particle.hamsterId + ".png); top: " + (hamsterTop + hamsterHeight / 2 + particle.posY) + "px; left: " + (hamsterLeft + hamsterWidth / 2 + particle.posX) + "px; transform: rotate(" + randomGenerator(360) + "deg);";
 		particle.element.className += " animation-fade-out";
 
 		// create a node that displays the clicked hamsters

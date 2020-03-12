@@ -496,19 +496,19 @@ body {
 	100%	{transform: scale(1.07) rotate(-6deg);}
 }
 .rare-hamster.bronze-hamster {
-	background-image: url(../pics/hamsters/rare_hamster_bronze.png);
+	background-image: url(../pics/hamsters/rare_hamsters/bronze/hamster.png);
 }
 .rare-hamster.silver-hamster {
-	background-image: url(../pics/hamsters/rare_hamster_silver.png);
+	background-image: url(../pics/hamsters/rare_hamster/silver/hamster.png);
 }
 .rare-hamster.gold-hamster {
-	background-image: url(../pics/hamsters/rare_hamster_gold.png);
+	background-image: url(../pics/hamsters/rare_hamsters/gold/hamster.png);
 }
 .rare-hamster.diamond-hamster {
-	background-image: url(../pics/hamsters/rare_hamster_diamond.png);
+	background-image: url(../pics/hamsters/rare_hamsters/diamond/hamster.png);
 }
 .rare-hamster.alexandrite-hamster {
-	background-image: url(../pics/hamsters/rare_hamster_alexandrite.png);
+	background-image: url(../pics/hamsters/rare_hamsters/alexandrite/hamster.png);
 }
 
 /* Rare Hamster Effect Info Box */
