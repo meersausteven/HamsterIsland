@@ -168,7 +168,7 @@ function addNewUpgradesToShop() {
 			var shopitem = new ShopItem(upgrade);
 			checkForBuyableUpgrades();
 		}
-	});
+	};
 }
 
 function checkForBuyableUpgrades() {
@@ -188,7 +188,7 @@ function checkForBuyableUpgrades() {
 				document.getElementById("upgrade_" + upgrade.id).classList.add("shop-item-unbuyable");
 			}
 		}
-	});
+	};
 	countShopItems();
 }
 
