@@ -28,7 +28,7 @@ class ClickedHamsters {
 			displayedNumber -= (hamstersperclick + hamstercount) - hamstercapacity;
 		}
 		this.element.innerHTML = "+" + convertToReadableNumber(displayedNumber);
-		this.element.className = "clicked-hamsters";
+		this.element.className = "clicked-hamsters gui_element";
 		this.posX = e.clientX - 10;
 		this.posY = e.clientY - 10;
 		this.element.style.cssText = "top: " + this.posY + "px; left: " + this.posX + "px;";
