@@ -26,8 +26,6 @@ body {
 	width: 640px;
 	left: calc(50% - 320px);
 	top: calc(50% - 180px);
-	
-	border: 3px solid green;
 }
 #hamster {
 	width: 180px;
@@ -37,8 +35,6 @@ body {
 	left: calc(50% - 90px);
 	cursor: pointer;
 	transition: 0.15s;
-	
-	border: brown solid 2px;
 }
 #hamster:hover {
 	transform: scale(1.05);
