@@ -13,7 +13,7 @@ class Particle {
 		this.posY = 100 * Math.sin(randomGenerator(360));
 		this.element.style.cssText = "transform: rotate(" + this.randeg + "deg);";
 		document.body.appendChild(this.element);
-		//setTimeout(function() {this.delete()}.bind(this), 1000);
+		setTimeout(function() {this.delete()}.bind(this), 1000);
 	}
 	delete() {
 		document.body.removeChild(this.element);
